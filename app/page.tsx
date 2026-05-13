@@ -154,7 +154,7 @@ export default function AIPosterDirectorMVP() {
   }
 
   return (
-    <div className="min-h-screen bg-[#070707] text-white overflow-hidden">
+    <div className="min-h-screen w-full bg-[#070707] text-white overflow-x-hidden">
       <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 text-center pointer-events-none">
         <p className="text-[10px] tracking-[0.45em] uppercase text-[#8B6B2E] mb-1">
           Visual Taste Director
@@ -165,8 +165,8 @@ export default function AIPosterDirectorMVP() {
         </p>
       </div>
 
-      <div className="flex pt-24">
-      <div className="w-[360px] border-r border-white/10 bg-black p-6 flex flex-col overflow-y-auto">
+      <div className="flex flex-col lg:flex-row pt-20 lg:pt-24 w-full overflow-x-hidden min-h-screen">
+      <div className="w-full lg:w-[360px] lg:min-w-[360px] lg:h-screen border-b lg:border-b-0 lg:border-r border-white/10 bg-black p-4 lg:p-6 flex flex-col overflow-y-auto shrink-0">
         <div>
           <div className="flex items-center justify-between">
             <div>
@@ -183,7 +183,7 @@ export default function AIPosterDirectorMVP() {
 
             </div>
 
-          <h1 className="text-4xl font-semibold leading-tight mt-4">
+          <h1 className="text-2xl lg:text-4xl font-semibold leading-tight mt-4">
             把日常照片
             <span className="text-zinc-500 block">
               升級成電影級提示詞
@@ -191,7 +191,7 @@ export default function AIPosterDirectorMVP() {
           </h1>
         </div>
 
-        <div className="mt-8 rounded-[32px] border border-white/10 bg-white/[0.03] p-6">
+        <div className="mt-8 rounded-[32px] border border-white/10 bg-white/[0.03] p-4 lg:p-6">
           <div className="flex items-center justify-center w-14 h-14 rounded-full bg-white/10 text-2xl mb-5">
             ↑
           </div>
@@ -218,7 +218,7 @@ export default function AIPosterDirectorMVP() {
               <img
                 src={uploadedImage}
                 alt="preview"
-                className="w-full h-44 object-cover"
+                className="w-full h-auto max-h-[420px] object-cover"
               />
             </div>
           )}
@@ -283,30 +283,30 @@ export default function AIPosterDirectorMVP() {
         </button>
       </div>
 
-      <div className="flex-1 bg-[#0d0d0d] p-10 overflow-y-auto">
-        <div className="max-w-5xl mx-auto">
+      <div className="w-full flex-1 bg-[#0d0d0d] p-4 lg:p-10 overflow-x-hidden">
+        <div className="w-full max-w-5xl mx-auto">
           <p className="text-xs tracking-[0.4em] uppercase text-zinc-600 mb-4">
             Prompt Output
           </p>
 
-          <h2 className="text-5xl font-semibold mb-8">
+          <h2 className="text-2xl lg:text-5xl font-semibold mb-6 lg:mb-8 leading-tight">
             AI 電影感提示詞生成器
           </h2>
 
-          <div className="rounded-[36px] border border-white/10 bg-black/40 backdrop-blur-xl p-8 min-h-[600px] relative">
+          <div className="w-full rounded-[28px] lg:rounded-[36px] border border-white/10 bg-black/40 backdrop-blur-xl p-4 lg:p-8 min-h-[300px] lg:min-h-[600px] relative overflow-hidden">
             {!generatedPrompt ? (
-              <div className="h-full flex items-center justify-center text-zinc-600 text-lg">
+              <div className="h-full flex items-center justify-center text-zinc-600 text-base lg:text-lg text-center px-4">
                 你的 AI 電影級提示詞將顯示在這裡
               </div>
             ) : (
               <>
-                <pre className="whitespace-pre-wrap text-sm leading-8 text-zinc-200">
+                <pre className="w-full whitespace-pre-wrap break-words text-xs lg:text-sm leading-7 lg:leading-8 text-zinc-200 overflow-x-auto">
                   {generatedPrompt}
                 </pre>
 
                 <button
                   onClick={handleCopy}
-                  className="absolute top-6 right-6 rounded-xl bg-white text-black px-4 py-2 text-sm font-medium hover:opacity-90"
+                  className="mt-6 lg:absolute lg:top-6 lg:right-6 rounded-xl bg-white text-black px-4 py-2 text-sm font-medium hover:opacity-90 w-full lg:w-auto"
                 >
                   複製提示詞
                 </button>
