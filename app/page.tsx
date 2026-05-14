@@ -228,17 +228,15 @@ ${activeStyle?.prompt || ''}`)
 
         <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.03] p-5">
           <p className="text-xs uppercase tracking-[0.3em] text-zinc-600 mb-4">
-            構圖鎖定
+            Prompt Engine
           </p>
 
           <div className="space-y-2 text-sm text-zinc-300">
-            <div className="space-y-2 text-sm text-zinc-300">
-  <p>✓ 電影級 Prompt Engine</p>
-  <p>✓ 16 種高級風格模組</p>
-  <p>✓ Cinematic Visual Language</p>
-  <p>✓ Premium Editorial Aesthetic</p>
-  <p>✓ 8K Commercial Prompt Output</p>
-</div>
+            <p>✓ Cinematic Prompt Engine</p>
+            <p>✓ 16 種電影風格模組</p>
+            <p>✓ Premium Editorial Aesthetic</p>
+            <p>✓ Luxury Commercial Visual</p>
+            <p>✓ 8K Prompt Output System</p>
           </div>
         </div>
 
