@@ -4,9 +4,11 @@ import { useMemo, useState } from 'react'
 
 export default function AIPosterDirectorMVP() {
   const [selectedStyle, setSelectedStyle] = useState('日系電影感')
-  const [uploadedImage, setUploadedImage] = useState<string | null>(null)
+  
   const [generatedPrompt, setGeneratedPrompt] = useState('')
   const [isGenerating, setIsGenerating] = useState(false)
+
+  const basePrompt = '請根據使用者提供的主題、自動分析最適合的場景類型、人物氣質、拍攝氛圍、服裝風格、建築元素、空間層次、鏡頭語言、光影方向、色彩配置與畫面情緒，延伸設計成具有高級感的電影海報、品牌形象廣告、時尚雜誌封面或 cinematic editorial poster 風格作品。整體畫面必須完整保留原始構圖、人物位置、鏡頭角度、空間比例、透視結構、景深層次與光影方向，不可擅自改變場景配置或重新設計構圖。AI 僅可在原始畫面基礎上，自然加入適合氛圍的高級設計元素，例如大型 typography、電影標題、品牌標語、雜誌編排、幾何圖形、膠片顆粒、色彩分級、光影特效、紙張質感、霓虹光效、雙重曝光、潮流視覺元素與 cinematic atmosphere。整體需具有 premium commercial design、editorial poster aesthetic、fashion magazine layout、cinematic visual atmosphere、ultra detailed texture、8K resolution、award-winning cinematic composition 與國際精品品牌海報完成度。'
 
   const styles = [
     {
@@ -113,16 +115,15 @@ export default function AIPosterDirectorMVP() {
   )
 
   const handleGeneratePrompt = async () => {
-    if (!uploadedImage) {
-      alert('請先上傳照片')
-      return
-    }
+    
 
     setIsGenerating(true)
 
     await new Promise((resolve) => setTimeout(resolve, 1200))
 
-    setGeneratedPrompt(activeStyle?.prompt || '')
+    setGeneratedPrompt(`${basePrompt}
+
+${activeStyle?.prompt || ''}`)
 
     setIsGenerating(false)
   }
@@ -135,23 +136,7 @@ export default function AIPosterDirectorMVP() {
     alert('提示詞已複製')
   }
 
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-
-    if (!file) return
-
-    const reader = new FileReader()
-
-    reader.onload = () => {
-      const result = reader.result
-
-      if (typeof result === 'string') {
-        setUploadedImage(result)
-      }
-    }
-
-    reader.readAsDataURL(file)
-  }
+  
 
   return (
     <div className="min-h-screen w-full bg-[#070707] text-white overflow-x-hidden">
@@ -184,44 +169,25 @@ export default function AIPosterDirectorMVP() {
             </div>
 
           <h1 className="text-2xl lg:text-4xl font-semibold leading-tight mt-4">
-            把日常照片
+            把創意靈感
             <span className="text-zinc-500 block">
-              升級成電影級提示詞
+              生成電影級提示詞
             </span>
           </h1>
         </div>
 
-        <div className="mt-8 rounded-[32px] border border-white/10 bg-white/[0.03] p-4 lg:p-6">
+        <div className="mt-8 rounded-[32px] border border-white/10 bg-white/[0.03] p-5 lg:p-6">
           <div className="flex items-center justify-center w-14 h-14 rounded-full bg-white/10 text-2xl mb-5">
-            ↑
+            ✦
           </div>
 
           <p className="text-lg font-medium mb-2">
-            {uploadedImage ? '照片上傳成功' : '上傳照片'}
+            電影級提示詞引擎
           </p>
 
-          <p className="text-sm text-zinc-500 leading-relaxed mb-5">
-            {uploadedImage
-              ? 'AI 已成功讀取你的照片，即將生成電影級提示詞。'
-              : '系統將保留原始構圖與人物位置，只強化整體電影氛圍。'}
+          <p className="text-sm text-zinc-500 leading-relaxed">
+            選擇你想要的電影風格後，系統將直接生成高質感 AI 電影級提示詞。你可以自由搭配任何照片、角色、動漫、品牌或主題進行創作。
           </p>
-
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleUpload}
-            className="block w-full text-sm text-zinc-400 file:mr-4 file:rounded-xl file:border-0 file:bg-white file:px-4 file:py-2 file:text-sm file:font-semibold file:text-black"
-          />
-
-          {uploadedImage && (
-            <div className="mt-5 overflow-hidden rounded-2xl border border-white/10">
-              <img
-                src={uploadedImage}
-                alt="preview"
-                className="w-full h-auto max-h-[420px] object-cover"
-              />
-            </div>
-          )}
         </div>
 
         <div className="mt-8">
@@ -266,11 +232,13 @@ export default function AIPosterDirectorMVP() {
           </p>
 
           <div className="space-y-2 text-sm text-zinc-300">
-            <p>✓ 保留人物位置</p>
-            <p>✓ 保留鏡頭角度</p>
-            <p>✓ 保留透視結構</p>
-            <p>✓ 保留場景構圖</p>
-            <p>✓ 僅強化電影氛圍</p>
+            <div className="space-y-2 text-sm text-zinc-300">
+  <p>✓ 電影級 Prompt Engine</p>
+  <p>✓ 16 種高級風格模組</p>
+  <p>✓ Cinematic Visual Language</p>
+  <p>✓ Premium Editorial Aesthetic</p>
+  <p>✓ 8K Commercial Prompt Output</p>
+</div>
           </div>
         </div>
 
