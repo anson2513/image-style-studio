@@ -305,9 +305,7 @@ ${activeStyle?.prompt || ''}`)
 
           <h2 className="text-2xl lg:text-5xl font-semibold mb-6 lg:mb-8 leading-tight">
             AI 電影感提示詞生成器
-          </h2>
-
-          <div className="w-full rounded-[28px] lg:rounded-[36px] border border-white/10 bg-black/40 backdrop-blur-xl p-4 lg:p-8 min-h-[300px] lg:min-h-[600px] relative overflow-hidden">
+          </h2>          <div className="w-full rounded-[28px] lg:rounded-[36px] border border-white/10 bg-black/40 backdrop-blur-xl p-4 lg:p-8 min-h-[300px] lg:min-h-[600px] relative overflow-hidden">
             {!generatedPrompt ? (
               <div className="h-full flex items-center justify-center text-zinc-600 text-base lg:text-lg text-center px-4">
                 你的 AI 電影級提示詞將顯示在這裡
@@ -329,6 +327,9 @@ ${activeStyle?.prompt || ''}`)
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
     </>
   )
 }
