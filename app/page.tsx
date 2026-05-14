@@ -139,17 +139,26 @@ ${activeStyle?.prompt || ''}`)
       }, 350)
     }, 2400)
 
-    return (
+    return () => clearTimeout(splashTimer)
+  }, [])
+
+  const handleCopy = async () => {
+    if (!generatedPrompt) return
+
+    await navigator.clipboard.writeText(generatedPrompt)
+
+    alert('提示詞已複製')
+  }
+
+  
+
+  return (
     <>
       {showSplash && (
-        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[#050505] overflow-hidden">
+        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[#050505] overflow-hidden transition-all duration-1000">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.14),transparent_60%)]" />
 
-          <div className="absolute inset-0 opacity-[0.06] mix-blend-screen pointer-events-none">
-            <div className="w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-          </div>
-
-          <div className="text-center animate-[fadeIn_1.8s_ease-out] px-8">
+          <div className="text-center animate-pulse px-8">
             <div className="w-24 h-24 mx-auto rounded-[28px] bg-gradient-to-br from-[#FFF5D6] via-[#D4AF37] to-[#7B5B1A] flex items-center justify-center shadow-[0_0_80px_rgba(212,175,55,0.25)] mb-8">
               <div className="text-black text-4xl font-black tracking-tight">
                 A
@@ -164,14 +173,12 @@ ${activeStyle?.prompt || ''}`)
               ✦ Anson Du
             </h1>
 
-            <p className="mt-6 text-zinc-500 text-sm tracking-[0.3em] uppercase animate-pulse">
+            <p className="mt-6 text-zinc-500 text-sm tracking-[0.3em] uppercase">
               Cinematic Prompt Engine
             </p>
           </div>
         </div>
-    </>
-  )
-}
+      )}
 
       <div
         className={`transition-all duration-1000 ${
@@ -179,21 +186,8 @@ ${activeStyle?.prompt || ''}`)
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
-      >) => clearTimeout(splashTimer)
-  }, [])
-
-  const handleCopy = async () => {
-    if (!generatedPrompt) return
-
-    await navigator.clipboard.writeText(generatedPrompt)
-
-    alert('提示詞已複製')
-  }
-
-  
-
-  return (
-    <div className="min-h-screen w-full bg-[#070707] text-white overflow-x-hidden">
+      >
+        <div className="min-h-screen w-full bg-[#070707] text-white overflow-x-hidden">
       <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 text-center pointer-events-none">
         <p className="text-[10px] tracking-[0.45em] uppercase text-[#8B6B2E] mb-1">
           Visual Taste Director
@@ -335,7 +329,6 @@ ${activeStyle?.prompt || ''}`)
           </div>
         </div>
       </div>
-          </div>
-    </div>
+    </>
   )
 }
