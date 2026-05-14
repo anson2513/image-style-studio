@@ -130,17 +130,15 @@ ${activeStyle?.prompt || ''}`)
     setIsGenerating(false)
   }
 
-  useEffect(() => {
-    const splashTimer = setTimeout(() => {
-      setShowSplash(false)
+useEffect(() => {
+  setShowMainUI(true)
 
-      setTimeout(() => {
-        setShowMainUI(true)
-      }, 350)
-    }, 2400)
+  const splashTimer = setTimeout(() => {
+    setShowSplash(false)
+  }, 2200)
 
-    return () => clearTimeout(splashTimer)
-  }, [])
+  return () => clearTimeout(splashTimer)
+}, [])
 
   const handleCopy = async () => {
     if (!generatedPrompt) return
