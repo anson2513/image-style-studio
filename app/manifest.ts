@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'AI Visual Director',
-    short_name: 'AIVD',
+    name: 'AI修圖提示詞',
+    short_name: 'AI修圖提示詞',
     description: 'Create cinematic AI prompts with premium visual aesthetics.',
     
     start_url: '/',
