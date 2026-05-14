@@ -1,12 +1,14 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 export default function AIPosterDirectorMVP() {
   const [selectedStyle, setSelectedStyle] = useState('日系電影感')
   
   const [generatedPrompt, setGeneratedPrompt] = useState('')
   const [isGenerating, setIsGenerating] = useState(false)
+  const [showSplash, setShowSplash] = useState(true)
+  const [showMainUI, setShowMainUI] = useState(false)
 
   const basePrompt = '請根據使用者提供的主題、自動分析最適合的場景類型、人物氣質、拍攝氛圍、服裝風格、建築元素、空間層次、鏡頭語言、光影方向、色彩配置與畫面情緒，延伸設計成具有高級感的電影海報、品牌形象廣告、時尚雜誌封面或 cinematic editorial poster 風格作品。整體畫面必須完整保留原始構圖、人物位置、鏡頭角度、空間比例、透視結構、景深層次與光影方向，不可擅自改變場景配置或重新設計構圖。AI 僅可在原始畫面基礎上，自然加入適合氛圍的高級設計元素，例如大型 typography、電影標題、品牌標語、雜誌編排、幾何圖形、膠片顆粒、色彩分級、光影特效、紙張質感、霓虹光效、雙重曝光、潮流視覺元素與 cinematic atmosphere。整體需具有 premium commercial design、editorial poster aesthetic、fashion magazine layout、cinematic visual atmosphere、ultra detailed texture、8K resolution、award-winning cinematic composition 與國際精品品牌海報完成度。'
 
@@ -127,6 +129,58 @@ ${activeStyle?.prompt || ''}`)
 
     setIsGenerating(false)
   }
+
+  useEffect(() => {
+    const splashTimer = setTimeout(() => {
+      setShowSplash(false)
+
+      setTimeout(() => {
+        setShowMainUI(true)
+      }, 350)
+    }, 2400)
+
+    return (
+    <>
+      {showSplash && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[#050505] overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.14),transparent_60%)]" />
+
+          <div className="absolute inset-0 opacity-[0.06] mix-blend-screen pointer-events-none">
+            <div className="w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          </div>
+
+          <div className="text-center animate-[fadeIn_1.8s_ease-out] px-8">
+            <div className="w-24 h-24 mx-auto rounded-[28px] bg-gradient-to-br from-[#FFF5D6] via-[#D4AF37] to-[#7B5B1A] flex items-center justify-center shadow-[0_0_80px_rgba(212,175,55,0.25)] mb-8">
+              <div className="text-black text-4xl font-black tracking-tight">
+                A
+              </div>
+            </div>
+
+            <p className="text-[11px] tracking-[0.55em] uppercase text-[#B08A3C] mb-4">
+              Visual Taste Director
+            </p>
+
+            <h1 className="text-4xl lg:text-6xl font-semibold italic tracking-[0.18em] bg-gradient-to-r from-[#FFF8E1] via-[#D4AF37] to-[#8B6B2E] bg-clip-text text-transparent drop-shadow-[0_0_28px_rgba(212,175,55,0.45)]">
+              ✦ Anson Du
+            </h1>
+
+            <p className="mt-6 text-zinc-500 text-sm tracking-[0.3em] uppercase animate-pulse">
+              Cinematic Prompt Engine
+            </p>
+          </div>
+        </div>
+    </>
+  )
+}
+
+      <div
+        className={`transition-all duration-1000 ${
+          showMainUI
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-4 pointer-events-none'
+        }`}
+      >) => clearTimeout(splashTimer)
+  }, [])
 
   const handleCopy = async () => {
     if (!generatedPrompt) return
