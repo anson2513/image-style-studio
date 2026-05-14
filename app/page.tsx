@@ -251,7 +251,10 @@ ${activeStyle?.prompt || ''}`)
             {styles.map((style) => (
               <button
                 key={style.name}
-                onClick={() => setSelectedStyle(style.name)}
+                onClick={() => {
+                  setSelectedStyle(style.name)
+                  setGeneratedPrompt('')
+                }}
                 className={`w-full rounded-2xl border p-5 text-left transition-all ${
                   selectedStyle === style.name
                     ? 'bg-white text-black border-white'
