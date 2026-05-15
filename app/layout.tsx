@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'AI Visual Director',
+  title: 'AI 電影感提示詞引擎',
 
   description:
     'Premium cinematic AI prompt engine',

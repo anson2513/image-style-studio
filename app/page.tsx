@@ -335,7 +335,7 @@ ${styleToUse?.prompt || ''}`)
             </div>
 
             <p className="text-[11px] tracking-[0.55em] uppercase text-[#B08A3C] mb-4">
-              Visual Taste Director
+              AI 電影感提示詞引擎
             </p>
 
             <h1 className="text-4xl lg:text-6xl font-semibold italic tracking-[0.18em] bg-gradient-to-r from-[#FFF8E1] via-[#D4AF37] to-[#8B6B2E] bg-clip-text text-transparent drop-shadow-[0_0_28px_rgba(212,175,55,0.45)]">
@@ -343,12 +343,12 @@ ${styleToUse?.prompt || ''}`)
             </h1>
 
             <p className="mt-6 text-zinc-500 text-sm tracking-[0.3em] uppercase">
-              Cinematic Prompt Engine
+              AI 電影感提示詞引擎
             </p>
 
             <div className="mt-20 text-center">
               <p className="text-[10px] tracking-[0.35em] uppercase text-zinc-600">
-                Prompt Engine v1.0
+                Prompt Engine v1.0 
               </p>
             </div>
           </div>
@@ -365,7 +365,7 @@ ${styleToUse?.prompt || ''}`)
         <div className="min-h-screen w-full bg-[#070707] text-white overflow-x-hidden">
       <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 text-center pointer-events-none">
         <p className="text-[10px] tracking-[0.45em] uppercase text-[#8B6B2E] mb-1">
-          Visual Taste Director
+          AI 電影感提示詞引擎
         </p>
 
         <p className="text-2xl font-semibold italic tracking-[0.18em] bg-gradient-to-r from-[#FFF8E1] via-[#D4AF37] to-[#8B6B2E] bg-clip-text text-transparent drop-shadow-[0_0_22px_rgba(212,175,55,0.42)]">
@@ -379,7 +379,7 @@ ${styleToUse?.prompt || ''}`)
           <div className="flex items-center justify-between">
             <div>
               <p className="text-[11px] tracking-[0.42em] uppercase bg-gradient-to-r from-[#C7D2FE] via-[#A5B4FC] to-[#818CF8] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(129,140,248,0.18)]">
-                AI Visual Taste Engine
+                AI 電影感提示詞引擎
               </p>
 
               <p className="text-sm mt-2 tracking-[0.18em] text-zinc-500">
