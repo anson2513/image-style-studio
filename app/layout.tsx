@@ -20,7 +20,11 @@ export const metadata: Metadata = {
 
   manifest: '/manifest.webmanifest',
 
-  themeColor: '#080808',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'AI 電影感提示詞引擎',
+  },
 
   icons: {
     icon: '/icon.png',
