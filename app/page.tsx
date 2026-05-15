@@ -397,11 +397,11 @@ ${activeStyle?.prompt || ''}`)
               ✕
             </button>
 
-            <div className="relative aspect-[3/5] max-h-[72vh] overflow-hidden">
+            <div className="relative h-[72vh] sm:h-[78vh] overflow-hidden bg-black">
               <img
                 src={previewStyle.cover}
                 alt={previewStyle.name}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover scale-[1.08]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
