@@ -15,7 +15,26 @@ export default function AIPosterDirectorMVP() {
 
   const basePrompt = '請根據使用者提供的主題、自動分析最適合的場景類型、人物氣質、拍攝氛圍、服裝風格、建築元素、空間層次、鏡頭語言、光影方向、色彩配置與畫面情緒，延伸設計成具有高級感的電影海報、品牌形象廣告、時尚雜誌封面或 cinematic editorial poster 風格作品。整體畫面必須完整保留原始構圖、人物位置、鏡頭角度、空間比例、透視結構、景深層次與光影方向，不可擅自改變場景配置或重新設計構圖。AI 僅可在原始畫面基礎上，自然加入適合氛圍的高級設計元素，例如大型 typography、電影標題、品牌標語、雜誌編排、幾何圖形、膠片顆粒、色彩分級、光影特效、紙張質感、霓虹光效、雙重曝光、潮流視覺元素與 cinematic atmosphere。整體需具有 premium commercial design、editorial poster aesthetic、fashion magazine layout、cinematic visual atmosphere、ultra detailed texture、8K resolution、award-winning cinematic composition 與國際精品品牌海報完成度。'
 
-  const categories = ['收藏', '🔥熱門', '吉卜力', '韓系電影', '動漫熱血', '賽博龐克', '港風電影', '夢幻童話']
+  const categories = [
+    '收藏',
+    '🔥熱門',
+    '日系電影感',
+    '精品時尚感',
+    '熱血動漫版',
+    '韓系電影感',
+    '吉卜力動畫風',
+    '賽博龐克風',
+    '復古港風電影',
+    '極簡藝術海報',
+    '歐美電影預告感',
+    '黑白攝影展風格',
+    '潮流街頭品牌風',
+    '夢幻童話風',
+    '水彩插畫風',
+    '蒸汽龐克風',
+    '日系戀愛劇氛圍',
+    '高級旅遊雜誌風',
+  ]
 
   const styles = [
     // 保留原始 16 種電影風格命名
@@ -146,7 +165,7 @@ export default function AIPosterDirectorMVP() {
       return styles.filter((s) => favorites.includes(s.name))
     }
 
-    return styles.filter((s) => s.category === selectedCategory)
+    return styles.filter((s) => s.name === selectedCategory)
   }, [selectedCategory, favorites])
 
   const activeStyle = useMemo(
