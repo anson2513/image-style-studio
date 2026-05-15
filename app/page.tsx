@@ -188,6 +188,16 @@ ${activeStyle?.prompt || ''}`)
   }
 
   useEffect(() => {
+    document.documentElement.style.backgroundColor = '#050505'
+    document.body.style.backgroundColor = '#050505'
+
+    return () => {
+      document.documentElement.style.backgroundColor = ''
+      document.body.style.backgroundColor = ''
+    }
+  }, [])
+
+  useEffect(() => {
     const splashTimer = setTimeout(() => {
       setShowSplash(false)
 
