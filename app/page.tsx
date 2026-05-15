@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 
+
 export default function AIPosterDirectorMVP() {
   const [selectedStyle, setSelectedStyle] = useState('日系電影感')
   const [selectedCategory, setSelectedCategory] = useState('🔥熱門')
@@ -322,10 +323,15 @@ ${activeStyle?.prompt || ''}`)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.14),transparent_60%)]" />
 
           <div className="text-center animate-pulse px-8">
-            <div className="w-24 h-24 mx-auto rounded-[28px] bg-gradient-to-br from-[#FFF8E1] via-[#D4AF37] to-[#8B6B2E] flex items-center justify-center shadow-[0_0_80px_rgba(212,175,55,0.25)] mb-8">
-              <div className="text-black text-4xl font-black tracking-tight">
-                A
-              </div>
+            <div className="w-24 h-24 mx-auto rounded-[28px] overflow-hidden shadow-[0_0_80px_rgba(212,175,55,0.25)] mb-8 border border-[#F3D98B]/20">
+              <img
+                src="/icon.png"
+                alt="Anson Du App Icon"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                }}
+              />
             </div>
 
             <p className="text-[11px] tracking-[0.55em] uppercase text-[#B08A3C] mb-4">
@@ -542,8 +548,8 @@ ${activeStyle?.prompt || ''}`)
                 className="w-full rounded-2xl border border-[#F3D98B]/30 bg-gradient-to-br from-[#FFF8E1]/10 via-[#D4AF37]/10 to-[#8B6B2E]/10 py-4 text-sm tracking-[0.18em] uppercase text-[#E7C76A] backdrop-blur-xl"
               >
                 {favorites.includes(previewStyle.name)
-                  ? '已收藏 · 長按可取消'
-                  : '長按電影封面即可收藏'}
+                  ? '已加入收藏庫'
+                  : '加入收藏庫'}
               </button>
               <button
                 onClick={() => {
