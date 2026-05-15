@@ -262,8 +262,8 @@ export default function AIPosterDirectorMVP() {
     [selectedStyle]
   )
 
-  const handleGeneratePrompt = async () => {
-    
+  const handleGeneratePrompt = async (styleOverride?: any) => {
+    const styleToUse = styleOverride || activeStyle
 
     setIsGenerating(true)
 
@@ -271,7 +271,7 @@ export default function AIPosterDirectorMVP() {
 
     setGeneratedPrompt(`${basePrompt}
 
-${activeStyle?.prompt || ''}`)
+${styleToUse?.prompt || ''}`)
 
     setIsGenerating(false)
   }
@@ -561,7 +561,7 @@ ${activeStyle?.prompt || ''}`)
                 onClick={() => {
                   setSelectedStyle(previewStyle.name)
                   setPreviewStyle(null)
-                  handleGeneratePrompt()
+                  handleGeneratePrompt(previewStyle)
                 }}
                 className="w-full rounded-2xl bg-lime-400 text-black py-4 lg:py-5 font-bold text-base lg:text-lg shadow-[0_0_40px_rgba(163,230,53,0.25)] active:scale-[0.98] transition-all"
               >
