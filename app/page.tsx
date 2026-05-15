@@ -292,8 +292,8 @@ ${activeStyle?.prompt || ''}`)
 
       setTimeout(() => {
         setShowMainUI(true)
-      }, 350)
-    }, 2400)
+      }, 500)
+    }, 3600)
 
     return () => clearTimeout(splashTimer)
   }, [])
@@ -345,6 +345,12 @@ ${activeStyle?.prompt || ''}`)
             <p className="mt-6 text-zinc-500 text-sm tracking-[0.3em] uppercase">
               Cinematic Prompt Engine
             </p>
+
+            <div className="mt-20 text-center">
+              <p className="text-[10px] tracking-[0.35em] uppercase text-zinc-600">
+                Prompt Engine v1.0
+              </p>
+            </div>
           </div>
         </div>
       )}
