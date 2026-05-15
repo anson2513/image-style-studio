@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'AI 電影感提示詞引擎',
 
-  description: 'Premium cinematic AI prompt engine',
+  description: 'AI 電影感提示詞引擎',
 
   manifest: '/manifest.webmanifest',
 
@@ -12,6 +12,20 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: 'black-translucent',
     title: 'AI 電影感提示詞引擎',
+  },
+
+  openGraph: {
+    title: 'AI 電影感提示詞引擎',
+    description: 'AI 電影感提示詞引擎',
+    siteName: 'AI 電影感提示詞引擎',
+    locale: 'zh_TW',
+    type: 'website',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI 電影感提示詞引擎',
+    description: 'AI 電影感提示詞引擎',
   },
 
   icons: {

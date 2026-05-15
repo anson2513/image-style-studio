@@ -1,7 +1,7 @@
 {
   "name": "AI 電影感提示詞引擎",
-  "short_name": "AI電影感",
-  "description": "Premium cinematic AI prompt engine",
+  "short_name": "AI 電影感",
+  "description": "AI 電影感提示詞引擎",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#050505",
