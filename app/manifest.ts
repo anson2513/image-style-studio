@@ -2,17 +2,20 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'AI修圖提示詞',
-    short_name: 'AI修圖提示詞',
-    description: 'Create cinematic AI prompts with premium visual aesthetics.',
-    
+    name: 'AI 電影感提示詞引擎',
+
+    short_name: 'AI 電影感',
+
+    description:
+      'Premium cinematic AI prompt engine',
+
     start_url: '/',
-    
+
     display: 'standalone',
-    
-    background_color: '#080808',
-    
-    theme_color: '#080808',
+
+    background_color: '#050505',
+
+    theme_color: '#050505',
 
     icons: [
       {
@@ -21,13 +24,8 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/png',
       },
       {
-        src: '/icon.png',
-        sizes: '512x512',
-        type: 'image/png',
-      },
-      {
         src: '/apple-icon.png',
-        sizes: '180x180',
+        sizes: '512x512',
         type: 'image/png',
       },
     ],
