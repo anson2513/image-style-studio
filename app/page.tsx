@@ -273,6 +273,7 @@ export default function AIPosterDirectorMVP() {
 
     let basePromptToUse = movieBasePrompt
 
+    // 插畫宇宙
     if (
       [
         '水彩插畫風',
@@ -284,7 +285,8 @@ export default function AIPosterDirectorMVP() {
       basePromptToUse = illustrationBasePrompt
     }
 
-    if (
+    // 城市旅遊宇宙
+    else if (
       [
         '高級旅遊雜誌風',
         '城市旅繪日誌',
@@ -294,7 +296,8 @@ export default function AIPosterDirectorMVP() {
       basePromptToUse = travelBasePrompt
     }
 
-    if (
+    // 空間敘事宇宙
+    else if (
       ['電影級風景 HDR', '空拍敘事視角'].includes(
         styleToUse?.name
       )
@@ -302,9 +305,16 @@ export default function AIPosterDirectorMVP() {
       basePromptToUse = spaceBasePrompt
     }
 
+    // 電影宇宙
+    else {
+      basePromptToUse = movieBasePrompt
+    }
+
     setIsGenerating(true)
 
-    await new Promise((resolve) => setTimeout(resolve, 1200))
+    await new Promise((resolve) =>
+      setTimeout(resolve, 1200)
+    )
 
     setGeneratedPrompt(`${basePromptToUse}
 
