@@ -138,8 +138,216 @@ export default function AIPosterDirectorMVP() {
       cover: '/covers/watercolor-illustration.jpg',
       name: '水彩插畫風',
       desc: 'Watercolor Illustration',
-      prompt:
-        '一張高級水彩插畫風格作品，完整保留原始照片構圖與人物位置，加入自然暈染、水彩紙質感、柔和色彩與藝術手繪感，整體像高級插畫書封面。',
+      prompt: `請根據我上傳／選取的照片進行「content-preserving image-to-image style transfer」。
+
+以原始照片內容作為唯一畫面基礎，
+嚴格保留原始照片中的：
+
+- 主體內容
+- 人物辨識度
+- 臉部特徵
+- 服裝造型
+- 動作姿態
+- 表情情緒
+- 構圖比例
+- 鏡頭視角
+- 空間透視
+- 物件配置
+- 場景結構
+- 光影方向
+- 色彩關係
+- 背景內容
+- 環境氛圍
+- 生活感
+
+所有物件的位置、比例、數量與空間關係，
+都必須與原始照片完全一致。
+
+這是一個「只改變藝術風格」的任務，
+不是重新生成新場景。
+
+strictly preserve original composition,
+strictly preserve original objects and scene structure,
+maintain identical framing and perspective,
+content-preserving transformation only,
+image-to-image translation instead of image generation.
+
+禁止改變原始場景內容，
+禁止重新設計畫面，
+禁止新增任何原始照片中不存在的元素。
+
+不得新增：
+人物、
+動物、
+飛鳥、
+雲朵、
+天空元素、
+車輛、
+植物、
+樹木、
+家具、
+建築、
+街景、
+招牌、
+燈飾、
+霧氣、
+雨、
+雪、
+星空、
+月亮、
+道具、
+背景裝飾、
+任何額外物件。
+
+do not add new people,
+do not add extra objects,
+do not redesign the environment,
+do not generate cinematic props,
+do not invent missing areas,
+do not extend the scene,
+do not modify background structure.
+
+僅將畫面轉換為融合：
+
+Korean emotional realism、
+Japanese watercolor sketch、
+urban watercolor illustration、
+slice of life anime atmosphere、
+contemporary editorial painting aesthetic
+
+的高級情緒系水彩插畫風格。
+
+整體維持原始照片的真實場景與視覺結構，
+僅改變：
+
+- 水彩渲染
+- 紙張質感
+- 顏料暈染
+- 手繪線條
+- 色彩氛圍
+- 插畫材質
+
+Only transform:
+watercolor rendering,
+paper grain texture,
+soft pigment bleeding,
+pencil sketch texture,
+editorial watercolor aesthetics,
+hand-painted illustration feeling.
+
+畫面帶有：
+
+透明水彩、
+紙張顆粒、
+乾刷筆觸、
+淡彩暈染、
+鉛筆草稿線、
+輕微顏料堆積、
+手繪留白、
+自然水痕邊界。
+
+不要過度精緻，
+不要商業 CG 感，
+不要 3D rendering，
+保留自然生活感與安靜情緒。
+
+色彩以：
+
+低飽和奶油白、
+霧灰藍、
+米杏色、
+深海軍藍、
+煙燻灰、
+冷灰紫、
+局部暖橘光源
+
+作為主色調，
+形成柔和 blue hour 冷暖對比。
+
+保留原始照片中的光線結構與環境光方向，
+不要重新設計燈光。
+
+Preserve original lighting structure,
+preserve original environmental lighting,
+preserve original shadows and reflections.
+
+背景允許輕微水彩化與局部 sketch rendering，
+但不得改變原始背景內容。
+
+人物描寫自然寫實，
+保留真實人物氣質與生活感，
+不過度美化、
+不 AI 偶像化、
+不動漫臉化。
+
+整體畫面像高級城市情緒系透明水彩插畫作品，
+具有安靜、懷舊、溫柔、電影感的都市情緒。
+
+畫面必須乾淨純粹，
+僅保留原始照片內容與插畫風格轉換。
+
+禁止出現任何：
+
+文字、
+韓文、
+英文、
+數字、
+日期、
+標題、
+Logo、
+watermark、
+caption、
+typography、
+subtitle、
+journal text、
+diary notes、
+editorial layout、
+graphic design text、
+poster title、
+calligraphy、
+labels、
+stickers、
+stamps。
+
+畫面中不得出現任何可閱讀文字。
+
+clean composition,
+pure visual storytelling only,
+no typography,
+no handwriting,
+no text overlays,
+no subtitles,
+no poster layout,
+no graphic elements.
+
+Negative prompt:
+extra people,
+additional objects,
+new background elements,
+clouds,
+birds,
+vehicles,
+trees,
+props,
+cinematic objects,
+scene extension,
+environment redesign,
+text,
+letters,
+handwriting,
+Korean text,
+English text,
+numbers,
+watermark,
+logo,
+typography,
+caption,
+poster title,
+journal notes,
+graphic overlays,
+3D render,
+CGI,
+overdetailed rendering`,
     },
     {
       cover: '/covers/steampunk-world.jpg',
@@ -594,10 +802,16 @@ and naturally beautiful.
 
     let basePromptToUse = movieBasePrompt
 
-    // 插畫宇宙
+    // 水彩插畫風 不套 base prompt
     if (
+      styleToUse?.name === '水彩插畫風'
+    ) {
+      basePromptToUse = ''
+    }
+
+    // 插畫宇宙
+    else if (
       [
-        '水彩插畫風',
         '彩色蠟筆手繪插畫',
         '極簡留白童話速寫',
         '手繪風註解日誌',
