@@ -47,7 +47,7 @@ export default function AIPosterDirectorMVP() {
   const styles = [
     {
       category: '視覺企劃',
-      cover: '/covers/visual-director.jpg',
+      cover: '/covers/visual-director-v2.jpg',
       name: '視覺導演',
       desc: 'Creative Direction × Cinematic Visual Design',
       prompt: `請先將我上傳／選取的參考照片，
@@ -197,7 +197,7 @@ export default function AIPosterDirectorMVP() {
     },
     {
       category: '視覺企劃',
-      cover: '/covers/cinematic-ticket.jpg',
+      cover: '/covers/cinematic-ticket-v2.jpg',
       name: '電影收藏票根',
       desc: 'Luxury Movie Ticket Collector Edition',
       prompt: `請先根據【電影名稱】深度理解電影本身的：
@@ -492,21 +492,21 @@ export default function AIPosterDirectorMVP() {
     // 保留原始 16 種電影風格命名
     {
       category: '🔥熱門',
-      cover: '/covers/japanese-cinema.jpg',
+      cover: '/covers/japanese-cinema-v2.jpg',
       name: '日系電影感',
       desc: '新海誠天空 × 青春電影感',
       prompt:
         '一張高質感日系動畫電影海報風插畫，完整保留原始照片構圖、人物位置、鏡頭角度與場景結構，整體轉化為 anime cinematic illustration 與 Japanese movie poster aesthetic 的 cinematic visual。加入 soft natural volumetric lighting、dreamy realism、nostalgic anime movie poster 氛圍、細膩空氣感、藍橘電影色調、情緒化天空、超高級光影與 premium editorial layout，畫面具有濃厚青春電影感與高級動畫電影海報質感。',
     },
     {
-      cover: '/covers/luxury-editorial.jpg',
+      cover: '/covers/luxury-editorial-v2.jpg',
       name: '精品時尚感',
       desc: 'Luxury Editorial',
       prompt:
         '一張高級精品雜誌封面風格插畫，完整保留原始照片構圖與人物姿態，加入精品品牌廣告視覺、極簡留白、莫蘭迪色調、高級時尚排版、柔和陰影與 editorial photography 氛圍，整體具有精品廣告與 Vogue 雜誌封面質感。',
     },
     {
-      cover: '/covers/anime-action.jpg',
+      cover: '/covers/anime-action-v2.jpg',
       name: '熱血動漫版',
       desc: 'Anime Action Style',
       prompt:
@@ -514,7 +514,7 @@ export default function AIPosterDirectorMVP() {
     },
     {
       category: '韓系電影',
-      cover: '/covers/korean-cinema.jpg',
+      cover: '/covers/korean-cinema-v2.jpg',
       name: '韓系電影感',
       desc: 'Netflix 韓劇 × 深夜情緒感',
       prompt:
@@ -522,7 +522,7 @@ export default function AIPosterDirectorMVP() {
     },
     {
       category: '吉卜力',
-      cover: '/covers/ghibli-circus.jpg',
+      cover: '/covers/ghibli-circus-v2.jpg',
       name: '吉卜力動畫風',
       desc: '宮崎駿森林 × 奇幻療癒世界',
       prompt:
@@ -530,7 +530,7 @@ export default function AIPosterDirectorMVP() {
     },
     {
       category: '賽博龐克',
-      cover: '/covers/cyberpunk-future.jpg',
+      cover: '/covers/cyberpunk-future-v2.jpg',
       name: '賽博龐克風',
       desc: 'Cyberpunk Future',
       prompt:
@@ -538,35 +538,35 @@ export default function AIPosterDirectorMVP() {
     },
     {
       category: '港風電影',
-      cover: '/covers/hongkong-retro.jpg',
+      cover: '/covers/hongkong-retro-v2.jpg',
       name: '復古港風電影',
       desc: 'Hong Kong Retro Cinema',
       prompt:
         '一張 90 年代香港電影風格海報插畫，保留原始照片構圖與角色站位，加入復古霓虹、底片顆粒、暖色街燈、王家衛電影氛圍與情緒化光影，整體具有濃厚港片電影感。',
     },
     {
-      cover: '/covers/minimal-poster.jpg',
+      cover: '/covers/minimal-poster-v2.jpg',
       name: '極簡藝術海報',
       desc: 'Minimal Poster Design',
       prompt:
         '一張極簡高級感藝術海報風格插畫，保留原始照片主體構圖，加入大量留白、現代排版、低彩度色系、藝術展覽海報質感與高級平面設計風格。',
     },
     {
-      cover: '/covers/hollywood-trailer.jpg',
+      cover: '/covers/hollywood-trailer-v2.jpg',
       name: '歐美電影預告感',
       desc: 'Hollywood Trailer Poster',
       prompt:
         '一張 Hollywood 電影預告海報風格插畫，完整保留原始照片場景與人物比例，加入史詩級光影、煙霧粒子、電影標題排版、強烈戲劇感與 blockbuster 視覺氛圍。',
     },
     {
-      cover: '/covers/fineart-monochrome.jpg',
+      cover: '/covers/fineart-monochrome-v2.jpg',
       name: '黑白攝影展風格',
       desc: 'Fine Art Monochrome',
       prompt:
         '一張高級黑白攝影展風格海報，保留原始照片構圖與人物神韻，加入 Fine Art Photography 氛圍、黑白灰階層次、底片顆粒、極簡排版與藝廊展示感。',
     },
     {
-      cover: '/covers/streetwear-campaign.jpg',
+      cover: '/covers/streetwear-campaign-v2.jpg',
       name: '潮流街頭品牌風',
       desc: 'Streetwear Campaign',
       prompt:
@@ -574,14 +574,14 @@ export default function AIPosterDirectorMVP() {
     },
     {
       category: '夢幻童話',
-      cover: '/covers/fantasy-fairytale.jpg',
+      cover: '/covers/fantasy-fairytale-v2.jpg',
       name: '夢幻童話風',
       desc: 'Fantasy Fairytale',
       prompt:
         '一張夢幻童話電影風格插畫，保留原始照片場景與人物構圖，加入奇幻森林、柔霧光線、夢境色彩、星光粒子與童話故事氛圍，整體像迪士尼奇幻電影海報。',
     },
     {
-      cover: '/covers/watercolor-illustration.jpg',
+      cover: '/covers/watercolor-illustration-v2.jpg',
       name: '水彩插畫風',
       desc: 'Watercolor Illustration',
       prompt: `請根據我上傳／選取的照片進行「content-preserving image-to-image style transfer」。
@@ -796,42 +796,42 @@ CGI,
 overdetailed rendering`,
     },
     {
-      cover: '/covers/steampunk-world.jpg',
+      cover: '/covers/steampunk-world-v2.jpg',
       name: '蒸汽龐克風',
       desc: 'Steampunk World',
       prompt:
         '一張蒸汽龐克電影風格海報，保留原始照片構圖與透視，加入齒輪機械、黃銅金屬、蒸氣煙霧、復古科技與維多利亞時代幻想氛圍。',
     },
     {
-      cover: '/covers/japanese-romance.jpg',
+      cover: '/covers/japanese-romance-v2.jpg',
       name: '日系戀愛劇氛圍',
       desc: 'Japanese Romance Drama',
       prompt:
         '一張日系戀愛電影劇照風格海報，保留原始照片人物位置與環境構圖，加入夕陽逆光、青春感色調、細膩情緒、柔焦空氣感與戀愛電影氛圍。',
     },
     {
-      cover: '/covers/travel-magazine.jpg',
+      cover: '/covers/travel-magazine-v2.jpg',
       name: '高級旅遊雜誌風',
       desc: 'Travel Magazine Cover',
       prompt:
         '一張高級旅遊雜誌封面風格海報，完整保留原始照片地景與人物構圖，加入旅遊 editorial 視覺、清新配色、雜誌標題排版與高級旅遊品牌感。',
     },
     {
-      cover: '/covers/crayon-handdrawn.jpg',
+      cover: '/covers/crayon-handdrawn-v2.jpg',
       name: '彩色蠟筆手繪插畫',
       desc: 'Handdrawn Crayon × Whimsical Storybook',
       prompt:
         '一張充滿溫暖生活感與童趣氛圍的「彩色蠟筆手繪插畫」風格作品，採用直式構圖與自然生活紀錄視角，以使用者上傳照片中的人物為絕對基礎，完整保留真實臉型、五官比例、髮型特徵、眼神神韻、膚色與個人辨識度，不過度美化、不改變長相、不修成卡通臉，保留自然生活感與真實人物氣質。人物動作、姿態、服裝輪廓與肢體比例需忠實還原原照片內容，維持日常抓拍般的自然互動感。整體畫面轉化為高質感彩色蠟筆插畫風格，使用大量粗細不均的彩色鉛筆與油性蠟筆筆觸，保留手工塗抹感、紙張纖維紋理與自然不規則線條，呈現像兒童繪本、生活日記與手帳塗鴉結合的溫暖藝術感。背景場景、家具、寵物、擺設、街景或室內空間皆需完整保留原照片構圖與空間關係，不增加不存在的大型物件、不重新設計場景。畫面可加入少量手繪感裝飾元素，如彩色愛心、星星、笑臉、雲朵、旋轉線條、小花與塗鴉字樣，但需自然融入畫面周圍，不能破壞原始構圖。整體色調以奶油白、米色、木質暖棕與低飽和粉彩色系為主，搭配柔和粉紅、淺藍、黃色、紫色與綠色點綴，營造溫暖、療癒、青春感十足的日系手繪氛圍。光影柔和自然，保留生活攝影般的空間感與真實互動情緒，整體呈現高級感、文青感與可愛童趣並存的彩色蠟筆生活插畫作品。',
     },
     {
-      cover: '/covers/urban-sketch-journal.jpg',
+      cover: '/covers/urban-sketch-journal-v2.jpg',
       name: '城市旅繪日誌',
       desc: 'Urban Sketch × Travel Journal',
       prompt:
         '一張高級感「城市旅遊雜誌封面＋水彩速寫插畫」風格作品，採用直式 9:16 構圖與大量留白設計，整體畫面必須完全比照使用者上傳照片中的原始構圖，不可擅自更改任何場景配置、建築位置、人物數量、站位、街道方向、鏡頭高度、透視關係、光影方向與空間比例，完整保留照片中的街景節奏與真實都市氛圍。畫面以台灣城市街頭為核心主題，保留原始街道、人行道、斑馬線、交通號誌、店家招牌、騎樓、機車與行人流動感，遠景地標與建築輪廓皆需忠實還原。前景人物以自然生活感呈現，不過度美化、不改變姿勢與互動狀態，保留真實日常感與街頭觀察氛圍。整體採用透明水彩、鋼筆速寫、墨線勾勒與細膩紙張紋理效果，筆觸鬆散自然但細節豐富，帶有日本旅遊手帳、歐系城市建築速寫與高級生活風格雜誌封面的融合感。色彩以低飽和莫蘭迪色系為主，包含米白、灰藍、淺咖啡、橄欖綠、柔和橘色與淡灰黑線條，光線為溫暖自然日光，帶有柔和空氣感與輕微水彩暈染。天空與背景保留大量乾淨留白，搭配精緻雜誌式排版設計，包括大型英文字城市名稱、手寫感英文副標、小段簡約介紹文字，字體纖細優雅、排版具有高級感與呼吸感。整體氛圍文青、安靜、溫暖且富有都市生活詩意，像一本高級旅遊文化刊物封面，無3D感、無厚塗、無強烈HDR、無過度寫實渲染，強調自然手繪感、水彩滲色與真實城市空氣感。',
     },
     {
-      cover: '/covers/minimal-story-sketch.jpg',
+      cover: '/covers/minimal-story-sketch-v2.jpg',
       name: '極簡留白童話速寫',
       desc: 'Minimal Sketch × Quiet Fairytale',
       prompt:
@@ -846,21 +846,21 @@ overdetailed rendering`,
 請根據我提供的真實照片，生成一張上下分區的旅行攝影海報，整體參考「小紅書城市打卡 / 建築冰箱貼 / 極簡拼貼」風格。【畫面結構】 畫面為豎版構圖，比例 3：4 ，整張圖分為上下兩個部分。上半部分占畫面約50%，為極簡純色背景;下半部分占畫面約 50%，保留原圖，不修改，自動判斷照片中的構圖主體，已主體位主要目標【上半部分：建築冰箱貼圖示】 從下半部分真實照片中提取最有識別度的主體建築元素，例如窗戶、門廊、立面、拱門、屋頂、陽臺或建築正面。 將該建築元素轉化為一個簡約的「冰箱貼式建築圖示」：1、保留建築的核心輪廓和標誌性特徵;2、造型簡潔、乾淨、像旅行紀念品冰箱貼;3、有輕微立體感和投影;4、邊緣清晰，白色或淺色描邊;5、細節適度簡化，不要畫得太複雜;6、圖示位於上半部分居中偏上位置;7、圖示尺寸較小且精緻，周圍保留大量留白。【背景顏色】 上半部分背景顏色從照片中提取一個最主要、最有記憶點的顏色。 例如建築牆面的藍色、黃色、紅色、綠色，或照片中最強烈的環境色。 背景為純色顏色要飽和、乾淨、有旅行明信片感。 不要使用漸變，不要加入複雜圖案。8、兩張圖中間用漸變色過渡，不要簡單拼接【文字排版】 在建築冰箱貼圖示下方添加一行優雅的英文文字： “{地點名稱} ， {時間}” （具體按照每一張照片的不同來向我提問具體文字）【整體氣質】 整體要像一張高級旅行攝影卡片： 真實照片 + 極簡建築冰箱貼 + 主色背景 + 輕盈文字排版。 風格清爽、乾淨、明亮、有城市漫遊感。 強調建築識別度、色彩記憶點和小紅書旅行打卡氛圍。【避免】不要做成普通拼貼。不要把上半部分畫得複雜。不要添加多餘裝飾元素。不要改變下半部分照片。不要出現亂碼文字。不要過度卡通化。不要讓建築圖示太大。不要讓文字壓住建築主體`,
     },
     {
-      cover: '/covers/cinematic-landscape-hdr.jpg',
+      cover: '/covers/cinematic-landscape-hdr-v2.jpg',
       name: '電影級風景 HDR',
       desc: 'Epic HDR × Cinematic Landscape',
       prompt:
         '在保持原始構圖與主體不變的前提下進行畫面重構。 場景由普通現實狀態被瞬間喚醒，整體光影與色彩顯著增強。 風景呈現HDR效果，環境中細節清晰可見，畫面具有震撼感與真實感。 天空層次極其豐富，色調為自然色彩，從亮雲到暗部過渡自然。 色彩整體飽和度適中。 前景到遠景形成超大動態範圍的空間層次,8K高清,高級感,9:16格式',
     },
     {
-      cover: '/covers/handwritten-note-sketch.jpg',
+      cover: '/covers/handwritten-note-sketch-v2.jpg',
       name: '手繪風註解日誌',
       desc: 'Handwritten Notes × Sketch Diary',
       prompt:
         '請先觀察照片中出現的每個元素，並針對這些內容加入有意義的手繪風註解。【照片中的物件】請在這裡填入照片裡出現的物品，例如：冰紅茶、甜甜圈、咖啡杯、桌子、窗邊光影。【繪製規則】・使用像白色筆畫上去的細手繪線條・線條要有隨手一筆畫出的感覺，略微粗細不均、自然隨性・沿著物體外輪廓加上手繪描邊・可搭配箭頭、虛線，讓畫面有視線引導感【文字規則】・使用手寫感的中文文字・句子要短，像自言自語一樣自然・語氣偏日記感、隨手記下心情的感覺，帶一點情緒與生活感【文字內容生成規則】・飲料：描述味道、溫度、喝下去的感覺例如：清爽、剛剛好、微甜很舒服・食物：描述口感與美味程度例如：鬆鬆軟軟、好好吃、超喜歡・空間：描述氛圍與感受例如：很放鬆、好喜歡這裡、空氣很舒服・整體畫面：最後加一句總結式的小感想例如：今天也太幸福了、這一刻很喜歡、好想停在這裡【裝飾元素】・可適度加入蒸氣、閃亮亮、小愛心、小表情符號等手繪裝飾・不要加太多，保留一些留白，讓畫面看起來輕鬆舒服【成品風格】・整體要像 Instagram 限時動態的手寫塗鴉風・也像雜誌上隨手寫下的靈感筆記・氛圍要時髦、可愛、自然，不要太刻意',
     },
     {
-      cover: '/covers/aerial-storyframe.jpg',
+      cover: '/covers/aerial-storyframe-v2.jpg',
       name: '空拍敘事視角',
       desc: 'Aerial View × Cinematic Storyframe',
       prompt:
@@ -868,7 +868,7 @@ overdetailed rendering`,
     },
     {
       category: '食物美學',
-      cover: '/covers/food-poster-design.jpg',
+      cover: '/covers/food-poster-design-v2.jpg',
       name: '食物海報設計',
       desc: 'Lifestyle Food Editorial',
       prompt: `請根據我上傳／選取的真實食物照片，自動分析畫面中的主體內容、食物種類、甜點、飲品、咖啡、冰品、零食、餐點、器皿、托盤、餐具、配件、背景材質、桌面環境、光線方向、色彩關係、食物質感與構圖特徵，並重構為「韓系極簡生活感 × 日系 editorial food photography aesthetic」風格的高級日常食物分享海報。
