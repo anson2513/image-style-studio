@@ -13,11 +13,11 @@ Create a separate repository and deployment without changing the production AI P
 
 Status: In progress.
 
-- Create an independent local working directory.
-- Move the new splash screen into the new App.
-- Restore the legacy App to a clean production state.
-- Create a separate GitHub Repository.
-- Create a separate Vercel project and URL.
+- [x] Create an independent local working directory.
+- [x] Move the new splash screen into the new App.
+- [x] Restore the legacy App to a clean production state.
+- [x] Create a separate GitHub Repository.
+- [ ] Create a separate Vercel project and URL. Waiting for Vercel sign-in.
 
 ### S2-T2 — Unify Product Identity
 

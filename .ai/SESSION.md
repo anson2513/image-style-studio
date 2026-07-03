@@ -22,13 +22,13 @@ The new App lives in:
 - The legacy repository was restored to a clean `main` state.
 - Product metadata, PWA identity, splash screen, visible branding, and handoff documents now use 影像風格室.
 - Lint, production build, and dependency security audit pass.
+- Independent GitHub Repository created and pushed: `https://github.com/anson2513/image-style-studio`.
 
 ## Current Priority
 
-1. Create and push the independent GitHub Repository.
-2. Create the independent Vercel deployment.
-3. Verify that both old and new Apps remain available.
-4. Extend the style data model without changing approved prompt text.
+1. Sign in to Vercel and create the independent deployment.
+2. Verify that both old and new Apps remain available.
+3. Extend the style data model without changing approved prompt text.
 
 ## Critical Rules
 
