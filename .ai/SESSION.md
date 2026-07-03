@@ -45,6 +45,8 @@ Reasonable next options:
 - All 8 categories preserve their prior membership counts and source-data order.
 - Favorites filtering still follows the current local favorites state.
 - `npm run build` passes after extraction.
+- Existing ESLint and Next.js warnings were resolved without changing the visible design.
+- Local development, optimized images, and the production build were reverified after warning cleanup.
 
 ## Do Not Touch Yet
 

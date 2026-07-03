@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import Image from 'next/image'
 import { categories, filterStyles } from '../lib/categories'
 import type { Category } from '../lib/categories'
 import { buildPrompt } from '../lib/promptRouter'
@@ -15,7 +16,6 @@ export default function AIPosterDirectorMVP() {
   const [favorites, setFavorites] = useState<string[]>([])
   
   const [generatedPrompt, setGeneratedPrompt] = useState('')
-  const [isGenerating, setIsGenerating] = useState(false)
   const [showSplash, setShowSplash] = useState(true)
   const [showMainUI, setShowMainUI] = useState(false)
 
@@ -32,15 +32,11 @@ export default function AIPosterDirectorMVP() {
   const handleGeneratePrompt = async (styleOverride?: Style) => {
     const styleToUse = styleOverride || activeStyle
 
-    setIsGenerating(true)
-
     await new Promise((resolve) =>
       setTimeout(resolve, 1200)
     )
 
     setGeneratedPrompt(buildPrompt(styleToUse))
-
-    setIsGenerating(false)
   }
 
   useEffect(() => {
@@ -90,11 +86,13 @@ export default function AIPosterDirectorMVP() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.14),transparent_60%)]" />
 
           <div className="text-center animate-pulse px-8">
-            <div className="w-24 h-24 mx-auto rounded-[28px] overflow-hidden shadow-[0_0_80px_rgba(212,175,55,0.25)] mb-8 border border-[#F3D98B]/20">
-              <img
+            <div className="relative w-24 h-24 mx-auto rounded-[28px] overflow-hidden shadow-[0_0_80px_rgba(212,175,55,0.25)] mb-8 border border-[#F3D98B]/20">
+              <Image
                 src="/icon.png"
                 alt="Anson Du App Icon"
-                className="w-full h-full object-cover"
+                fill
+                sizes="96px"
+                className="object-cover"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none'
                 }}
@@ -260,10 +258,12 @@ export default function AIPosterDirectorMVP() {
                   }}
                   className="relative min-w-[150px] w-[150px] sm:min-w-[170px] sm:w-[170px] lg:min-w-[220px] lg:w-[220px] aspect-[3/4] rounded-[26px] overflow-hidden border border-white/10 snap-start group shrink-0"
                 >
-                  <img
+                  <Image
                     src={style.cover}
                     alt={style.name}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    fill
+                    sizes="(min-width: 1024px) 220px, (min-width: 640px) 170px, 150px"
+                    className="object-cover group-hover:scale-110 transition duration-700"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
@@ -294,10 +294,12 @@ export default function AIPosterDirectorMVP() {
             </button>
 
             <div className="relative h-[72vh] sm:h-[78vh] overflow-hidden bg-black">
-              <img
+              <Image
                 src={previewStyle.cover}
                 alt={previewStyle.name}
-                className="absolute inset-0 w-full h-full object-cover scale-[1.08]"
+                fill
+                sizes="(max-width: 640px) 100vw, 448px"
+                className="object-cover scale-[1.08]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />

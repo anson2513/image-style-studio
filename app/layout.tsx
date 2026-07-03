@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
 
+}
+
+export const viewport: Viewport = {
   themeColor: '#050505',
 }
 
@@ -58,11 +61,6 @@ export default function RootLayout({
         <meta
           name="application-name"
           content="AI 電影感提示詞引擎"
-        />
-
-        <meta
-          name="theme-color"
-          content="#050505"
         />
 
         <link

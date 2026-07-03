@@ -101,11 +101,14 @@ Shared prompt universes:
 
 2. The style named `日系生活感手繪插畫` appears in the 手繪插畫 category, but intentionally retains the previous default movie routing until a product decision changes it.
 
-3. ESLint reports the existing unused `isGenerating` state and three `<img>` optimization warnings.
+3. The current app is a single-page MVP. It should be preserved while refactoring incrementally.
 
-4. Next.js reports the existing `themeColor` metadata warning and an inferred workspace-root warning caused by the parent lockfile.
+## Verification Status
 
-5. The current app is a single-page MVP. It should be preserved while refactoring incrementally.
+- ESLint passes with no warnings.
+- The production build passes with no warnings.
+- Local development serves successfully with the explicit parent workspace root.
+- Optimized splash and cover images render without browser errors.
 
 ## Current Priority
 

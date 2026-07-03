@@ -18,6 +18,9 @@ Status: Active
 - Replaced local `any` usage for the preview and prompt-generation style values with the shared `Style` type.
 - Replaced the name-based prompt-routing condition chain with `promptMode` metadata on special styles.
 - Moved category filtering out of `app/page.tsx` while preserving source-data order and favorites behavior.
+- Replaced raw image elements with responsive `next/image` components while preserving the existing crops and layout.
+- Moved `themeColor` to the Next.js viewport export and explicitly configured the parent Turbopack workspace root.
+- Removed the unused generation-state variable while preserving the existing prompt delay.
 
 ### Verified
 
@@ -26,6 +29,8 @@ Status: Active
 - All 29 generated prompt outputs match the previous routing behavior exactly.
 - All 8 categories match their previous membership counts and ordering.
 - Production build passes.
+- ESLint and the production build complete with no warnings.
+- Local optimized images render without browser errors.
 
 ## Current Snapshot
 
