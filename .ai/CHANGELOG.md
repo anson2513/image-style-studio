@@ -3,6 +3,17 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-03 — Independent Production Deployed
+
+### Added
+
+- GitHub Repository: `https://github.com/anson2513/image-style-studio`.
+- Vercel production: `https://image-style-studio.vercel.app`.
+
+### Verified
+
+- The new App and legacy production App both load without browser errors or warnings.
+
 ## 2026-07-03 — Independent 影像風格室 Foundation
 
 ### Added

@@ -109,7 +109,9 @@ Shared prompt universes:
 - The production build passes with no warnings.
 - Local development serves successfully with the explicit parent workspace root.
 - Optimized splash and cover images render without browser errors.
+- Independent production is live at `https://image-style-studio.vercel.app`.
+- The legacy production remains live at `https://ai-poster-director-clean.vercel.app`.
 
 ## Current Priority
 
-Complete the independent repository and deployment, then extend the style data model for summaries, tags, input types, and authentic examples.
+Extend the style data model for summaries, tags, input types, and authentic examples.
