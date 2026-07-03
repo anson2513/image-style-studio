@@ -1,50 +1,45 @@
 # PROJECT_CONTEXT.md
 
-Version: 1.0.0  
+Version: 2.0.0
 Status: Active
 
 ## Product Name
 
-**Anson Creative OS Web**
+**影像風格室**
 
-## Current Module
+Subtitle:
 
-**Module 01: AI Poster Director**
+**AI 修圖風格工作台**
+
+Developer credit:
+
+**開發者 By Anson**
 
 ## Product Positioning
 
-AI Poster Director is not a simple prompt generator. It is the first module of Anson Creative OS, a Creative Intelligence Platform intended to help AI understand aesthetics, creative direction, and creator preference.
+影像風格室 is a private single-user Web App for selecting complete AI photo-restyling prompts. It is not a direct image editor and not a generic keyword prompt generator.
 
-## Core Mission
+## Primary Workflow
 
-Teach AI to understand aesthetics before generating creativity.
+1. The user prepares a personally captured photo or photo series.
+2. The user browses a visual style in 影像風格室.
+3. The user reviews real input-versus-result examples.
+4. The app produces the complete approved prompt.
+5. The user copies the prompt and uses it with the photo in ChatGPT GPT-5.5, 智慧高 mode.
 
-## North Star
+## Product Principles
 
-Help AI understand creators before helping creators create.
+- Preserve the full integrity of approved prompts.
+- Show realistic examples generated from the exact prompt.
+- Keep the interface premium, quiet, practical, and mobile-friendly.
+- Help the user choose a direction before using AI.
+- Independent prompt universes must never inherit unrelated base prompts.
 
-## Current Product Function
+## Confirmed Scope
 
-The current Web App lets a user:
-
-- Browse creative styles by category.
-- Preview a cover image for each style.
-- Generate a long-form AI prompt from a selected style.
-- Copy the generated prompt.
-- Favorite styles locally during the session.
-
-## Future Product Direction
-
-AI Poster Director will become one workspace inside Anson Creative OS. Future modules may include:
-
-- Creative DNA
-- Creative Analysis
-- Decision Engine
-- Creative Library
-- AI Participation / Creator Control
-- Prompt History and Project Workspace
-
-## Important Product Principle
-
-Each style is a creative universe. Styles that are marked as independent must not inherit unrelated base prompts.
-
+- Responsive Web App and installable PWA.
+- One user: Anson.
+- Local favorites and recent usage are allowed.
+- No authentication, cloud database, collaboration, subscription, or native application.
+- No TXT export.
+- The original AI Poster Director remains a separate legacy production App.

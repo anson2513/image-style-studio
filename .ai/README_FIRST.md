@@ -1,35 +1,46 @@
 # README_FIRST.md
 
-Version: 1.0.0  
+Version: 2.0.0
 Status: Active  
-Project: Anson Creative OS Web  
-Module: AI Poster Director
+Project: 影像風格室
+English identifier: Image Style Studio
 
 ## Read This First
 
-You are joining **Anson Creative OS**, a Creative Intelligence Platform. The current working product is **AI Poster Director**, Module 01 of the larger system.
+You are joining **影像風格室**, a private single-user Web App and PWA for choosing complete AI photo-restyling prompts.
 
-Do not treat this as a generic prompt generator or a normal Next.js starter project. The app is a creative-direction tool built around style systems, long-form prompts, preview covers, and prompt routing.
+Do not treat this as a generic prompt generator or a direct image editor. The user brings a photo, chooses a style, generates the complete prompt, and uses that prompt with ChatGPT GPT-5.5 in 智慧高 mode.
 
 ## Required Reading Order
 
 Read these files before editing code:
 
 1. `PROJECT_CONTEXT.md`
-2. `CURRENT_STATE.md`
-3. `ARCHITECTURE.md`
-4. `DEVELOPMENT_RULES.md`
-5. `STYLE_SYSTEM.md`
-6. `PROMPT_SYSTEM.md`
-7. `TASK_BOARD.md`
-8. `SESSION.md`
-9. `DECISIONS.md`
+2. `PRODUCT_SPEC.md`
+3. `CURRENT_STATE.md`
+4. `ARCHITECTURE.md`
+5. `DEVELOPMENT_RULES.md`
+6. `STYLE_SYSTEM.md`
+7. `PROMPT_SYSTEM.md`
+8. `TASK_BOARD.md`
+9. `SESSION.md`
+10. `DECISIONS.md`
 
 ## Highest-Level Product Rule
 
 **Understand → Decide → Create**
 
-The product should help AI understand a creator's aesthetic before generating creative outputs.
+The product should help the user understand what a prompt will do to a photo before copying it to AI.
+
+## Confirmed Product Scope
+
+- Single-user responsive Web App/PWA.
+- No auth, database, cloud sync, subscriptions, collaboration, or native app.
+- No TXT export.
+- Real prompt examples must come from the exact production prompt and representative input photos.
+- Mobile comparison uses 原始照片／提示詞效果 switching.
+- Desktop comparison may add a draggable Before/After divider.
+- Long approved prompts must remain unchanged.
 
 ## Immediate Developer Rule
 

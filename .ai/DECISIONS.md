@@ -3,7 +3,7 @@
 Version: 1.0.0  
 Status: Active
 
-## Decision 001 — Product Naming
+## Decision 001 — Legacy Product Naming
 
 Platform/Product name:
 
@@ -13,7 +13,7 @@ Current module:
 
 **AI Poster Director**
 
-Status: Accepted
+Status: Superseded for this new repository by Decision 008.
 
 ## Decision 002 — Product Mission
 
@@ -60,6 +60,38 @@ Status: Accepted
 ## Decision 007 — Codex Bootstrap Pack
 
 Instead of first writing long product philosophy documents, the immediate need is a practical AI handoff pack that lets Codex understand the current codebase and continue development.
+
+Status: Accepted
+
+## Decision 008 — Independent Product Identity
+
+Product name: **影像風格室**
+Subtitle: **AI 修圖風格工作台**
+Developer credit: **開發者 By Anson**
+
+Status: Accepted
+
+## Decision 009 — Separate App and Deployment
+
+影像風格室 is developed in a separate GitHub Repository and Vercel project. The original AI Poster Director remains online and unchanged.
+
+Status: Accepted
+
+## Decision 010 — Single-User Web App Scope
+
+The product remains a single-user responsive Web App/PWA. Auth, cloud database, collaboration, subscriptions, and native apps are out of scope.
+
+Status: Accepted
+
+## Decision 011 — No TXT Export
+
+The prompt result uses a single copy action. TXT export is not planned.
+
+Status: Accepted
+
+## Decision 012 — Authentic Style Examples
+
+Official covers and Before/After examples must use representative source photos and the exact approved production prompt. The target workflow is ChatGPT GPT-5.5 in 智慧高 mode.
 
 Status: Accepted
 

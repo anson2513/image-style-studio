@@ -25,7 +25,7 @@ The founder prefers:
 
 The project started as AI Poster Director, a Web App for generating high-quality prompts from selected styles.
 
-It evolved into the first module of Anson Creative OS, a larger Creative Intelligence Platform designed to learn and amplify a creator's aesthetic.
+The stable legacy App remains deployed separately. A new independent product, 影像風格室, is being built as a private Web App for choosing authentic AI photo-restyling prompts and reviewing original-versus-result examples.
 
 ## Important Lessons
 

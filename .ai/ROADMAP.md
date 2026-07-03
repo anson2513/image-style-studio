@@ -1,76 +1,61 @@
 # ROADMAP.md
 
-Version: 1.0.0  
+Version: 2.0.0
 Status: Active
 
-## Phase 0 — Current MVP
+## Phase 0 — Independent Foundation
 
-AI Poster Director exists as a single-page Next.js Web App.
+- Separate local repository
+- Separate GitHub Repository
+- Separate Vercel project and URL
+- 影像風格室 identity and PWA metadata
+- Provided splash screen
 
-Core features:
+## Phase 1 — Style Content Model
 
-- style browsing
-- cover previews
-- prompt generation
-- copy prompt
-- local favorites
+- `summary`
+- `tags`
+- `inputType`
+- authentic `examples`
+- scalable per-style content organization
 
-## Phase 1 — Stabilization
+## Phase 2 — Benchmark Assets
 
-Goal: make the MVP maintainable.
+- Six neutral source-photo groups
+- Five pilot style results
+- Exact prompt and ChatGPT GPT-5.5 智慧高 workflow
+- Original-versus-result validation
 
-- Add AI Bootstrap Pack
-- Extract styles
-- Extract prompt router
-- Extract category logic
-- Preserve UI
+## Phase 3 — Mobile-First UI
 
-## Phase 2 — Creative Workspace
+- Two-column style grid
+- On-demand search
+- Visible favorites
+- Recent usage
+- Detail bottom sheet
+- Original/result switching
+- Single copy action
 
-Goal: move from style picker to workspace.
+## Phase 4 — Desktop Workspace
 
-- Prompt History
-- Favorite persistence
-- Export prompt
-- Recent projects
-- Workspace layout
+- Three-column layout
+- Style library
+- Detail inspector
+- Before/After comparison
+- Prompt output
 
-## Phase 3 — Creative Library
+## Phase 5 — Expand and Validate
 
-Goal: start collecting visual knowledge.
+- Authentic examples for all 29 styles
+- Mobile and desktop verification
+- PWA installation verification
+- Prompt integrity regression checks
 
-- Reference upload
-- Reference categories
-- Mood board
-- Knowledge source library
+## Not Planned
 
-## Phase 4 — Creative DNA Alpha
-
-Goal: begin learning creator preference.
-
-- Layout DNA
-- Color DNA
-- Mood DNA
-- Typography DNA
-- Editorial DNA
-
-## Phase 5 — Decision Engine Alpha
-
-Goal: AI recommends style direction.
-
-- AI recommendation mode
-- Creator manual mode
-- Co-creation mode
-- AI participation slider
-
-## Phase 6 — Anson Creative OS Web v1.0
-
-Goal: full creative intelligence workspace.
-
-- Creative Analysis
-- Creative DNA
-- Decision Engine
-- Prompt Engine
-- Project Library
-- Export workflows
-
+- Native mobile app
+- Authentication
+- Cloud database
+- Multi-user collaboration
+- Subscription or payment
+- TXT export

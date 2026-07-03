@@ -1,13 +1,13 @@
 # CURRENT_STATE.md
 
-Version: 1.1.0  
-Status: Updated after Sprint 1 architecture extraction
+Version: 2.0.0
+Status: Independent 影像風格室 foundation
 
 ## Repository Snapshot
 
 Root project folder observed:
 
-`ai-poster-director-clean/`
+`image-style-studio/`
 
 Key files:
 
@@ -112,4 +112,4 @@ Shared prompt universes:
 
 ## Current Priority
 
-Sprint 1 architecture stabilization is complete. Select the next product or maintenance priority before expanding scope.
+Complete the independent repository and deployment, then extend the style data model for summaries, tags, input types, and authentic examples.

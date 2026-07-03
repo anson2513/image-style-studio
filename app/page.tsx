@@ -50,15 +50,45 @@ export default function AIPosterDirectorMVP() {
   }, [])
 
   useEffect(() => {
+    document.body.style.overflow = showSplash ? 'hidden' : ''
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [showSplash])
+
+  useEffect(() => {
+    const splashStorageKey = 'image-style-studio-splash-v1'
+    let hasSeenSplash = false
+
+    try {
+      hasSeenSplash = window.localStorage.getItem(splashStorageKey) === 'seen'
+    } catch {
+      hasSeenSplash = false
+    }
+
+    const splashDuration = hasSeenSplash ? 800 : 2200
+    let mainUiTimer: ReturnType<typeof setTimeout> | undefined
+
     const splashTimer = setTimeout(() => {
       setShowSplash(false)
 
-      setTimeout(() => {
-        setShowMainUI(true)
-      }, 500)
-    }, 3600)
+      try {
+        window.localStorage.setItem(splashStorageKey, 'seen')
+      } catch {
+        // The splash still works when browser storage is unavailable.
+      }
 
-    return () => clearTimeout(splashTimer)
+      mainUiTimer = setTimeout(() => {
+        setShowMainUI(true)
+      }, 300)
+    }, splashDuration)
+
+    return () => {
+      clearTimeout(splashTimer)
+
+      if (mainUiTimer) clearTimeout(mainUiTimer)
+    }
   }, [])
 
   const toggleFavorite = (styleName: string) => {
@@ -82,41 +112,15 @@ export default function AIPosterDirectorMVP() {
   return (
     <>
       {showSplash && (
-        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[#050505] overflow-hidden transition-all duration-1000">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.14),transparent_60%)]" />
-
-          <div className="text-center animate-pulse px-8">
-            <div className="relative w-24 h-24 mx-auto rounded-[28px] overflow-hidden shadow-[0_0_80px_rgba(212,175,55,0.25)] mb-8 border border-[#F3D98B]/20">
-              <Image
-                src="/icon.png"
-                alt="Anson Du App Icon"
-                fill
-                sizes="96px"
-                className="object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                }}
-              />
-            </div>
-
-            <p className="text-[11px] tracking-[0.55em] uppercase text-[#B08A3C] mb-4">
-              AI 電影感提示詞引擎
-            </p>
-
-            <h1 className="text-4xl lg:text-6xl font-semibold italic tracking-[0.18em] bg-gradient-to-r from-[#FFF8E1] via-[#D4AF37] to-[#8B6B2E] bg-clip-text text-transparent drop-shadow-[0_0_28px_rgba(212,175,55,0.45)]">
-              ✦ Anson Du
-            </h1>
-
-            <p className="mt-6 text-zinc-500 text-sm tracking-[0.3em] uppercase">
-              AI 電影感提示詞引擎
-            </p>
-
-            <div className="mt-20 text-center">
-              <p className="text-[10px] tracking-[0.35em] uppercase text-zinc-600">
-                Prompt Engine v1.0 
-              </p>
-            </div>
-          </div>
+        <div className="fixed inset-0 z-[999] bg-black overflow-hidden">
+          <Image
+            src="/image-style-studio-splash.png"
+            alt="影像風格室 — AI 修圖風格工作台，開發者 By Anson"
+            fill
+            preload
+            sizes="100vw"
+            className="object-cover lg:object-contain select-none"
+          />
         </div>
       )}
 
@@ -130,11 +134,11 @@ export default function AIPosterDirectorMVP() {
         <div className="min-h-screen w-full bg-[#070707] text-white overflow-x-hidden">
       <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 text-center pointer-events-none">
         <p className="text-[10px] tracking-[0.45em] uppercase text-[#8B6B2E] mb-1">
-          AI 電影感提示詞引擎
+          AI 修圖風格工作台
         </p>
 
-        <p className="text-2xl font-semibold italic tracking-[0.18em] bg-gradient-to-r from-[#FFF8E1] via-[#D4AF37] to-[#8B6B2E] bg-clip-text text-transparent drop-shadow-[0_0_22px_rgba(212,175,55,0.42)]">
-          ✦ Anson Du
+        <p className="text-2xl font-semibold tracking-[0.18em] bg-gradient-to-r from-[#FFF8E1] via-[#D4AF37] to-[#8B6B2E] bg-clip-text text-transparent drop-shadow-[0_0_22px_rgba(212,175,55,0.42)]">
+          影像風格室
         </p>
       </div>
 
@@ -144,12 +148,12 @@ export default function AIPosterDirectorMVP() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-[11px] tracking-[0.42em] uppercase bg-gradient-to-r from-[#C7D2FE] via-[#A5B4FC] to-[#818CF8] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(129,140,248,0.18)]">
-                AI 電影感提示詞引擎
+                AI 修圖風格工作台
               </p>
 
               <p className="text-sm mt-2 tracking-[0.18em] text-zinc-500">
                 <span className="bg-gradient-to-r from-[#E5E7EB] via-[#CBD5E1] to-[#94A3B8] bg-clip-text text-transparent">
-                  電影級 Prompt Studio
+                  開發者 By Anson
                 </span>
               </p>
             </div>
@@ -157,9 +161,9 @@ export default function AIPosterDirectorMVP() {
             </div>
 
           <h1 className="text-2xl lg:text-4xl font-semibold leading-tight mt-4">
-            把創意靈感
+            為你的照片
             <span className="text-zinc-500 block">
-              生成電影級提示詞
+              選擇下一種視覺風格
             </span>
           </h1>
         </div>
@@ -170,11 +174,11 @@ export default function AIPosterDirectorMVP() {
           </div>
 
           <p className="text-lg font-medium mb-2">
-            電影級提示詞引擎
+            AI 修圖風格提示詞
           </p>
 
           <p className="text-sm text-zinc-500 leading-relaxed">
-            選擇你想要的電影風格後，系統將直接生成高質感 AI 電影級提示詞。你可以自由搭配任何照片、角色、動漫、品牌或主題進行創作。
+            選擇適合照片的視覺方向，取得完整 AI 修圖提示詞，再搭配原始照片交給 AI 使用。
           </p>
         </div>
 
@@ -184,11 +188,11 @@ export default function AIPosterDirectorMVP() {
           </p>
 
           <div className="space-y-2 text-sm text-zinc-300 leading-relaxed">
-            <p>✓ Cinematic Prompt Explore</p>
-            <p>✓ Premium Movie Cover Selection</p>
-            <p>✓ Visual Inspiration Feed</p>
-            <p>✓ AI Editorial Prompt Engine</p>
-            <p>✓ Mobile Native Experience</p>
+            <p>✓ 影像風格探索</p>
+            <p>✓ 真實提示詞效果示範</p>
+            <p>✓ 原始照片與效果比較</p>
+            <p>✓ 完整 AI 修圖提示詞</p>
+            <p>✓ 手機與電腦響應式使用</p>
           </div>
         </div>
       </div>

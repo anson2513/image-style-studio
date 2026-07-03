@@ -3,6 +3,25 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-03 — Independent 影像風格室 Foundation
+
+### Added
+
+- Independent local repository for 影像風格室.
+- Approved product specification.
+- Provided 影像風格室 splash image.
+
+### Changed
+
+- Product and PWA identity from AI Poster Director to 影像風格室.
+- Subtitle to AI 修圖風格工作台.
+- Developer credit to 開發者 By Anson.
+
+### Protected
+
+- The legacy AI Poster Director repository and production App remain unchanged.
+- All 29 approved prompts and routing rules remain intact.
+
 ## 2026-07-03
 
 ### Added

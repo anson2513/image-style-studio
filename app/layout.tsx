@@ -13,15 +13,15 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'AI 電影感提示詞引擎',
-  description: 'Premium cinematic AI prompt engine',
+  title: '影像風格室｜By Anson',
+  description: 'AI 修圖風格工作台',
 
   manifest: '/manifest.webmanifest',
 
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'AI 電影感提示詞引擎',
+    title: '影像風格室',
   },
 
   icons: {
@@ -46,21 +46,21 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
-        <title>AI 電影感提示詞引擎</title>
+        <title>影像風格室｜By Anson</title>
 
         <meta
           name="description"
-          content="Premium cinematic AI prompt engine"
+          content="AI 修圖風格工作台"
         />
 
         <meta
           name="apple-mobile-web-app-title"
-          content="AI 電影感提示詞引擎"
+          content="影像風格室"
         />
 
         <meta
           name="application-name"
-          content="AI 電影感提示詞引擎"
+          content="影像風格室"
         />
 
         <link

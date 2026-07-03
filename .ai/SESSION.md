@@ -1,57 +1,39 @@
 # SESSION.md
 
-Version: 1.1.0  
+Version: 2.0.0
 Status: Active
 
 ## Current Working Context
 
-The project has been handed off for Codex continuation.
+This repository is becoming the independent **影像風格室** Web App.
 
-Primary goal:
+The original production AI Poster Director remains in:
 
-Make the current AI Poster Director Web App maintainable and ready for continued development.
+`C:\Users\Anson\ai-poster-director\ai-poster-director-clean`
 
-## Current App State
+The new App lives in:
 
-- Dependencies install and the production build passes locally.
-- Main UI and interaction logic remain in `app/page.tsx`.
-- Style data now lives in `lib/styles.ts`.
-- Base prompts now live in `lib/basePrompts.ts`.
-- Shared style types now live in `lib/types.ts`.
-- Prompt composition and base-prompt routing now live in `lib/promptRouter.ts`.
-- Category labels, membership, and filtering now live in `lib/categories.ts`.
-- Main UI and prompt generation work.
-- `攝影書敘事` has been added and should remain independent.
+`C:\Users\Anson\image-style-studio`
 
-## Next Engineering Task
+## Completed
 
-Sprint 1 is complete. Do not start a deferred product feature until the next priority is selected.
+- The new local repository was cloned from the stable legacy commit.
+- The provided 影像風格室 splash image was moved into the new App.
+- The legacy repository was restored to a clean `main` state.
+- Product metadata, PWA identity, splash screen, visible branding, and handoff documents now use 影像風格室.
+- Lint, production build, and dependency security audit pass.
 
-Reasonable next options:
+## Current Priority
 
-1. Extract UI components incrementally without changing the design.
-2. Resolve existing framework and lint warnings.
-3. Select one item from the `Do Later` list as the next product sprint.
+1. Create and push the independent GitHub Repository.
+2. Create the independent Vercel deployment.
+3. Verify that both old and new Apps remain available.
+4. Extend the style data model without changing approved prompt text.
 
-## Verification Completed This Session
+## Critical Rules
 
-- `npm install` completed.
-- Local homepage returned HTTP 200 and rendered categories and style cards.
-- `攝影書敘事` is included in the `視覺企劃` filter.
-- `攝影書敘事` is routed without `movieBasePrompt`.
-- Extracted 29 style objects and four base prompts match the original content exactly.
-- All 29 styles produce the same output through the new data-driven router.
-- Prompt modes verified: 15 movie, 3 illustration, 2 travel, 2 space, and 7 independent.
-- All 8 categories preserve their prior membership counts and source-data order.
-- Favorites filtering still follows the current local favorites state.
-- `npm run build` passes after extraction.
-- Existing ESLint and Next.js warnings were resolved without changing the visible design.
-- Local development, optimized images, and the production build were reverified after warning cleanup.
-
-## Do Not Touch Yet
-
-- Do not redesign UI.
-- Do not rename product.
-- Do not rename style names.
-- Do not shorten prompts.
-- Do not add database or auth.
+- Never push redesign work to the legacy repository.
+- Never change or shorten approved prompts without explicit permission.
+- Examples must be generated from the exact prompt, not invented from the style name.
+- Official example workflow targets ChatGPT GPT-5.5 in 智慧高 mode.
+- No auth, database, TXT export, or native App work.

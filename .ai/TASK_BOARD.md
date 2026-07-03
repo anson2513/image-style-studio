@@ -1,76 +1,72 @@
 # TASK_BOARD.md
 
-Version: 1.0.0  
+Version: 2.0.0
 Status: Active
 
-## Current Sprint: Stabilize AI Poster Director MVP
-
-Status: Completed on 2026-07-03.
+## Current Sprint: Establish the Independent 影像風格室 App
 
 ### Goal
 
-Make the current Web App easier for Codex to maintain without changing the visible product.
+Create a separate repository and deployment without changing the production AI Poster Director App.
 
-## Sprint 1 Tasks
+### S2-T1 — Isolate the New App
 
-### T1 — Verify Current App
+Status: In progress.
 
-Status: Completed on 2026-07-03.
+- Create an independent local working directory.
+- Move the new splash screen into the new App.
+- Restore the legacy App to a clean production state.
+- Create a separate GitHub Repository.
+- Create a separate Vercel project and URL.
 
-- Run `npm install` if needed.
-- Run `npm run dev`.
-- Confirm homepage loads.
-- Confirm categories render.
-- Confirm `攝影書敘事` appears under `視覺企劃`.
-- Confirm generated prompt for `攝影書敘事` does not include `movieBasePrompt`.
+### S2-T2 — Unify Product Identity
 
-### T2 — Add AI Handoff Pack
+Status: Complete.
 
-Status: Completed on 2026-07-03.
+- Product name: 影像風格室.
+- Subtitle: AI 修圖風格工作台.
+- Developer credit: 開發者 By Anson.
+- Update metadata, PWA manifest, visible branding, and handoff documents.
+- Keep the provided splash image.
 
-- Copy `.ai/` folder into project root.
-- Replace or extend `AGENTS.md` so AI tools read `.ai/README_FIRST.md` first.
-- Keep `CLAUDE.md` pointing to `AGENTS.md`.
+### S2-T3 — Extend the Style Data Model
 
-### T3 — Extract Style Data
+Status: Next.
 
-Status: Completed on 2026-07-03.
+- Add `summary`.
+- Add `tags`.
+- Add `inputType` for single-image and multi-image prompts.
+- Add `examples` with input images and output image.
+- Preserve all current prompt text and prompt routing.
 
-- Create `lib/types.ts`.
-- Create `lib/basePrompts.ts`.
-- Create `lib/styles.ts`.
-- Move style objects from `app/page.tsx` without changing prompt content.
-- Verify UI unchanged.
+### S2-T4 — Build Benchmark Assets
 
-### T4 — Extract Prompt Router
+- Prepare six neutral source-photo groups.
+- Pilot five representative styles.
+- Generate official examples using ChatGPT GPT-5.5, 智慧高 mode.
+- Keep original inputs and first-run outputs.
 
-Status: Completed on 2026-07-03.
+### S2-T5 — Build the New Mobile UI
 
-- Create `lib/promptRouter.ts`.
-- Replace current `else if` routing with data-driven routing.
-- Preserve current output exactly.
+- Two-column style grid.
+- On-demand search.
+- Visible favorites.
+- Local recent usage.
+- Style detail bottom sheet.
+- 原始素材／提示詞效果 switching.
+- Single full-width copy action.
 
-### T5 — Extract Category Logic
+### S2-T6 — Build the New Desktop UI
 
-Status: Completed on 2026-07-03.
+- Three-column workspace.
+- Style library, detail inspector, and prompt output.
+- Desktop Before/After comparison.
 
-- Create `lib/categories.ts`.
-- Preserve curated order.
-- Remove duplicated manual risk where possible.
+## Explicitly Out of Scope
 
-## Do Later
-
-- Prompt History
-- Export prompt as `.txt`
-- Project Library
-- Creative Library
-- Creative DNA Alpha
-- AI Participation modes
-
-## Do Not Do Yet
-
-- Do not rebuild UI.
-- Do not add auth.
-- Do not add database.
-- Do not start iOS.
-- Do not rename product or styles.
+- Native iOS or Android App.
+- Auth and accounts.
+- Cloud database and sync.
+- Collaboration, subscription, or payment.
+- TXT export.
+- Direct in-App AI image generation for the first release.
