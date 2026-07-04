@@ -48,20 +48,39 @@ export function MobileStyleDetailSheet({
   }, [onClose])
 
   return (
-    <div role="dialog" aria-modal="true" aria-labelledby="mobile-style-detail-title" className="fixed inset-0 z-[999] flex items-end justify-center overflow-y-auto bg-black/90 p-3 backdrop-blur-xl sm:items-center lg:hidden">
-      <div className="mb-safe relative max-h-[94vh] w-full max-w-md overflow-y-auto rounded-t-[32px] border border-white/10 bg-[#0b0b0b] sm:rounded-[32px]">
-        <button ref={closeButtonRef} onClick={onClose} aria-label="關閉風格詳情" className="absolute right-5 top-5 z-20 h-10 w-10 rounded-full bg-black/50 text-white focus:outline-none focus:ring-2 focus:ring-[#E7C76A]">✕</button>
+    <div role="dialog" aria-modal="true" aria-labelledby="mobile-style-detail-title" className="fixed inset-0 z-[999] flex items-end justify-center overflow-y-auto bg-[#20211F]/35 lg:hidden">
+      <div className="relative max-h-[88vh] w-full max-w-md overflow-y-auto rounded-t-[28px] border border-[#DEDCD5] bg-[#F6F4EF] pb-[max(5.5rem,env(safe-area-inset-bottom))] text-[#20211F] shadow-[0_-8px_30px_rgba(32,33,31,0.12)]">
+        <div className="mx-auto mt-3 h-1 w-12 rounded-full bg-[#B8B6AF]" />
+        <button ref={closeButtonRef} onClick={onClose} aria-label="關閉風格詳情" className="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full text-xl text-[#454742] hover:bg-[#ECEAE4] focus:outline-none focus:ring-2 focus:ring-[#7C8B72]">✕</button>
 
-        <div className="relative aspect-[3/4] max-h-[58vh] overflow-hidden bg-black">
+        <div className="px-5 pb-5 pt-6">
+          <div className="pr-12">
+            <p id="mobile-style-detail-title" className="text-2xl font-semibold leading-tight">{style.name}</p>
+            <p className="mt-2 text-sm leading-relaxed text-[#5F625D]">{style.summary}</p>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {style.tags.map((tag) => <span key={tag} className="rounded-full bg-[#E6E9E1] px-3 py-1.5 text-xs text-[#64725C]">{tag}</span>)}
+          </div>
+
+          {example && (
+            <div className="mt-5 grid grid-cols-2 rounded-xl border border-[#D8D6CF] bg-white p-1">
+              <button onClick={() => onExampleViewChange('input')} className={`min-h-11 rounded-lg px-3 py-2 text-sm transition ${exampleView === 'input' ? 'bg-[#7C8B72] text-white' : 'text-[#5F625D]'}`}>原始素材</button>
+              <button onClick={() => onExampleViewChange('output')} className={`min-h-11 rounded-lg px-3 py-2 text-sm transition ${exampleView === 'output' ? 'bg-[#7C8B72] text-white' : 'text-[#5F625D]'}`}>提示詞效果</button>
+            </div>
+          )}
+        </div>
+
+        <div className="relative mx-5 aspect-[4/3] overflow-hidden rounded-2xl bg-[#E8E5DE]">
           {example ? (
             exampleView === 'output' ? (
               <Image src={example.outputImage} alt={`${style.name}提示詞效果`} fill sizes="(max-width: 640px) 100vw, 448px" className="object-cover" />
             ) : example.inputImages.length === 1 ? (
               <Image src={example.inputImages[0]} alt={`${style.name}原始照片`} fill sizes="(max-width: 640px) 100vw, 448px" className="object-cover" />
             ) : (
-              <div className="absolute inset-0 grid grid-cols-2 gap-1 bg-black p-1">
+              <div className="absolute inset-0 grid grid-cols-2 gap-1 bg-[#E8E5DE] p-1">
                 {example.inputImages.map((src, index) => (
-                  <div key={src} className="relative overflow-hidden bg-zinc-900">
+                  <div key={src} className="relative overflow-hidden bg-[#E8E5DE]">
                     <Image src={src} alt={`${style.name}原始素材 ${index + 1}`} fill sizes="224px" className="object-cover" />
                   </div>
                 ))}
@@ -71,43 +90,15 @@ export function MobileStyleDetailSheet({
             <Image src={style.cover} alt={style.name} fill sizes="(max-width: 640px) 100vw, 448px" className="object-cover scale-[1.04]" />
           )}
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_55%)]" />
-
-          {example && (
-            <div className="absolute left-4 right-16 top-4 z-10 grid grid-cols-2 rounded-full border border-white/15 bg-black/55 p-1 backdrop-blur-xl">
-              <button onClick={() => onExampleViewChange('input')} className={`rounded-full px-3 py-2 text-xs transition ${exampleView === 'input' ? 'bg-white text-black' : 'text-white/70'}`}>原始素材</button>
-              <button onClick={() => onExampleViewChange('output')} className={`rounded-full px-3 py-2 text-xs transition ${exampleView === 'output' ? 'bg-white text-black' : 'text-white/70'}`}>提示詞效果</button>
-            </div>
-          )}
-
-          <div className="absolute bottom-0 left-0 right-0 p-6">
-            <p className="text-xs text-white/65">{example ? exampleView === 'input' ? '原始素材' : '提示詞效果' : '風格封面'}</p>
-          </div>
         </div>
 
-        <div className="space-y-5 p-6">
-          <div>
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p id="mobile-style-detail-title" className="text-3xl font-bold leading-tight">{style.name}</p>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-300">{style.summary}</p>
-              </div>
-              <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[10px] text-zinc-400">{style.inputType === 'multi-image' ? '多張照片' : '單張照片'}</span>
-            </div>
-
-            <div className="mt-4 flex flex-wrap gap-2">
-              {style.tags.map((tag) => <span key={tag} className="rounded-full bg-white/[0.06] px-3 py-1.5 text-xs text-zinc-300">{tag}</span>)}
-            </div>
-
-            <p className="mt-4 text-[11px] leading-relaxed text-zinc-500">示範結果會依原始照片與使用的 AI 模型而異。</p>
-          </div>
-
-          <button onClick={() => onToggleFavorite(style.name)} className="w-full rounded-2xl border border-[#F3D98B]/30 bg-gradient-to-br from-[#FFF8E1]/10 via-[#D4AF37]/10 to-[#8B6B2E]/10 py-4 text-sm uppercase tracking-[0.18em] text-[#E7C76A] backdrop-blur-xl">
+        <div className="space-y-3 px-5 pb-6 pt-5">
+          <p className="text-[11px] leading-relaxed text-[#8B8D87]">示範結果會依原始照片與使用的 AI 模型而異。</p>
+          <button onClick={() => onToggleFavorite(style.name)} className="w-full rounded-2xl border border-[#D8D6CF] bg-white py-3.5 text-sm font-medium text-[#64725C]">
             {isFavorite ? '已加入收藏庫' : '加入收藏庫'}
           </button>
-          <button onClick={() => onGenerate(style)} disabled={isGenerating} className="w-full rounded-2xl bg-lime-400 py-4 text-base font-bold text-black shadow-[0_0_40px_rgba(163,230,53,0.25)] transition-all active:scale-[0.98] disabled:opacity-60">
-            {isGenerating ? '正在準備…' : '生成提示詞'}
+          <button onClick={() => onGenerate(style)} disabled={isGenerating} className="w-full rounded-2xl bg-[#7C8B72] py-4 text-base font-bold text-white transition hover:bg-[#64725C] active:scale-[0.99] disabled:opacity-60">
+            {isGenerating ? '正在準備…' : '取得完整提示詞'}
           </button>
         </div>
       </div>

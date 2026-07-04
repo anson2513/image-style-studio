@@ -17,7 +17,7 @@ export function BeforeAfterComparison({
   const [position, setPosition] = useState(50)
 
   return (
-    <div className="relative h-full w-full overflow-hidden bg-black">
+    <div className="relative h-full w-full overflow-hidden bg-[#E8E5DE]">
       <Image
         src={afterImage}
         alt={`${styleName}提示詞效果`}
@@ -42,13 +42,13 @@ export function BeforeAfterComparison({
       </div>
 
       <div className="pointer-events-none absolute inset-y-0 w-px bg-white shadow-[0_0_12px_rgba(0,0,0,0.7)]" style={{ left: `${position}%` }}>
-        <span className="absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-black/65 text-xs text-white backdrop-blur-xl">
+        <span className="absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#DEDCD5] bg-white text-xs text-[#5F625D] shadow-sm">
           ↔
         </span>
       </div>
 
-      <span className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-black/65 px-3 py-1 text-[10px] text-white/80 backdrop-blur-xl">原始照片</span>
-      <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-black/65 px-3 py-1 text-[10px] text-white/80 backdrop-blur-xl">提示詞效果</span>
+      <span className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-[10px] text-[#5F625D]">原始照片</span>
+      <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-white/90 px-3 py-1 text-[10px] text-[#5F625D]">提示詞效果</span>
 
       <label className="sr-only" htmlFor={`comparison-${styleName}`}>調整原始照片與提示詞效果比較範圍</label>
       <input

@@ -45,12 +45,15 @@ The new App lives in:
 - Responsive structure QA passed at 390 × 844 and 1440 × 900: no horizontal overflow, correct mobile/desktop navigation visibility, two-column mobile cards, three-column desktop layout, and labeled comparison/favorite controls.
 - Accessibility hardening now includes modal semantics, Escape dismissal, focus placement, background scroll locking, search expansion state, result counts, and prompt-generation announcements.
 - All 21 deployed benchmark images were converted to dimension-preserving WebP files, reducing their combined size from 48.4 MB to 4.7 MB (about 90%).
+- The full interface was rebuilt from the approved feasible mockup direction: warm off-white, charcoal, muted sage, restrained amber, white cards, neutral borders, and minimal shadows.
+- The image-based splash was replaced by a code-native responsive splash with `開發者 By ANSON`; the unused 1.7 MB splash image was removed.
+- PWA icons now use the same code-owned crop-frame/photo brand mark and were reduced from about 1.4 MB each to about 15 KB each.
 - Chrome is not currently exposed to Codex, so the exact logged-in ChatGPT GPT-5.5 即時 release-candidate pass cannot be automated yet.
 
 ## Current Priority
 
-1. Connect the Codex Chrome Extension, then run the exact ChatGPT GPT-5.5 即時 release-candidate example pass.
-2. Complete browser interaction QA.
+1. Complete browser interaction QA for the rebuilt interface.
+2. Connect the Codex Chrome Extension, then run the exact ChatGPT GPT-5.5 即時 release-candidate example pass.
 3. Generate a separate release-candidate pass in ChatGPT GPT-5.5 即時 when that exact workflow is available.
 
 ## Critical Rules

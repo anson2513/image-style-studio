@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">影像風格室</title>
+  <rect width="512" height="512" rx="112" fill="#F6F4EF"/>
+  <rect x="112" y="112" width="288" height="288" rx="72" fill="none" stroke="#20211F" stroke-width="18"/>
+  <path d="M158 214v-56h56M298 158h56v56M354 298v56h-56M214 354h-56v-56" fill="none" stroke="#20211F" stroke-width="16" stroke-linecap="round"/>
+  <rect x="196" y="208" width="132" height="104" rx="14" fill="none" stroke="#7C8B72" stroke-width="16"/>
+  <path d="m210 292 36-40 28 28 18-18 24 30" fill="none" stroke="#7C8B72" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="296" cy="234" r="12" fill="none" stroke="#C38A2E" stroke-width="12"/>
+</svg>

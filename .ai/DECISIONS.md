@@ -95,3 +95,20 @@ Official covers and Before/After examples must use representative source photos 
 
 Status: Accepted
 
+## Decision 013 — Warm Editorial Interface System
+
+The previous black-and-gold cinematic interface and image-based splash are superseded.
+
+The active visual system uses:
+
+- Warm off-white `#F6F4EF` background.
+- Charcoal `#20211F` typography.
+- Muted sage `#7C8B72` primary actions.
+- Restrained amber `#C38A2E` favorite accents.
+- White cards, neutral one-pixel borders, ordinary CSS layout, and minimal shadows.
+- A code-native splash screen with the exact credit `開發者 By ANSON`.
+
+All UI references must remain feasible in standard Next.js, React, Tailwind CSS, and normal HTML controls.
+
+Status: Accepted
+

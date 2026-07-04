@@ -9,7 +9,7 @@ Status: Active
 - Separate GitHub Repository
 - Separate Vercel project and URL
 - 影像風格室 identity and PWA metadata
-- Provided splash screen
+- Code-native warm editorial splash screen (supersedes the provided image splash)
 
 ## Phase 1 — Style Content Model
 

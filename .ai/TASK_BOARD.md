@@ -29,6 +29,8 @@ Status: Complete.
 - Update metadata, PWA manifest, visible branding, and handoff documents.
 - Keep the provided splash image.
 
+This original splash requirement was later superseded by S2-T10 and Decision 013.
+
 ### S2-T3 — Extend the Style Data Model
 
 Status: Complete.
@@ -107,6 +109,18 @@ Status: Complete.
 - [x] Preserve the original pixel dimensions.
 - [x] Update all source and example references.
 - [x] Reduce deployed benchmark assets from 48.4 MB to 4.7 MB.
+
+### S2-T10 — Rebuild the Visual Interface
+
+Status: Complete.
+
+- [x] Replace the black-and-gold cinematic theme with the warm editorial system.
+- [x] Replace the image splash with a code-native responsive splash.
+- [x] Include the exact splash credit `開發者 By ANSON`.
+- [x] Rebuild mobile cards, chips, search, bottom navigation, and detail sheet.
+- [x] Rebuild the desktop sidebar, style grid, and inspector.
+- [x] Replace legacy PWA icons with a lightweight code-owned brand mark.
+- [x] Keep every layout and interaction implementable with standard HTML/CSS controls.
 
 ## Explicitly Out of Scope
 

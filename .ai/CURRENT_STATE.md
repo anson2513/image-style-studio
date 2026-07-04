@@ -124,10 +124,11 @@ Shared prompt universes:
 - ESLint passes with no warnings.
 - The production build passes with no warnings.
 - Local development serves successfully with the explicit parent workspace root.
-- Optimized splash and cover images render without browser errors.
+- The active splash is code-native and matches the warm editorial interface; the legacy splash image has been removed.
+- PWA icons use the lightweight `public/brand-mark.svg` identity and matching generated PNG assets.
 - Independent production is live at `https://image-style-studio.vercel.app`.
 - The legacy production remains live at `https://ai-poster-director-clean.vercel.app`.
 
 ## Current Priority
 
-Run the exact ChatGPT GPT-5.5 即時 release-candidate example pass when that workflow is available, then perform responsive visual QA.
+Complete interaction QA, then run the exact ChatGPT GPT-5.5 即時 release-candidate example pass when that workflow is available.

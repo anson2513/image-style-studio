@@ -10,26 +10,26 @@ interface StyleCardProps {
 
 export function StyleCard({ style, isFavorite, onOpen, onToggleFavorite }: StyleCardProps) {
   return (
-    <article className="group relative aspect-[3/4] min-w-0 overflow-hidden rounded-[22px] border border-white/10 bg-black lg:rounded-[26px]">
+    <article className="group relative min-w-0 overflow-hidden rounded-2xl border border-[#DEDCD5] bg-white shadow-[0_2px_12px_rgba(32,33,31,0.04)]">
       <button
         type="button"
         onClick={() => onOpen(style)}
         aria-label={`查看${style.name}詳情`}
-        className="absolute inset-0 text-left"
+        className="block w-full text-left"
       >
-        <Image
-          src={style.cover}
-          alt=""
-          fill
-          sizes="(min-width: 1536px) 25vw, (min-width: 1280px) 33vw, (min-width: 1024px) 50vw, (min-width: 640px) 33vw, 50vw"
-          className="object-cover transition duration-700 group-hover:scale-105"
-        />
+        <div className="relative aspect-[4/3] overflow-hidden bg-[#E8E5DE]">
+          <Image
+            src={style.cover}
+            alt=""
+            fill
+            sizes="(min-width: 1536px) 25vw, (min-width: 1280px) 33vw, (min-width: 1024px) 50vw, (min-width: 640px) 33vw, 50vw"
+            className="object-cover transition duration-500 group-hover:scale-[1.025]"
+          />
+        </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent" />
-
-        <div className="absolute bottom-0 left-0 right-0 p-3.5 text-left lg:p-5">
-          <p className="text-sm font-semibold leading-tight lg:text-lg">{style.name}</p>
-          <p className="mt-1 line-clamp-2 text-[10px] leading-relaxed text-zinc-300 lg:text-xs">{style.summary}</p>
+        <div className="min-h-[68px] p-3.5 text-left lg:min-h-[82px] lg:p-4">
+          <p className="pr-8 text-sm font-semibold leading-tight text-[#20211F] lg:text-base">{style.name}</p>
+          <p className="mt-1.5 line-clamp-2 text-[11px] leading-relaxed text-[#74766F] lg:text-xs">{style.summary}</p>
         </div>
       </button>
 
@@ -38,10 +38,10 @@ export function StyleCard({ style, isFavorite, onOpen, onToggleFavorite }: Style
         onClick={() => onToggleFavorite(style.name)}
         aria-label={isFavorite ? `取消收藏${style.name}` : `收藏${style.name}`}
         aria-pressed={isFavorite}
-        className={`absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border text-base backdrop-blur-xl transition lg:right-4 lg:top-4 ${
+        className={`absolute bottom-3 right-3 z-10 flex h-11 w-11 items-center justify-center rounded-full text-lg transition lg:bottom-4 lg:right-4 ${
           isFavorite
-            ? 'border-[#E7C76A]/60 bg-[#D4AF37] text-black'
-            : 'border-white/15 bg-black/45 text-white/80 hover:bg-white hover:text-black'
+            ? 'bg-[#F6EFE2] text-[#C38A2E]'
+            : 'bg-transparent text-[#5F625D] hover:bg-[#F0EEE8]'
         }`}
       >
         {isFavorite ? '♥' : '♡'}

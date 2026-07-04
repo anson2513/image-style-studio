@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'black-translucent',
+    statusBarStyle: 'default',
     title: '影像風格室',
   },
 
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#050505',
+  themeColor: '#F6F4EF',
 }
 
 export default function RootLayout({
@@ -79,7 +79,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
+      <body className="min-h-screen overflow-x-hidden bg-[#F6F4EF] text-[#20211F]">
         {children}
       </body>
     </html>
