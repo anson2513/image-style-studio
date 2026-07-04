@@ -6,6 +6,14 @@ The current 16 source photos were generated with OpenAI image generation on 2026
 
 The five pilot output images were generated as first-run results on 2026-07-04 from the exact prompt text stored in `lib/styles.ts`. They have not been selectively regenerated or retouched.
 
+The release-candidate pass started on 2026-07-05 in ChatGPT GPT-5.5, 即時 mode. The original development outputs remain unchanged. Completed release candidates:
+
+- `攝影書敘事`: four multi-photo narrative sources, exact independent production prompt, first-run output at `outputs/photobook-narrative/photobook-narrative-rc-chatgpt-5-5-instant-01.webp`.
+- `水彩插畫風`: `daily-life-01.webp`, exact independent production prompt, first-run output at `outputs/watercolor-illustration/watercolor-illustration-rc-chatgpt-5-5-instant-01.webp`.
+- `高級旅遊雜誌風`: `city-travel-02.webp`, exact travel-universe production prompt, first-run output at `outputs/travel-magazine/travel-magazine-rc-chatgpt-5-5-instant-01.webp`.
+- `食物海報設計`: `food-01.webp`, exact independent production prompt, first-run output at `outputs/food-poster-design/food-poster-design-rc-chatgpt-5-5-instant-01.webp`.
+- `日系電影感`: `portrait-01.webp`, exact movie-universe production prompt, first-run output at `outputs/japanese-cinema/japanese-cinema-rc-chatgpt-5-5-instant-01.webp`.
+
 ## Directory convention
 
 ```text

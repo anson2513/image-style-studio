@@ -54,7 +54,12 @@ Status: In progress.
 - [ ] Optionally replace development sources with personally captured photos for a documentary-authentic release set.
 - [x] Generate first-run development examples with OpenAI image generation and each exact approved prompt.
 - [x] Keep original development inputs and first-run outputs.
-- [ ] Generate release-candidate examples using ChatGPT GPT-5.5, 即時 mode when that exact workflow is available.
+- [x] Generate release-candidate examples using ChatGPT GPT-5.5, 即時 mode when that exact workflow is available.
+  - [x] 攝影書敘事 release candidate generated on 2026-07-05.
+  - [x] 水彩插畫風 release candidate generated on 2026-07-05.
+  - [x] 高級旅遊雜誌風 release candidate generated on 2026-07-05.
+  - [x] 食物海報設計 release candidate generated on 2026-07-05.
+  - [x] 日系電影感 release candidate generated on 2026-07-05.
 
 ### S2-T5 — Build the New Mobile UI
 

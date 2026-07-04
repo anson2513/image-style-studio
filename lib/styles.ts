@@ -1757,31 +1757,31 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
         '/examples/sources/multi-photo-narrative/multi-photo-narrative-03.webp',
         '/examples/sources/multi-photo-narrative/multi-photo-narrative-04.webp',
       ],
-      outputImage: '/examples/outputs/photobook-narrative/photobook-narrative-01.webp',
+      outputImage: '/examples/outputs/photobook-narrative/photobook-narrative-rc-chatgpt-5-5-instant-01.webp',
     },
   ],
   '水彩插畫風': [
     {
       inputImages: ['/examples/sources/daily-life/daily-life-01.webp'],
-      outputImage: '/examples/outputs/watercolor-illustration/watercolor-illustration-01.webp',
+      outputImage: '/examples/outputs/watercolor-illustration/watercolor-illustration-rc-chatgpt-5-5-instant-01.webp',
     },
   ],
   '高級旅遊雜誌風': [
     {
       inputImages: ['/examples/sources/city-travel/city-travel-02.webp'],
-      outputImage: '/examples/outputs/travel-magazine/travel-magazine-01.webp',
+      outputImage: '/examples/outputs/travel-magazine/travel-magazine-rc-chatgpt-5-5-instant-01.webp',
     },
   ],
   '食物海報設計': [
     {
       inputImages: ['/examples/sources/food/food-01.webp'],
-      outputImage: '/examples/outputs/food-poster-design/food-poster-design-01.webp',
+      outputImage: '/examples/outputs/food-poster-design/food-poster-design-rc-chatgpt-5-5-instant-01.webp',
     },
   ],
   '日系電影感': [
     {
       inputImages: ['/examples/sources/portrait/portrait-01.webp'],
-      outputImage: '/examples/outputs/japanese-cinema/japanese-cinema-01.webp',
+      outputImage: '/examples/outputs/japanese-cinema/japanese-cinema-rc-chatgpt-5-5-instant-01.webp',
     },
   ],
 }

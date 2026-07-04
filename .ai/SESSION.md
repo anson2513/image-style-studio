@@ -53,6 +53,8 @@ The new App lives in:
 - Mobile and desktop interaction QA now passes for style selection, detail-sheet focus and scroll locking, prompt generation, search, favorites, and recent usage.
 - Mobile prompt output is capped to a viewport-relative scroll area so the primary copy action remains visible after generation.
 - Hidden mobile detail-sheet effects no longer lock desktop scrolling.
+- The first ChatGPT GPT-5.5 即時 release candidate is complete for `攝影書敘事`; its optimized WebP now powers the official in-App example while the original development output remains preserved.
+- All five pilot release candidates are now complete in ChatGPT GPT-5.5 即時 and power the official in-App examples; original development outputs remain preserved.
 
 ## Current Priority
 
