@@ -31,36 +31,82 @@ Status: Complete.
 
 ### S2-T3 — Extend the Style Data Model
 
-Status: Next.
+Status: Complete.
 
-- Add `summary`.
-- Add `tags`.
-- Add `inputType` for single-image and multi-image prompts.
-- Add `examples` with input images and output image.
-- Preserve all current prompt text and prompt routing.
+- [x] Add `summary`.
+- [x] Add `tags`.
+- [x] Add `inputType` for single-image and multi-image prompts.
+- [x] Add an `examples` model with input images and an output image.
+- [x] Preserve all current prompt text and prompt routing.
+
+All 29 styles now include the extended metadata. Example arrays remain empty until authentic benchmark inputs and first-run outputs are prepared in S2-T4.
 
 ### S2-T4 — Build Benchmark Assets
 
-- Prepare six neutral source-photo groups.
-- Pilot five representative styles.
-- Generate official examples using ChatGPT GPT-5.5, 智慧高 mode.
-- Keep original inputs and first-run outputs.
+Status: In progress.
+
+- [x] Define six neutral source-photo groups and their expected image counts.
+- [x] Define the five representative pilot styles.
+- [x] Add the authentic asset directory and provenance convention.
+- [x] Add 16 high-quality AI-generated development source photos with explicit provenance.
+- [ ] Optionally replace development sources with personally captured photos for a documentary-authentic release set.
+- [x] Generate first-run development examples with OpenAI image generation and each exact approved prompt.
+- [x] Keep original development inputs and first-run outputs.
+- [ ] Generate release-candidate examples using ChatGPT GPT-5.5, 即時 mode when that exact workflow is available.
 
 ### S2-T5 — Build the New Mobile UI
 
-- Two-column style grid.
-- On-demand search.
-- Visible favorites.
-- Local recent usage.
-- Style detail bottom sheet.
-- 原始素材／提示詞效果 switching.
-- Single full-width copy action.
+Status: Complete.
+
+- [x] Two-column mobile style grid with responsive desktop columns.
+- [x] On-demand search across names, summaries, descriptions, and tags.
+- [x] Visible per-card favorites.
+- [x] Local recent usage.
+- [x] Style detail bottom sheet with summary, tags, and input type.
+- [x] 原始素材／提示詞效果 switching for populated examples.
+- [x] Single full-width copy action with generation feedback and result scrolling.
+- [x] Mobile bottom navigation: 圖庫, 收藏, 最近.
+- [x] Persist favorites and recent usage locally.
 
 ### S2-T6 — Build the New Desktop UI
 
-- Three-column workspace.
-- Style library, detail inspector, and prompt output.
-- Desktop Before/After comparison.
+Status: Complete.
+
+- [x] Three-column workspace.
+- [x] Style library, detail inspector, authentic example, and prompt output.
+- [x] Desktop draggable Before/After comparison for single-image examples.
+
+### S2-T7 — Extract Stable UI Components
+
+Status: Complete.
+
+- [x] Extract `StyleCard`.
+- [x] Extract `MobileBottomNav`.
+- [x] Extract `MobileStyleDetailSheet`.
+- [x] Extract `DesktopStyleInspector`.
+- [x] Extract `PromptOutput`.
+- [x] Keep responsive behavior, prompt routing, and approved prompt text unchanged.
+
+### S2-T8 — Responsive and Accessibility QA
+
+Status: In progress.
+
+- [x] Verify the two-column mobile grid and mobile bottom navigation.
+- [x] Verify the 260 px / flexible / 380 px desktop workspace.
+- [x] Confirm no horizontal document overflow at mobile and desktop widths.
+- [x] Confirm accessible favorite actions and a labeled comparison slider.
+- [x] Add dialog semantics, Escape dismissal, initial focus, and background scroll locking.
+- [x] Add accessible search expansion and prompt-generation status announcements.
+- [ ] Complete interaction QA in a browser session with reliable event control.
+
+### S2-T9 — Optimize Benchmark Delivery Assets
+
+Status: Complete.
+
+- [x] Convert all 21 benchmark source and output images from PNG to high-quality WebP.
+- [x] Preserve the original pixel dimensions.
+- [x] Update all source and example references.
+- [x] Reduce deployed benchmark assets from 48.4 MB to 4.7 MB.
 
 ## Explicitly Out of Scope
 

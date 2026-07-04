@@ -1,6 +1,8 @@
 import type { Style } from './types'
 
-export const styles: Style[] = [
+type StyleDefinition = Omit<Style, 'summary' | 'tags' | 'inputType' | 'examples'>
+
+const styleDefinitions: StyleDefinition[] = [
     {
       category: '視覺企劃',
       cover: '/covers/visual-director.jpg',
@@ -1594,4 +1596,198 @@ and naturally beautiful.
 
 「IG 文青食物分享 × 小紅書生活 aesthetic × 韓系生活感攝影 × 日系 editorial food magazine × 高級日常 food diary visual」。`,
     },
-  ]
+]
+
+type StyleDetails = Pick<Style, 'summary' | 'tags' | 'inputType'>
+
+const styleDetails: Record<Style['name'], StyleDetails> = {
+  '視覺導演': {
+    summary: '分析照片內容並重新建立完整的商業視覺世界觀與主視覺。',
+    tags: ['商業視覺', '創意指導', '電影光影'],
+    inputType: 'single-image',
+  },
+  '色彩氛圍美學': {
+    summary: '解析照片的色彩、光影與情緒，延伸成可直接使用的美學方向。',
+    tags: ['色彩分析', '氛圍設計', '視覺企劃'],
+    inputType: 'single-image',
+  },
+  '電影收藏票根': {
+    summary: '將電影世界觀轉化為現代精品質感的直式收藏票根。',
+    tags: ['電影票根', '精品印刷', '收藏設計'],
+    inputType: 'single-image',
+  },
+  '攝影書敘事': {
+    summary: '把一組照片編排成具有留白、節奏與出版質感的攝影書跨頁。',
+    tags: ['多圖敘事', '攝影書', '編輯設計'],
+    inputType: 'multi-image',
+  },
+  '日系電影感': {
+    summary: '把日常照片轉化為清透天空與青春情緒交織的日系電影畫面。',
+    tags: ['日系電影', '青春感', '清透光影'],
+    inputType: 'single-image',
+  },
+  '精品時尚感': {
+    summary: '以高端時尚編輯語言重塑照片的構圖、材質與品牌氣質。',
+    tags: ['精品時尚', '雜誌感', '品牌視覺'],
+    inputType: 'single-image',
+  },
+  '熱血動漫版': {
+    summary: '強化動勢、張力與角色氣場，創造熱血動漫式主視覺。',
+    tags: ['熱血動漫', '動態構圖', '戲劇張力'],
+    inputType: 'single-image',
+  },
+  '韓系電影感': {
+    summary: '以克制色調與深夜情緒，營造細膩的韓劇電影氛圍。',
+    tags: ['韓系電影', '深夜情緒', '柔和光影'],
+    inputType: 'single-image',
+  },
+  '吉卜力動畫風': {
+    summary: '將照片轉化為溫暖、奇幻且充滿自然生命力的動畫世界。',
+    tags: ['動畫風', '自然幻想', '療癒感'],
+    inputType: 'single-image',
+  },
+  '賽博龐克風': {
+    summary: '以霓虹、未來城市與高反差光影重構科技感場景。',
+    tags: ['賽博龐克', '霓虹夜景', '未來感'],
+    inputType: 'single-image',
+  },
+  '復古港風電影': {
+    summary: '運用復古色彩與街頭電影語言，重現港片式時代情緒。',
+    tags: ['港風電影', '復古色調', '街頭敘事'],
+    inputType: 'single-image',
+  },
+  '極簡藝術海報': {
+    summary: '以幾何秩序、留白與精準排版，轉化成安靜的藝術海報。',
+    tags: ['極簡設計', '藝術海報', '留白'],
+    inputType: 'single-image',
+  },
+  '歐美電影預告感': {
+    summary: '用史詩光影與預告片式張力，打造歐美電影宣傳主視覺。',
+    tags: ['電影預告', '史詩感', '戲劇光影'],
+    inputType: 'single-image',
+  },
+  '黑白攝影展風格': {
+    summary: '去除色彩干擾，突出光影、紋理與美術館級攝影質感。',
+    tags: ['黑白攝影', '藝術展覽', '細膩質感'],
+    inputType: 'single-image',
+  },
+  '潮流街頭品牌風': {
+    summary: '融合街頭文化、品牌態度與大膽排版，形成潮流 campaign。',
+    tags: ['街頭潮流', '品牌企劃', '大膽排版'],
+    inputType: 'single-image',
+  },
+  '夢幻童話風': {
+    summary: '以柔光、奇幻色彩與童話敘事，創造夢境般的視覺場景。',
+    tags: ['夢幻童話', '柔光', '奇幻敘事'],
+    inputType: 'single-image',
+  },
+  '水彩插畫風': {
+    summary: '保留照片特徵，以透明水彩筆觸呈現輕盈且富手感的插畫。',
+    tags: ['水彩插畫', '透明筆觸', '手作質感'],
+    inputType: 'single-image',
+  },
+  '蒸汽龐克風': {
+    summary: '以黃銅機械、蒸汽結構與復古工業美學建立架空世界。',
+    tags: ['蒸汽龐克', '機械美學', '架空世界'],
+    inputType: 'single-image',
+  },
+  '日系戀愛劇氛圍': {
+    summary: '以柔和自然光與含蓄情緒，營造日系戀愛劇的瞬間。',
+    tags: ['日系戀愛', '柔和光線', '清新情緒'],
+    inputType: 'single-image',
+  },
+  '高級旅遊雜誌風': {
+    summary: '把旅行照片提升為兼具地點故事與精品排版的雜誌封面。',
+    tags: ['旅遊雜誌', '精品排版', '目的地'],
+    inputType: 'single-image',
+  },
+  '彩色蠟筆手繪插畫': {
+    summary: '用自然蠟筆線條與鮮明色塊，畫出活潑溫暖的故事感。',
+    tags: ['蠟筆插畫', '童趣', '手繪質感'],
+    inputType: 'single-image',
+  },
+  '日系生活感手繪插畫': {
+    summary: '把日常片刻轉化為溫柔、舒適且帶生活氣息的手繪畫面。',
+    tags: ['日系生活', '手繪插畫', '溫暖日常'],
+    inputType: 'single-image',
+  },
+  '城市旅繪日誌': {
+    summary: '以旅行速寫、手帳文字與城市觀察記錄街道的細節。',
+    tags: ['城市速寫', '旅行手帳', '在地觀察'],
+    inputType: 'single-image',
+  },
+  '極簡留白童話速寫': {
+    summary: '用簡潔線條與大片留白，保留安靜而富想像力的童話感。',
+    tags: ['極簡速寫', '留白', '安靜童話'],
+    inputType: 'single-image',
+  },
+  'Colorwalk 城市漫遊': {
+    summary: '擷取城市建築與代表色，設計成清爽的旅行色彩卡片。',
+    tags: ['城市漫遊', '建築色彩', '旅行卡片'],
+    inputType: 'single-image',
+  },
+  '電影級風景 HDR': {
+    summary: '提升天空、景深與動態範圍，呈現震撼而真實的電影風景。',
+    tags: ['風景攝影', 'HDR', '電影尺度'],
+    inputType: 'single-image',
+  },
+  '手繪風註解日誌': {
+    summary: '沿著照片物件加入自然線條、箭頭與日記感手寫註解。',
+    tags: ['手寫註解', '生活日誌', '塗鴉感'],
+    inputType: 'single-image',
+  },
+  '空拍敘事視角': {
+    summary: '從空拍尺度重構空間關係，形成具有故事性的電影畫面。',
+    tags: ['空拍視角', '空間敘事', '電影構圖'],
+    inputType: 'single-image',
+  },
+  '食物海報設計': {
+    summary: '把真實食物照片轉化為韓日系生活感的編輯海報。',
+    tags: ['食物攝影', '生活美學', '編輯海報'],
+    inputType: 'single-image',
+  },
+}
+
+const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
+  '攝影書敘事': [
+    {
+      inputImages: [
+        '/examples/sources/multi-photo-narrative/multi-photo-narrative-01.webp',
+        '/examples/sources/multi-photo-narrative/multi-photo-narrative-02.webp',
+        '/examples/sources/multi-photo-narrative/multi-photo-narrative-03.webp',
+        '/examples/sources/multi-photo-narrative/multi-photo-narrative-04.webp',
+      ],
+      outputImage: '/examples/outputs/photobook-narrative/photobook-narrative-01.webp',
+    },
+  ],
+  '水彩插畫風': [
+    {
+      inputImages: ['/examples/sources/daily-life/daily-life-01.webp'],
+      outputImage: '/examples/outputs/watercolor-illustration/watercolor-illustration-01.webp',
+    },
+  ],
+  '高級旅遊雜誌風': [
+    {
+      inputImages: ['/examples/sources/city-travel/city-travel-02.webp'],
+      outputImage: '/examples/outputs/travel-magazine/travel-magazine-01.webp',
+    },
+  ],
+  '食物海報設計': [
+    {
+      inputImages: ['/examples/sources/food/food-01.webp'],
+      outputImage: '/examples/outputs/food-poster-design/food-poster-design-01.webp',
+    },
+  ],
+  '日系電影感': [
+    {
+      inputImages: ['/examples/sources/portrait/portrait-01.webp'],
+      outputImage: '/examples/outputs/japanese-cinema/japanese-cinema-01.webp',
+    },
+  ],
+}
+
+export const styles: Style[] = styleDefinitions.map((style) => ({
+  ...style,
+  ...styleDetails[style.name],
+  examples: styleExamples[style.name] ?? [],
+}))

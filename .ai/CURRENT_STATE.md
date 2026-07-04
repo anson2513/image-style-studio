@@ -48,12 +48,28 @@ Scripts:
 
 The app remains a single-page client MVP, but stable data and routing responsibilities have been extracted.
 
-- `app/page.tsx`: about 346 lines; UI rendering, local state, preview, copy, and favorites.
+- `app/page.tsx`: about 406 lines; app state, filtering, persistence coordination, and responsive shell composition.
+- `components/BeforeAfterComparison.tsx`: desktop draggable original-versus-result comparison.
+- `components/DesktopStyleInspector.tsx`: persistent desktop detail, example, generation, and prompt panel.
+- `components/MobileBottomNav.tsx`: mobile 圖庫／收藏／最近 navigation.
+- `components/MobileStyleDetailSheet.tsx`: mobile style metadata and example bottom sheet.
+- `components/PromptOutput.tsx`: mobile prompt generation and copy result.
+- `components/StyleCard.tsx`: reusable responsive style card and favorite action.
 - `lib/styles.ts`: all 29 style objects and their prompt modes.
+- `lib/benchmarks.ts`: six benchmark source groups, 16 registered development images, and five pilot styles.
 - `lib/basePrompts.ts`: the four shared prompt universes.
 - `lib/promptRouter.ts`: data-driven base selection and final prompt composition.
 - `lib/categories.ts`: category labels, membership, ordering, and favorites filtering.
+- `lib/storage.ts`: safe local persistence for favorites and recent usage.
+- `public/examples/`: 16 AI-generated benchmark sources and five first-run pilot outputs, delivered as optimized WebP assets.
 - `lib/types.ts`: shared style and prompt-mode types.
+
+Each style now also carries:
+
+- `summary`: concise Traditional Chinese explanation.
+- `tags`: two to four browsing tags.
+- `inputType`: `single-image` or `multi-image`.
+- `examples`: typed input-image and output-image pairs; currently empty pending authentic benchmark production.
 
 ## Current Categories
 
@@ -97,7 +113,7 @@ Shared prompt universes:
 
 ## Known Technical Debt
 
-1. UI rendering, preview, copy, favorites, and app state still share `app/page.tsx`; UI components can be extracted incrementally.
+1. Category navigation, search controls, and the responsive shell still share `app/page.tsx`; further extraction is optional and should remain incremental.
 
 2. The style named `日系生活感手繪插畫` appears in the 手繪插畫 category, but intentionally retains the previous default movie routing until a product decision changes it.
 
@@ -114,4 +130,4 @@ Shared prompt universes:
 
 ## Current Priority
 
-Extend the style data model for summaries, tags, input types, and authentic examples.
+Run the exact ChatGPT GPT-5.5 即時 release-candidate example pass when that workflow is available, then perform responsive visual QA.

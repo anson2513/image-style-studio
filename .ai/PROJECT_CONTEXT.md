@@ -25,7 +25,7 @@ Developer credit:
 2. The user browses a visual style in 影像風格室.
 3. The user reviews real input-versus-result examples.
 4. The app produces the complete approved prompt.
-5. The user copies the prompt and uses it with the photo in ChatGPT GPT-5.5, 智慧高 mode.
+5. The user copies the prompt and uses it with the photo in ChatGPT GPT-5.5, 即時 mode.
 
 ## Product Principles
 

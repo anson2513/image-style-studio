@@ -1,42 +1,87 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
+import { DesktopStyleInspector } from '../components/DesktopStyleInspector'
+import { MobileBottomNav } from '../components/MobileBottomNav'
+import type { MobileLibraryView } from '../components/MobileBottomNav'
+import { MobileStyleDetailSheet } from '../components/MobileStyleDetailSheet'
+import { PromptOutput } from '../components/PromptOutput'
+import { StyleCard } from '../components/StyleCard'
 import { categories, filterStyles } from '../lib/categories'
 import type { Category } from '../lib/categories'
 import { buildPrompt } from '../lib/promptRouter'
+import { readStoredStringList, storageKeys, writeStoredStringList } from '../lib/storage'
 import { styles } from '../lib/styles'
 import type { Style } from '../lib/types'
-
 
 export default function AIPosterDirectorMVP() {
   const [selectedStyle, setSelectedStyle] = useState('日系電影感')
   const [selectedCategory, setSelectedCategory] = useState<Category>('🔥熱門')
   const [previewStyle, setPreviewStyle] = useState<Style | null>(null)
+  const [exampleView, setExampleView] = useState<'input' | 'output'>('output')
   const [favorites, setFavorites] = useState<string[]>([])
+  const [recentStyles, setRecentStyles] = useState<string[]>([])
+  const [mobileLibraryView, setMobileLibraryView] = useState<MobileLibraryView>('library')
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [storageReady, setStorageReady] = useState(false)
   
   const [generatedPrompt, setGeneratedPrompt] = useState('')
+  const [isGenerating, setIsGenerating] = useState(false)
   const [showSplash, setShowSplash] = useState(true)
   const [showMainUI, setShowMainUI] = useState(false)
+  const promptOutputRef = useRef<HTMLDivElement>(null)
 
   const filteredStyles = useMemo(
     () => filterStyles(styles, selectedCategory, favorites),
     [selectedCategory, favorites]
   )
 
+  const displayedStyles = useMemo(() => {
+    const baseStyles = mobileLibraryView === 'favorites'
+      ? styles.filter((style) => favorites.includes(style.name))
+      : mobileLibraryView === 'recent'
+        ? recentStyles
+            .map((name) => styles.find((style) => style.name === name))
+            .filter((style): style is Style => Boolean(style))
+        : filteredStyles
+
+    const normalizedQuery = searchQuery.trim().toLocaleLowerCase('zh-Hant')
+    if (!normalizedQuery) return baseStyles
+
+    return baseStyles.filter((style) =>
+      [style.name, style.summary, style.desc, ...style.tags]
+        .join(' ')
+        .toLocaleLowerCase('zh-Hant')
+        .includes(normalizedQuery)
+    )
+  }, [favorites, filteredStyles, mobileLibraryView, recentStyles, searchQuery])
+
   const activeStyle = useMemo(
     () => styles.find((s) => s.name === selectedStyle),
     [selectedStyle]
   )
+  const inspectorStyle = previewStyle || activeStyle
 
   const handleGeneratePrompt = async (styleOverride?: Style) => {
     const styleToUse = styleOverride || activeStyle
+    if (!styleToUse) return
 
-    await new Promise((resolve) =>
-      setTimeout(resolve, 1200)
-    )
+    setRecentStyles((previous) => [
+      styleToUse.name,
+      ...previous.filter((name) => name !== styleToUse.name),
+    ].slice(0, 12))
+    setIsGenerating(true)
+
+    await new Promise((resolve) => setTimeout(resolve, 500))
 
     setGeneratedPrompt(buildPrompt(styleToUse))
+    setIsGenerating(false)
+
+    window.requestAnimationFrame(() => {
+      promptOutputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
   }
 
   useEffect(() => {
@@ -48,6 +93,27 @@ export default function AIPosterDirectorMVP() {
       document.body.style.backgroundColor = ''
     }
   }, [])
+
+  useEffect(() => {
+    const hydrationTimer = window.setTimeout(() => {
+      const validStyleNames = new Set(styles.map((style) => style.name))
+      setFavorites(readStoredStringList(storageKeys.favorites).filter((name) => validStyleNames.has(name)))
+      setRecentStyles(readStoredStringList(storageKeys.recentStyles).filter((name) => validStyleNames.has(name)))
+      setStorageReady(true)
+    }, 0)
+
+    return () => window.clearTimeout(hydrationTimer)
+  }, [])
+
+  useEffect(() => {
+    if (!storageReady) return
+    writeStoredStringList(storageKeys.favorites, favorites)
+  }, [favorites, storageReady])
+
+  useEffect(() => {
+    if (!storageReady) return
+    writeStoredStringList(storageKeys.recentStyles, recentStyles)
+  }, [recentStyles, storageReady])
 
   useEffect(() => {
     document.body.style.overflow = showSplash ? 'hidden' : ''
@@ -131,7 +197,7 @@ export default function AIPosterDirectorMVP() {
             : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
       >
-        <div className="min-h-screen w-full bg-[#070707] text-white overflow-x-hidden">
+        <div className="min-h-screen w-full bg-[#070707] pb-20 text-white overflow-x-hidden lg:pb-0">
       <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 text-center pointer-events-none">
         <p className="text-[10px] tracking-[0.45em] uppercase text-[#8B6B2E] mb-1">
           AI 修圖風格工作台
@@ -142,8 +208,8 @@ export default function AIPosterDirectorMVP() {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row pt-20 lg:pt-24 w-full overflow-x-hidden min-h-screen">
-      <div className="w-full lg:w-[360px] lg:min-w-[360px] lg:h-screen border-b lg:border-b-0 lg:border-r border-white/10 bg-black p-4 lg:p-6 flex flex-col overflow-y-auto shrink-0">
+      <div className="flex min-h-screen w-full flex-col overflow-x-hidden pt-20 lg:grid lg:grid-cols-[260px_minmax(0,1fr)_380px] lg:pt-24">
+      <div className="hidden border-r border-white/10 bg-black p-5 lg:flex lg:h-[calc(100vh-6rem)] lg:flex-col lg:overflow-y-auto">
         <div>
           <div className="flex items-center justify-between">
             <div>
@@ -182,57 +248,50 @@ export default function AIPosterDirectorMVP() {
           </p>
         </div>
 
-        <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+        <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.03] p-4">
           <p className="text-xs uppercase tracking-[0.3em] text-zinc-600 mb-4">
-            App Vision
+            Style Library
           </p>
 
-          <div className="space-y-2 text-sm text-zinc-300 leading-relaxed">
-            <p>✓ 影像風格探索</p>
-            <p>✓ 真實提示詞效果示範</p>
-            <p>✓ 原始照片與效果比較</p>
-            <p>✓ 完整 AI 修圖提示詞</p>
-            <p>✓ 手機與電腦響應式使用</p>
+          <div className="space-y-1">
+            {categories.map((category) => (
+              <button
+                key={category}
+                type="button"
+                onClick={() => {
+                  setMobileLibraryView(category === '收藏' ? 'favorites' : 'library')
+                  setSelectedCategory(category)
+                }}
+                className={`flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-sm transition ${selectedCategory === category ? 'bg-white/10 text-white' : 'text-zinc-500 hover:bg-white/5 hover:text-zinc-300'}`}
+              >
+                {category}
+                {category === '收藏' && <span className="text-xs">{favorites.length}</span>}
+              </button>
+            ))}
+            <button
+              type="button"
+              onClick={() => setMobileLibraryView('recent')}
+              className={`flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-sm transition ${mobileLibraryView === 'recent' ? 'bg-white/10 text-white' : 'text-zinc-500 hover:bg-white/5 hover:text-zinc-300'}`}
+            >
+              最近使用
+              <span className="text-xs">{recentStyles.length}</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <div className="w-full flex-1 bg-[#0d0d0d] p-4 lg:p-10 overflow-x-hidden">
+      <main className="w-full min-w-0 bg-[#0d0d0d] p-4 lg:h-[calc(100vh-6rem)] lg:overflow-y-auto lg:p-7">
         <div className="w-full max-w-6xl mx-auto">
-          <p className="text-xs tracking-[0.4em] uppercase text-zinc-600 mb-4">
-            Prompt Output
-          </p>
-
-          <div className="flex items-center justify-between gap-3 mb-4 lg:mb-6">
-            <h2 className="text-2xl lg:text-5xl font-semibold leading-tight">
-              AI 電影感提示詞生成器
-            </h2>
-          </div>          <div className="w-full rounded-[28px] lg:rounded-[36px] border border-white/10 bg-black/40 backdrop-blur-xl p-4 lg:p-8 min-h-[220px] lg:min-h-[320px] relative overflow-hidden">
-            {!generatedPrompt ? (
-              <div className="h-full flex items-center justify-center text-zinc-600 text-base lg:text-lg text-center px-4">
-                你的 AI 電影級提示詞將顯示在這裡
-              </div>
-            ) : (
-              <>
-                <pre className="w-full whitespace-pre-wrap break-words text-xs lg:text-sm leading-7 lg:leading-8 text-zinc-200 overflow-x-auto">
-                  {generatedPrompt}
-                </pre>
-
-                <button
-                  onClick={handleCopy}
-                  className="mt-6 lg:absolute lg:top-6 lg:right-6 relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#FFF8E1] via-[#D4AF37] to-[#8B6B2E] text-black px-5 py-3 text-sm font-bold shadow-[0_0_38px_rgba(212,175,55,0.38)] hover:scale-[1.04] transition-all w-full lg:w-auto border border-[#F3D98B]/40 before:absolute before:inset-0 before:bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.35),transparent)] before:translate-x-[-120%] hover:before:translate-x-[120%] before:transition-transform before:duration-1000"
-                >
-                  複製提示詞
-                </button>
-              </>
-            )}
-          </div>
-                  <div className="mt-8 lg:mt-10 border-t border-white/10 pt-5 lg:pt-6">
-            <div className="flex gap-6 overflow-x-auto pb-4 text-sm text-zinc-400 whitespace-nowrap">
+          <PromptOutput containerRef={promptOutputRef} prompt={generatedPrompt} isGenerating={isGenerating} onCopy={handleCopy} />
+                  <div className="mt-8 border-t border-white/10 pt-5 lg:mt-0 lg:border-t-0 lg:pt-0">
+            <div className="flex gap-6 overflow-x-auto pb-4 text-sm text-zinc-400 whitespace-nowrap lg:hidden">
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => {
+                    setMobileLibraryView(category === '收藏' ? 'favorites' : 'library')
+                    setSelectedCategory(category)
+                  }}
                   className={`transition-all ${selectedCategory === category ? 'text-white' : 'text-zinc-500 hover:text-zinc-300'}`}
                 >
                   {category}
@@ -240,110 +299,110 @@ export default function AIPosterDirectorMVP() {
               ))}
             </div>
 
-            <div className="mt-5 flex gap-4 overflow-x-scroll pb-2 snap-x snap-mandatory scrollbar-hide touch-pan-x [-ms-overflow-style:none] [scrollbar-width:none] [-webkit-overflow-scrolling:touch] cursor-grab active:cursor-grabbing">
-              {filteredStyles.map((style) => (
-                <button
-                  key={style.name}
-                  onClick={() => setPreviewStyle(style)}
-                  onContextMenu={(e) => {
-                    e.preventDefault()
-                    toggleFavorite(style.name)
-                  }}
-                  onTouchStart={() => {
-                    const timer = setTimeout(() => {
-                      toggleFavorite(style.name)
-                    }, 650)
-
-                    const clear = () => clearTimeout(timer)
-
-                    window.addEventListener('touchend', clear, {
-                      once: true,
-                    })
-                  }}
-                  className="relative min-w-[150px] w-[150px] sm:min-w-[170px] sm:w-[170px] lg:min-w-[220px] lg:w-[220px] aspect-[3/4] rounded-[26px] overflow-hidden border border-white/10 snap-start group shrink-0"
-                >
-                  <Image
-                    src={style.cover}
-                    alt={style.name}
-                    fill
-                    sizes="(min-width: 1024px) 220px, (min-width: 640px) 170px, 150px"
-                    className="object-cover group-hover:scale-110 transition duration-700"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-[10px] tracking-[0.25em] uppercase text-white/80">
-                    Cinematic
-                  </div>
-
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-left">
-                    <p className="text-sm lg:text-lg font-semibold mb-1 leading-tight">{style.name}</p>
-                    <p className="text-[11px] lg:text-xs text-zinc-300">{style.desc}</p>
-                  </div>
-                </button>
-              ))}
+            <div className="mt-2 flex items-center justify-between gap-3">
+              <p className="text-sm text-zinc-400">
+                {mobileLibraryView === 'favorites' ? '我的收藏' : mobileLibraryView === 'recent' ? '最近使用' : selectedCategory}
+                <span className="ml-2 text-xs text-zinc-600">{displayedStyles.length}</span>
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  setSearchOpen((open) => !open)
+                  if (searchOpen) setSearchQuery('')
+                }}
+                aria-expanded={searchOpen}
+                aria-controls="style-search-panel"
+                className="flex h-10 items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 text-xs text-zinc-300 transition hover:bg-white/10"
+              >
+                <span aria-hidden="true">⌕</span>
+                搜尋
+              </button>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {previewStyle && (
-        <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-xl flex items-end sm:items-center justify-center p-3 lg:p-4 overflow-y-auto">
-          <div className="relative w-full max-w-md rounded-[32px] lg:rounded-[36px] overflow-hidden border border-white/10 bg-[#0b0b0b] mb-safe">
-            <button
-              onClick={() => setPreviewStyle(null)}
-              className="absolute top-5 right-5 z-20 w-10 h-10 rounded-full bg-black/50 text-white"
-            >
-              ✕
-            </button>
+            {searchOpen && (
+              <div id="style-search-panel" className="mt-3">
+                <label htmlFor="style-search" className="sr-only">搜尋風格</label>
+                <input
+                  id="style-search"
+                  type="search"
+                  value={searchQuery}
+                  onChange={(event) => setSearchQuery(event.target.value)}
+                  placeholder="搜尋名稱、標籤或風格描述"
+                  autoFocus
+                  className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 text-sm text-white outline-none placeholder:text-zinc-600 focus:border-[#D4AF37]/50"
+                />
+              </div>
+            )}
 
-            <div className="relative h-[72vh] sm:h-[78vh] overflow-hidden bg-black">
-              <Image
-                src={previewStyle.cover}
-                alt={previewStyle.name}
-                fill
-                sizes="(max-width: 640px) 100vw, 448px"
-                className="object-cover scale-[1.08]"
-              />
+            <div aria-live="polite" className="sr-only">目前顯示 {displayedStyles.length} 個風格</div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
-
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_55%)]" />
-
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-4xl font-bold leading-tight mb-3">
-                  {previewStyle.name}
-                </p>
-
-                <p className="text-zinc-300 text-sm leading-relaxed">
-                  {previewStyle.desc}
+            {displayedStyles.length === 0 ? (
+              <div className="mt-5 rounded-[24px] border border-dashed border-white/10 px-6 py-12 text-center">
+                <p className="text-sm text-zinc-400">
+                  {searchQuery ? '找不到符合的風格' : mobileLibraryView === 'favorites' ? '尚未收藏任何風格' : '尚無最近使用紀錄'}
                 </p>
               </div>
+            ) : (
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 lg:gap-5">
+              {displayedStyles.map((style) => (
+                <StyleCard
+                  key={style.name}
+                  style={style}
+                  isFavorite={favorites.includes(style.name)}
+                  onOpen={(nextStyle) => {
+                    setExampleView(nextStyle.examples.length > 0 ? 'output' : 'input')
+                    setPreviewStyle(nextStyle)
+                  }}
+                  onToggleFavorite={toggleFavorite}
+                />
+              ))}
             </div>
-
-            <div className="p-6 space-y-4">
-              <button
-                onClick={() => toggleFavorite(previewStyle.name)}
-                className="w-full rounded-2xl border border-[#F3D98B]/30 bg-gradient-to-br from-[#FFF8E1]/10 via-[#D4AF37]/10 to-[#8B6B2E]/10 py-4 text-sm tracking-[0.18em] uppercase text-[#E7C76A] backdrop-blur-xl"
-              >
-                {favorites.includes(previewStyle.name)
-                  ? '已加入收藏庫'
-                  : '加入收藏庫'}
-              </button>
-              <button
-                onClick={() => {
-                  setSelectedStyle(previewStyle.name)
-                  setPreviewStyle(null)
-                  handleGeneratePrompt(previewStyle)
-                }}
-                className="w-full rounded-2xl bg-lime-400 text-black py-4 lg:py-5 font-bold text-base lg:text-lg shadow-[0_0_40px_rgba(163,230,53,0.25)] active:scale-[0.98] transition-all"
-              >
-                生成提示詞
-              </button>
-            </div>
+            )}
           </div>
         </div>
+      </main>
+
+      <DesktopStyleInspector
+        style={inspectorStyle}
+        exampleView={exampleView}
+        isFavorite={inspectorStyle ? favorites.includes(inspectorStyle.name) : false}
+        isGenerating={isGenerating}
+        generatedPrompt={generatedPrompt}
+        onExampleViewChange={setExampleView}
+        onToggleFavorite={toggleFavorite}
+        onGenerate={(style) => {
+          setSelectedStyle(style.name)
+          handleGeneratePrompt(style)
+        }}
+        onCopy={handleCopy}
+      />
+
+      {previewStyle && (
+        <MobileStyleDetailSheet
+          style={previewStyle}
+          exampleView={exampleView}
+          isFavorite={favorites.includes(previewStyle.name)}
+          isGenerating={isGenerating}
+          onClose={() => setPreviewStyle(null)}
+          onExampleViewChange={setExampleView}
+          onToggleFavorite={toggleFavorite}
+          onGenerate={(style) => {
+            setSelectedStyle(style.name)
+            setPreviewStyle(null)
+            handleGeneratePrompt(style)
+          }}
+        />
       )}
+
+      <MobileBottomNav
+        activeView={mobileLibraryView}
+        onChange={(view) => {
+          setMobileLibraryView(view)
+          setSearchQuery('')
+          setSearchOpen(false)
+          if (view === 'library' && selectedCategory === '收藏') setSelectedCategory('🔥熱門')
+        }}
+      />
     </div>
   </div>
 </div>

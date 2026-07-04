@@ -9,7 +9,7 @@ English identifier: Image Style Studio
 
 You are joining **影像風格室**, a private single-user Web App and PWA for choosing complete AI photo-restyling prompts.
 
-Do not treat this as a generic prompt generator or a direct image editor. The user brings a photo, chooses a style, generates the complete prompt, and uses that prompt with ChatGPT GPT-5.5 in 智慧高 mode.
+Do not treat this as a generic prompt generator or a direct image editor. The user brings a photo, chooses a style, generates the complete prompt, and uses that prompt with ChatGPT GPT-5.5 in 即時 mode.
 
 ## Required Reading Order
 

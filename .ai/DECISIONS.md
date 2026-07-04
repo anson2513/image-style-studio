@@ -91,7 +91,7 @@ Status: Accepted
 
 ## Decision 012 — Authentic Style Examples
 
-Official covers and Before/After examples must use representative source photos and the exact approved production prompt. The target workflow is ChatGPT GPT-5.5 in 智慧高 mode.
+Official covers and Before/After examples must use representative source photos and the exact approved production prompt. The target workflow is ChatGPT GPT-5.5 in 即時 mode.
 
 Status: Accepted
 

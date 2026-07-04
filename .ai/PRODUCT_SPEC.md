@@ -23,7 +23,7 @@ Status: Approved direction
 2. Browse a style.
 3. Review authentic original-versus-prompt-result examples.
 4. Generate the complete approved prompt.
-5. Copy the prompt and use it with the photo in ChatGPT GPT-5.5, 智慧高 mode.
+5. Copy the prompt and use it with the photo in ChatGPT GPT-5.5, 即時 mode.
 
 ## Mobile Direction
 

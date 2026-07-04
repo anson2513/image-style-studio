@@ -23,7 +23,7 @@ Status: Active
 
 - Six neutral source-photo groups
 - Five pilot style results
-- Exact prompt and ChatGPT GPT-5.5 智慧高 workflow
+- Exact prompt and ChatGPT GPT-5.5 即時 workflow
 - Original-versus-result validation
 
 ## Phase 3 — Mobile-First UI
