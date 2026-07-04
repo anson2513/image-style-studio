@@ -182,10 +182,10 @@ export default function AIPosterDirectorMVP() {
       )}
 
       <div
-        className={`transition-all duration-1000 ${
+        className={`transition-opacity duration-700 ${
           showMainUI
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 translate-y-4 pointer-events-none'
+            ? 'opacity-100'
+            : 'pointer-events-none opacity-0'
         }`}
       >
         <div className="min-h-screen w-full overflow-x-hidden bg-[#F6F4EF] pb-20 text-[#20211F] lg:pb-0">
