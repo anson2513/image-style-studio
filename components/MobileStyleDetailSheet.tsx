@@ -31,6 +31,8 @@ export function MobileStyleDetailSheet({
   const closeButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
+    if (!window.matchMedia('(max-width: 1023px)').matches) return
+
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     closeButtonRef.current?.focus()

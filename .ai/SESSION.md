@@ -50,11 +50,14 @@ The new App lives in:
 - PWA icons now use the same code-owned crop-frame/photo brand mark and were reduced from about 1.4 MB each to about 15 KB each.
 - Chrome is not currently exposed to Codex, so the exact logged-in ChatGPT GPT-5.5 即時 release-candidate pass cannot be automated yet.
 
+- Mobile and desktop interaction QA now passes for style selection, detail-sheet focus and scroll locking, prompt generation, search, favorites, and recent usage.
+- Mobile prompt output is capped to a viewport-relative scroll area so the primary copy action remains visible after generation.
+- Hidden mobile detail-sheet effects no longer lock desktop scrolling.
+
 ## Current Priority
 
-1. Complete browser interaction QA for the rebuilt interface.
-2. Connect the Codex Chrome Extension, then run the exact ChatGPT GPT-5.5 即時 release-candidate example pass.
-3. Generate a separate release-candidate pass in ChatGPT GPT-5.5 即時 when that exact workflow is available.
+1. Connect the Codex Chrome Extension, then run the exact ChatGPT GPT-5.5 即時 release-candidate example pass.
+2. Generate a separate release-candidate pass in ChatGPT GPT-5.5 即時 when that exact workflow is available.
 
 ## Critical Rules
 

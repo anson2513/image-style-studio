@@ -99,7 +99,7 @@ Status: In progress.
 - [x] Confirm accessible favorite actions and a labeled comparison slider.
 - [x] Add dialog semantics, Escape dismissal, initial focus, and background scroll locking.
 - [x] Add accessible search expansion and prompt-generation status announcements.
-- [ ] Complete interaction QA in a browser session with reliable event control.
+- [x] Complete interaction QA in a browser session with reliable event control.
 
 ### S2-T9 — Optimize Benchmark Delivery Assets
 

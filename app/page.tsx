@@ -78,11 +78,18 @@ export default function AIPosterDirectorMVP() {
 
     setGeneratedPrompt(buildPrompt(styleToUse))
     setIsGenerating(false)
-
-    window.requestAnimationFrame(() => {
-      promptOutputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    })
   }
+
+  useEffect(() => {
+    if (!generatedPrompt || isGenerating) return
+    if (!window.matchMedia('(max-width: 1023px)').matches) return
+
+    const scrollTimer = window.setTimeout(() => {
+      promptOutputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 0)
+
+    return () => window.clearTimeout(scrollTimer)
+  }, [generatedPrompt, isGenerating])
 
   useEffect(() => {
     document.documentElement.style.backgroundColor = '#F6F4EF'

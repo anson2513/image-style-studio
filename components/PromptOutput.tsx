@@ -25,7 +25,7 @@ export function PromptOutput({ containerRef, prompt, isGenerating, onCopy }: Pro
           <div className="flex h-full min-h-[180px] items-center justify-center px-4 text-center text-base text-[#9A9C96]">選擇風格後，完整提示詞會顯示在這裡</div>
         ) : (
           <>
-            <pre aria-live="polite" className="w-full overflow-x-auto whitespace-pre-wrap break-words text-xs leading-7 text-[#454742]">{prompt}</pre>
+            <pre aria-live="polite" className="max-h-[50vh] w-full overflow-y-auto whitespace-pre-wrap break-words pr-1 text-xs leading-7 text-[#454742]">{prompt}</pre>
             <button onClick={onCopy} className="mt-6 w-full rounded-2xl bg-[#7C8B72] px-5 py-4 text-sm font-bold text-white transition hover:bg-[#64725C]">複製提示詞</button>
           </>
         )}
