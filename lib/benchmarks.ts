@@ -5,6 +5,7 @@ export type BenchmarkGroupId =
   | 'architecture-space'
   | 'multi-photo-narrative'
   | 'daily-life'
+  | 'aerial'
 
 export interface BenchmarkSourcePhoto {
   id: string
@@ -79,6 +80,14 @@ export const benchmarkGroups: BenchmarkGroup[] = [
       { id: 'daily-life-01', src: '/examples/sources/daily-life/daily-life-01.webp', alt: '木桌上整理白色花束的雙手', sourceType: 'ai-generated', creator: 'OpenAI image generation', createdAt: '2026-07-04' },
       { id: 'daily-life-02', src: '/examples/sources/daily-life/daily-life-02.webp', alt: '晨光床面上的書、眼鏡與咖啡', sourceType: 'ai-generated', creator: 'OpenAI image generation', createdAt: '2026-07-04' },
       { id: 'daily-life-03', src: '/examples/sources/daily-life/daily-life-03.webp', alt: '午後樹蔭下散步的人與狗', sourceType: 'ai-generated', creator: 'OpenAI image generation', createdAt: '2026-07-04' },
+    ],
+  },
+  {
+    id: 'aerial',
+    name: '空拍地景',
+    expectedImageCount: 1,
+    sourcePhotos: [
+      { id: 'aerial-01', src: '/examples/sources/aerial/aerial-01.webp', alt: '陰天晨光下的海岸聚落空拍地景', sourceType: 'ai-generated', creator: 'OpenAI image generation', createdAt: '2026-07-05' },
     ],
   },
 ]

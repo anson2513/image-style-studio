@@ -2,7 +2,7 @@
 
 Benchmark sources may be personally captured or AI-generated development assets. Every file must retain explicit provenance. Never present an AI-generated source as a personally captured photograph.
 
-The current 16 source photos were generated with OpenAI image generation on 2026-07-04. They are approved as development benchmark inputs, not documentary evidence of real people, places, or events.
+The original 16 source photos were generated with OpenAI image generation on 2026-07-04. One neutral aerial benchmark was added on 2026-07-05 for `空拍敘事視角`. All 17 are approved as development benchmark inputs, not documentary evidence of real people, places, or events.
 
 The five pilot output images were generated as first-run results on 2026-07-04 from the exact prompt text stored in `lib/styles.ts`. They have not been selectively regenerated or retouched.
 
@@ -25,6 +25,7 @@ examples/
     architecture-space/
     multi-photo-narrative/
     daily-life/
+    aerial/
   outputs/
     photobook-narrative/
     watercolor-illustration/
