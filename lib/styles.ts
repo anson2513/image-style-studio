@@ -1767,6 +1767,12 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
   '日系戀愛劇氛圍': [{ inputImages: ['/examples/sources/portrait/portrait-02.webp'], outputImage: '/examples/outputs/japanese-romance/japanese-romance-rc-chatgpt-5-5-instant-01.webp' }],
   '彩色蠟筆手繪插畫': [{ inputImages: ['/examples/sources/daily-life/daily-life-03.webp'], outputImage: '/examples/outputs/crayon-handdrawn/crayon-handdrawn-rc-chatgpt-5-5-instant-01.webp' }],
   '日系生活感手繪插畫': [{ inputImages: ['/examples/sources/city-travel/city-travel-01.webp'], outputImage: '/examples/outputs/japanese-lifestyle-sketch/japanese-lifestyle-sketch-rc-chatgpt-5-5-instant-01.webp' }],
+  '極簡留白童話速寫': [{ inputImages: ['/examples/sources/portrait/portrait-01.webp'], outputImage: '/examples/outputs/minimal-story-sketch/minimal-story-sketch-rc-chatgpt-5-5-instant-01.webp' }],
+  '手繪風註解日誌': [{ inputImages: ['/examples/sources/daily-life/daily-life-02.webp'], outputImage: '/examples/outputs/handwritten-note-sketch/handwritten-note-sketch-rc-chatgpt-5-5-instant-01.webp' }],
+  '城市旅繪日誌': [{ inputImages: ['/examples/sources/city-travel/city-travel-01.webp'], outputImage: '/examples/outputs/urban-sketch-journal/urban-sketch-journal-rc-chatgpt-5-5-instant-01.webp' }],
+  'Colorwalk 城市漫遊': [{ inputImages: ['/examples/sources/city-travel/city-travel-02.webp'], outputImage: '/examples/outputs/colorwalk-city/colorwalk-city-rc-chatgpt-5-5-instant-01.webp' }],
+  '電影級風景 HDR': [{ inputImages: ['/examples/sources/aerial/aerial-01.webp'], outputImage: '/examples/outputs/cinematic-landscape-hdr/cinematic-landscape-hdr-rc-chatgpt-5-5-instant-01.webp' }],
+  '空拍敘事視角': [{ inputImages: ['/examples/sources/aerial/aerial-01.webp'], outputImage: '/examples/outputs/aerial-storyframe/aerial-storyframe-rc-chatgpt-5-5-instant-01.webp' }],
   '攝影書敘事': [
     {
       inputImages: [

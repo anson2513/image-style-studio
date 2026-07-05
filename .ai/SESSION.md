@@ -58,6 +58,7 @@ The new App lives in:
 - Remaining-style release candidate Batch 1 is complete (6/24): 視覺導演、色彩氛圍美學、電影收藏票根、精品時尚感、熱血動漫版、韓系電影感.
 - Remaining-style release candidate Batch 2 is complete (12/24): 吉卜力動畫風、賽博龐克風、復古港風電影、極簡藝術海報、歐美電影預告感、黑白攝影展風格.
 - Remaining-style release candidate Batch 3 is complete (18/24): 潮流街頭品牌風、夢幻童話風、蒸汽龐克風、日系戀愛劇氛圍、彩色蠟筆手繪插畫、日系生活感手繪插畫.
+- Remaining-style release candidate Batch 4 is complete (24/24): 極簡留白童話速寫、手繪風註解日誌、城市旅繪日誌、Colorwalk 城市漫遊、電影級風景 HDR、空拍敘事視角. All 29 styles now have official ChatGPT GPT-5.5 即時 examples.
 - Analysis-only production prompts remain unchanged and use one standardized follow-up instruction to request the final image.
 
 ## Current Priority
