@@ -56,6 +56,7 @@ The new App lives in:
 - The first ChatGPT GPT-5.5 即時 release candidate is complete for `攝影書敘事`; its optimized WebP now powers the official in-App example while the original development output remains preserved.
 - All five pilot release candidates are now complete in ChatGPT GPT-5.5 即時 and power the official in-App examples; original development outputs remain preserved.
 - Remaining-style release candidate Batch 1 is complete (6/24): 視覺導演、色彩氛圍美學、電影收藏票根、精品時尚感、熱血動漫版、韓系電影感.
+- Remaining-style release candidate Batch 2 is complete (12/24): 吉卜力動畫風、賽博龐克風、復古港風電影、極簡藝術海報、歐美電影預告感、黑白攝影展風格.
 - Analysis-only production prompts remain unchanged and use one standardized follow-up instruction to request the final image.
 
 ## Current Priority

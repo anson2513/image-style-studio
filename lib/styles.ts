@@ -1755,6 +1755,12 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
   '精品時尚感': [{ inputImages: ['/examples/sources/portrait/portrait-02.webp'], outputImage: '/examples/outputs/premium-fashion/premium-fashion-rc-chatgpt-5-5-instant-01.webp' }],
   '熱血動漫版': [{ inputImages: ['/examples/sources/portrait/portrait-01.webp'], outputImage: '/examples/outputs/hot-blooded-anime/hot-blooded-anime-rc-chatgpt-5-5-instant-01.webp' }],
   '韓系電影感': [{ inputImages: ['/examples/sources/city-travel/city-travel-03.webp'], outputImage: '/examples/outputs/korean-cinema/korean-cinema-rc-chatgpt-5-5-instant-01.webp' }],
+  '吉卜力動畫風': [{ inputImages: ['/examples/sources/daily-life/daily-life-03.webp'], outputImage: '/examples/outputs/ghibli-animation/ghibli-animation-rc-chatgpt-5-5-instant-01.webp' }],
+  '賽博龐克風': [{ inputImages: ['/examples/sources/city-travel/city-travel-03.webp'], outputImage: '/examples/outputs/cyberpunk/cyberpunk-rc-chatgpt-5-5-instant-01.webp' }],
+  '復古港風電影': [{ inputImages: ['/examples/sources/city-travel/city-travel-01.webp'], outputImage: '/examples/outputs/retro-hong-kong/retro-hong-kong-rc-chatgpt-5-5-instant-01.webp' }],
+  '極簡藝術海報': [{ inputImages: ['/examples/sources/architecture-space/architecture-space-01.webp'], outputImage: '/examples/outputs/minimal-art-poster/minimal-art-poster-rc-chatgpt-5-5-instant-01.webp' }],
+  '歐美電影預告感': [{ inputImages: ['/examples/sources/city-travel/city-travel-03.webp'], outputImage: '/examples/outputs/western-trailer/western-trailer-rc-chatgpt-5-5-instant-01.webp' }],
+  '黑白攝影展風格': [{ inputImages: ['/examples/sources/portrait/portrait-02.webp'], outputImage: '/examples/outputs/black-white-exhibition/black-white-exhibition-rc-chatgpt-5-5-instant-01.webp' }],
   '攝影書敘事': [
     {
       inputImages: [

@@ -129,7 +129,7 @@ Status: Complete.
 
 ### S2-T11 – Complete the Remaining Style Examples
 
-Status: In progress (6/24).
+Status: In progress (12/24).
 
 - [x] Batch 1: 視覺導演、色彩氛圍美學、電影收藏票根、精品時尚感、熱血動漫版、韓系電影感.
 - [ ] Batch 2: 吉卜力動畫風、賽博龐克風、復古港風電影、極簡藝術海報、歐美電影預告感、黑白攝影展風格.
