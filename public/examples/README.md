@@ -14,6 +14,8 @@ The release-candidate pass started on 2026-07-05 in ChatGPT GPT-5.5, 即時 mode
 - `食物海報設計`: `food-01.webp`, exact independent production prompt, first-run output at `outputs/food-poster-design/food-poster-design-rc-chatgpt-5-5-instant-01.webp`.
 - `日系電影感`: `portrait-01.webp`, exact movie-universe production prompt, first-run output at `outputs/japanese-cinema/japanese-cinema-rc-chatgpt-5-5-instant-01.webp`.
 
+Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GPT-5.5, 即時 mode: `視覺導演`, `色彩氛圍美學`, `電影收藏票根`, `精品時尚感`, `熱血動漫版`, and `韓系電影感`. Analysis-only prompts retain their exact original prompt and use one standardized follow-up instruction to request the image.
+
 ## Directory convention
 
 ```text

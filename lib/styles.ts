@@ -1749,6 +1749,12 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
 }
 
 const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
+  '視覺導演': [{ inputImages: ['/examples/sources/architecture-space/architecture-space-01.webp'], outputImage: '/examples/outputs/visual-director/visual-director-rc-chatgpt-5-5-instant-01.webp' }],
+  '色彩氛圍美學': [{ inputImages: ['/examples/sources/portrait/portrait-02.webp'], outputImage: '/examples/outputs/color-atmosphere/color-atmosphere-rc-chatgpt-5-5-instant-01.webp' }],
+  '電影收藏票根': [{ inputImages: ['/examples/sources/portrait/portrait-01.webp'], outputImage: '/examples/outputs/movie-ticket/movie-ticket-rc-chatgpt-5-5-instant-01.webp' }],
+  '精品時尚感': [{ inputImages: ['/examples/sources/portrait/portrait-02.webp'], outputImage: '/examples/outputs/premium-fashion/premium-fashion-rc-chatgpt-5-5-instant-01.webp' }],
+  '熱血動漫版': [{ inputImages: ['/examples/sources/portrait/portrait-01.webp'], outputImage: '/examples/outputs/hot-blooded-anime/hot-blooded-anime-rc-chatgpt-5-5-instant-01.webp' }],
+  '韓系電影感': [{ inputImages: ['/examples/sources/city-travel/city-travel-03.webp'], outputImage: '/examples/outputs/korean-cinema/korean-cinema-rc-chatgpt-5-5-instant-01.webp' }],
   '攝影書敘事': [
     {
       inputImages: [

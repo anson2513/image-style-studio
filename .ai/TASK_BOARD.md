@@ -127,6 +127,15 @@ Status: Complete.
 - [x] Replace legacy PWA icons with a lightweight code-owned brand mark.
 - [x] Keep every layout and interaction implementable with standard HTML/CSS controls.
 
+### S2-T11 – Complete the Remaining Style Examples
+
+Status: In progress (6/24).
+
+- [x] Batch 1: 視覺導演、色彩氛圍美學、電影收藏票根、精品時尚感、熱血動漫版、韓系電影感.
+- [ ] Batch 2: 吉卜力動畫風、賽博龐克風、復古港風電影、極簡藝術海報、歐美電影預告感、黑白攝影展風格.
+- [ ] Batch 3: 潮流街頭品牌風、夢幻童話風、蒸汽龐克風、日系戀愛劇氛圍、彩色蠟筆手繪插畫、日系生活感手繪插畫.
+- [ ] Batch 4: 極簡留白童話速寫、手寫風格解說日誌、城市旅繪日誌、Colorwalk 城市漫遊、電影級風景 HDR、空拍敘事視角.
+
 ## Explicitly Out of Scope
 
 - Native iOS or Android App.

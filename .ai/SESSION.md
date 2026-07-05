@@ -55,6 +55,8 @@ The new App lives in:
 - Hidden mobile detail-sheet effects no longer lock desktop scrolling.
 - The first ChatGPT GPT-5.5 即時 release candidate is complete for `攝影書敘事`; its optimized WebP now powers the official in-App example while the original development output remains preserved.
 - All five pilot release candidates are now complete in ChatGPT GPT-5.5 即時 and power the official in-App examples; original development outputs remain preserved.
+- Remaining-style release candidate Batch 1 is complete (6/24): 視覺導演、色彩氛圍美學、電影收藏票根、精品時尚感、熱血動漫版、韓系電影感.
+- Analysis-only production prompts remain unchanged and use one standardized follow-up instruction to request the final image.
 
 ## Current Priority
 
