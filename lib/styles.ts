@@ -1761,6 +1761,12 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
   '極簡藝術海報': [{ inputImages: ['/examples/sources/architecture-space/architecture-space-01.webp'], outputImage: '/examples/outputs/minimal-art-poster/minimal-art-poster-rc-chatgpt-5-5-instant-01.webp' }],
   '歐美電影預告感': [{ inputImages: ['/examples/sources/city-travel/city-travel-03.webp'], outputImage: '/examples/outputs/western-trailer/western-trailer-rc-chatgpt-5-5-instant-01.webp' }],
   '黑白攝影展風格': [{ inputImages: ['/examples/sources/portrait/portrait-02.webp'], outputImage: '/examples/outputs/black-white-exhibition/black-white-exhibition-rc-chatgpt-5-5-instant-01.webp' }],
+  '潮流街頭品牌風': [{ inputImages: ['/examples/sources/portrait/portrait-01.webp'], outputImage: '/examples/outputs/streetwear-campaign/streetwear-campaign-rc-chatgpt-5-5-instant-01.webp' }],
+  '夢幻童話風': [{ inputImages: ['/examples/sources/daily-life/daily-life-03.webp'], outputImage: '/examples/outputs/fantasy-fairytale/fantasy-fairytale-rc-chatgpt-5-5-instant-01.webp' }],
+  '蒸汽龐克風': [{ inputImages: ['/examples/sources/architecture-space/architecture-space-01.webp'], outputImage: '/examples/outputs/steampunk-world/steampunk-world-rc-chatgpt-5-5-instant-01.webp' }],
+  '日系戀愛劇氛圍': [{ inputImages: ['/examples/sources/portrait/portrait-02.webp'], outputImage: '/examples/outputs/japanese-romance/japanese-romance-rc-chatgpt-5-5-instant-01.webp' }],
+  '彩色蠟筆手繪插畫': [{ inputImages: ['/examples/sources/daily-life/daily-life-03.webp'], outputImage: '/examples/outputs/crayon-handdrawn/crayon-handdrawn-rc-chatgpt-5-5-instant-01.webp' }],
+  '日系生活感手繪插畫': [{ inputImages: ['/examples/sources/city-travel/city-travel-01.webp'], outputImage: '/examples/outputs/japanese-lifestyle-sketch/japanese-lifestyle-sketch-rc-chatgpt-5-5-instant-01.webp' }],
   '攝影書敘事': [
     {
       inputImages: [
