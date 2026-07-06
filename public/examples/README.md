@@ -16,6 +16,8 @@ The release-candidate pass started on 2026-07-05 in ChatGPT GPT-5.5, 即時 mode
 
 Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GPT-5.5, 即時 mode: `視覺導演`, `色彩氛圍美學`, `電影收藏票根`, `精品時尚感`, `熱血動漫版`, and `韓系電影感`. Analysis-only prompts retain their exact original prompt and use one standardized follow-up instruction to request the image.
 
+`藝術拉絲攝影` was added on 2026-07-06 from an Anson-provided source/result pair. The source is preserved as `sources/fine-art-motion-streak/fine-art-motion-streak-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/fine-art-motion-streak/fine-art-motion-streak-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
+
 ## Directory convention
 
 ```text
@@ -28,12 +30,14 @@ examples/
     multi-photo-narrative/
     daily-life/
     aerial/
+    fine-art-motion-streak/
   outputs/
     photobook-narrative/
     watercolor-illustration/
     travel-magazine/
     food-poster-design/
     japanese-cinema/
+    fine-art-motion-streak/
 ```
 
 Use lowercase kebab-case filenames. Keep originals unchanged; create separate optimized copies if the Web App needs smaller files.

@@ -37,6 +37,7 @@ Current style object shape:
 - 電影收藏票根
 - 攝影書敘事
 - 食物海報設計
+- 藝術拉絲攝影
 
 ### 電影宇宙
 

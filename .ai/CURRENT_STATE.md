@@ -56,13 +56,13 @@ The app remains a single-page client MVP, but stable data and routing responsibi
 - `components/MobileStyleDetailSheet.tsx`: mobile style metadata and example bottom sheet.
 - `components/PromptOutput.tsx`: mobile prompt generation and copy result.
 - `components/StyleCard.tsx`: reusable responsive style card and favorite action.
-- `lib/styles.ts`: all 29 style objects and their prompt modes.
+- `lib/styles.ts`: all 30 style objects and their prompt modes.
 - `lib/benchmarks.ts`: six benchmark source groups, 16 registered development images, and five pilot styles.
 - `lib/basePrompts.ts`: the four shared prompt universes.
 - `lib/promptRouter.ts`: data-driven base selection and final prompt composition.
 - `lib/categories.ts`: category labels, membership, ordering, and favorites filtering.
 - `lib/storage.ts`: safe local persistence for favorites and recent usage.
-- `public/examples/`: 17 AI-generated benchmark sources and 34 preserved development/release outputs, delivered as optimized WebP assets.
+- `public/examples/`: 18 benchmark/user-provided sources and 35 preserved development/release outputs, delivered as optimized WebP assets.
 - `lib/types.ts`: shared style and prompt-mode types.
 
 Each style now also carries:
@@ -70,7 +70,7 @@ Each style now also carries:
 - `summary`: concise Traditional Chinese explanation.
 - `tags`: two to four browsing tags.
 - `inputType`: `single-image` or `multi-image`.
-- `examples`: typed input-image and output-image pairs; all 29 styles now point to official GPT-5.5 即時 results.
+- `examples`: typed input-image and output-image pairs; all 30 styles now point to official GPT-5.5 即時 results.
 
 ## Current Categories
 
@@ -92,6 +92,7 @@ Each style now also carries:
 - 日系生活感手繪插畫
 - 食物海報設計
 - Colorwalk 城市漫遊
+- 藝術拉絲攝影
 
 ## Current Important Prompt Routing State
 
@@ -104,6 +105,7 @@ Independent prompts with no base prompt:
 - 色彩氛圍美學
 - 攝影書敘事
 - 食物海報設計
+- 藝術拉絲攝影
 
 Shared prompt universes:
 
@@ -129,8 +131,8 @@ Shared prompt universes:
 - PWA icons use the lightweight `public/brand-mark.svg` identity and matching generated PNG assets.
 - Independent production is live at `https://image-style-studio.vercel.app`.
 - The legacy production remains live at `https://ai-poster-director-clean.vercel.app`.
-- All 29 style examples reference existing assets.
-- The repository contains 51 optimized WebP benchmark assets totaling about 14.83 MB.
+- All 30 style examples reference existing assets.
+- The repository contains 53 optimized WebP example assets.
 - The dependency audit reports zero vulnerabilities.
 - Official output images now power desktop and mobile style cards.
 - Desktop and mobile detail previews preserve the full 9:16 composition without cropping.

@@ -41,7 +41,7 @@ Status: Complete.
 - [x] Add an `examples` model with input images and an output image.
 - [x] Preserve all current prompt text and prompt routing.
 
-All 29 styles now include the extended metadata. Example arrays remain empty until authentic benchmark inputs and first-run outputs are prepared in S2-T4.
+All 30 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, and S2-T14.
 
 ### S2-T4 — Build Benchmark Assets
 
@@ -141,7 +141,7 @@ Status: Complete (24/24).
 Status: Complete.
 
 - [x] Confirm GPT-5.5 即時 as the official example workflow.
-- [x] Confirm all 29 styles have official examples.
+- [x] Confirm all 30 styles have official examples.
 - [x] Confirm all referenced example assets exist.
 - [x] Pass ESLint and the production build.
 - [x] Pass the dependency security audit with zero vulnerabilities.
@@ -158,6 +158,18 @@ Status: Complete.
 - [x] Show complete uncropped media in the mobile detail sheet.
 - [x] Add a mobile full-screen original/result viewer.
 - [x] Preserve multi-image source grids and segmented switching.
+
+### S2-T14 — Add 藝術拉絲攝影
+
+Status: Complete.
+
+- [x] Preserve the Anson-provided original and prompt-result images as optimized WebP assets.
+- [x] Add the complete approved prompt without rewriting or shortening it.
+- [x] Name the style `藝術拉絲攝影` and place it in `視覺企劃`.
+- [x] Add the summary and tags `藝術拉絲`, `長曝光`, and `極簡攝影`.
+- [x] Mark the style as single-image and independent.
+- [x] Connect the official result to card, 9:16 detail, and full-screen previews.
+- [x] Confirm 30 unique styles, 30 official outputs, and zero missing assets.
 
 ## Explicitly Out of Scope
 

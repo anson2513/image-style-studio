@@ -1596,6 +1596,106 @@ and naturally beautiful.
 
 「IG 文青食物分享 × 小紅書生活 aesthetic × 韓系生活感攝影 × 日系 editorial food magazine × 高級日常 food diary visual」。`,
     },
+    {
+      category: '視覺企劃',
+      cover: '/examples/outputs/fine-art-motion-streak/fine-art-motion-streak-chatgpt-5-5-instant-01.webp',
+      name: '藝術拉絲攝影',
+      promptMode: 'independent',
+      desc: 'Fine Art Motion Streak',
+      prompt: `請以我上傳的照片作為唯一創作基礎，完整保留原始照片的構圖、主體位置、拍攝角度、透視關係、空間比例、景深層次、光影方向與色彩基調，不可改變畫面構圖，不可重新設計場景，不可新增或刪除任何元素。
+
+AI 必須先自動分析照片中的主要拍攝主體，並以主體作為畫面唯一的視覺焦點。
+
+主體包含但不限於：
+
+人物、建築、橋梁、船隻、車輛、樹木、山峰、動物、食物、街景、雕像或任何畫面最重要的元素。
+
+主體必須保持百分之百清晰。
+
+保留原始細節、紋理、材質、輪廓與真實光影，不可模糊、不可變形、不可重繪、不可拉伸、不可產生 AI 修補痕跡。
+
+除了主體之外，
+
+整個畫面全部轉換成 Fine Art Motion Streak（藝術拉絲） 效果。
+
+背景、前景、天空、雲層、建築、樹木、水面、道路、地面、光影、倒影與所有環境元素，都必須共同參與拉絲，而不是只有局部模糊。
+
+拉絲方向必須根據畫面構圖自動判斷，選擇最能強化畫面張力與美感的方向，以水平拉絲為優先；若其他方向更能表現作品情緒，可自然調整，但整體必須保持一致且具有藝術性。
+
+拉絲效果必須覆蓋整張畫面，
+
+形成極其平滑且連續的色彩流動。
+
+整個背景應逐漸抽象化，
+
+保留原始色彩關係，
+
+融合成柔順的色帶與流動畫布。
+
+畫面不可出現：
+
+* 放射模糊
+* 縮放模糊
+* 鬼影
+* 雙重影像
+* 主體殘影
+* AI 拼接痕跡
+* 不自然的邊界
+* 模糊區塊突然中斷
+
+主體與背景之間的過渡必須自然，
+
+看起來像是真正透過 ICM（Intentional Camera Movement）、長時間曝光 與 多重曝光疊圖 所完成，而不是後製套用模糊濾鏡。
+
+整體畫面需呈現：
+
+* Fine Art Photography
+* 極簡攝影美學
+* 抽象藝術
+* 長曝光藝術作品
+* Museum Quality
+* Premium Editorial
+* Gallery Print
+* Award-winning Photography
+* 高級藝術展覽海報
+* 國際攝影比賽得獎作品質感
+* 高級留白
+* 空氣感
+* 色彩呼吸感
+* 極簡構圖
+* 超高解析度 8K
+* 細膩色彩分層
+* 電影級色彩分級
+* 高端收藏級 Fine Art 攝影作品完成度。
+
+請將拉絲效果提升至極致。
+
+除了主體之外，
+
+整張照片幾乎完全抽象化，
+
+形成大片柔順且連續的色彩流動。
+
+所有環境元素共同融合成如油畫般的水平色帶，
+
+畫面中不應再清楚辨識背景細節，
+
+而是透過色彩、光線與流動方向暗示原本的場景。
+
+整體效果應營造出：
+
+世界正在流動，而只有主體靜止於時間之中。
+
+拉絲效果必須自然且連續，
+
+覆蓋整張照片，
+
+沒有任何局部停止或不一致。
+
+最終作品應呈現高級 Fine Art 攝影作品的質感，
+
+具有博物館典藏、藝術畫廊展覽、國際攝影獎得獎作品與收藏級藝術輸出的完成度，而非一般數位模糊或 AI 特效`,
+    },
 ]
 
 type StyleDetails = Pick<Style, 'summary' | 'tags' | 'inputType'>
@@ -1746,6 +1846,11 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
     tags: ['食物攝影', '生活美學', '編輯海報'],
     inputType: 'single-image',
   },
+  '藝術拉絲攝影': {
+    summary: '讓主體維持銳利清晰，將其餘環境轉化為連續流動的藝術拉絲，形成時間靜止般的收藏級攝影。',
+    tags: ['藝術拉絲', '長曝光', '極簡攝影'],
+    inputType: 'single-image',
+  },
 }
 
 const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
@@ -1773,6 +1878,7 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
   'Colorwalk 城市漫遊': [{ inputImages: ['/examples/sources/city-travel/city-travel-02.webp'], outputImage: '/examples/outputs/colorwalk-city/colorwalk-city-rc-chatgpt-5-5-instant-01.webp' }],
   '電影級風景 HDR': [{ inputImages: ['/examples/sources/aerial/aerial-01.webp'], outputImage: '/examples/outputs/cinematic-landscape-hdr/cinematic-landscape-hdr-rc-chatgpt-5-5-instant-01.webp' }],
   '空拍敘事視角': [{ inputImages: ['/examples/sources/aerial/aerial-01.webp'], outputImage: '/examples/outputs/aerial-storyframe/aerial-storyframe-rc-chatgpt-5-5-instant-01.webp' }],
+  '藝術拉絲攝影': [{ inputImages: ['/examples/sources/fine-art-motion-streak/fine-art-motion-streak-01.webp'], outputImage: '/examples/outputs/fine-art-motion-streak/fine-art-motion-streak-chatgpt-5-5-instant-01.webp' }],
   '攝影書敘事': [
     {
       inputImages: [

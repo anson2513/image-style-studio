@@ -3,6 +3,21 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-06 — 藝術拉絲攝影 Added
+
+### Added
+
+- New independent single-image style `藝術拉絲攝影` in `視覺企劃`.
+- Exact user-provided Fine Art Motion Streak prompt without a shared base prompt.
+- Anson-provided 9:16 source and result assets, optimized to WebP for delivery.
+- Summary and tags for art streaking, long exposure, and minimalist photography.
+
+### Verified
+
+- 30 unique styles and 30 official example outputs.
+- No missing referenced assets.
+- ESLint and the production build pass.
+
 ## 2026-07-06 — Preview System Expanded
 
 ### Changed
@@ -25,13 +40,13 @@ Status: Active
 ### Confirmed
 
 - GPT-5.5 即時 is the official workflow for all style examples.
-- All 29 styles have official examples and valid source/output assets.
+- All 30 current styles have official examples and valid source/output assets.
 
 ### Verified
 
 - ESLint and the production build pass.
 - Dependency audit reports zero vulnerabilities.
-- All 51 WebP benchmark assets are present; all 29 in-App output references resolve.
+- All 53 WebP example assets are present; all 30 in-App output references resolve.
 
 ## 2026-07-03 — Independent Production Deployed
 
