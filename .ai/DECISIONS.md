@@ -50,6 +50,7 @@ Examples:
 - 食物海報設計
 - 藝術拉絲攝影
 - 精品食物品牌廣告
+- 生活速寫混合媒介
 
 Status: Accepted
 

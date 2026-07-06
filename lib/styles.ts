@@ -1962,11 +1962,399 @@ refined typography,
 masterpiece,
 global creative agency quality.`,
     },
+    {
+      category: '手繪插畫',
+      cover: '/examples/outputs/mixed-media-lifestyle-sketch/mixed-media-lifestyle-sketch-chatgpt-5-5-instant-01.webp',
+      name: '生活速寫混合媒介',
+      promptMode: 'independent',
+      desc: 'Mixed Media Lifestyle Sketch',
+      prompt: `請將我提供的真實照片視為唯一創作基礎。
+
+不要重新生成場景。
+不要改變建築、道路、人物、空間結構、透視關係、鏡頭高度、光影方向與原始構圖。
+整體必須維持真實攝影質感，只在照片上自然融合手繪元素，形成高級 Mixed Media（混合媒介）藝術海報。
+
+---
+
+## 第一階段｜照片分析
+
+請先完整分析照片中的：
+
+* 空間透視
+* 真實物理尺度
+* 消失點
+* 景深層次
+* 光線方向
+* 留白區域
+* 主視覺重心
+* 人物與建築比例
+* 可互動位置
+* 可加入插畫的位置
+
+所有新增插畫人物與物件，都必須符合真實世界比例。
+
+不可漂浮。
+不可比例錯誤。
+不可破壞透視。
+
+必須像真的存在於現場。
+
+---
+
+# 攝影背景
+
+完整保留：
+
+* 真實攝影質感
+* 原始色彩
+* 光影
+* 天空
+* 建築
+* 地面
+* 水面
+* 樹木
+* 所有真實元素
+
+不得改成插畫背景。
+
+背景永遠是真實照片。
+
+---
+
+# 手繪插畫風格
+
+在真實照片中加入：
+
+抽象概括速寫（Abstract Sketch）
+
+整體必須具有：
+
+* 手繪感
+* 粉筆感
+* 枯筆感
+* 蠟筆感
+* 塗鴉感
+
+禁止：
+
+* 精細漫畫
+* 日系動漫
+* 寫實插畫
+* 電腦向量圖
+
+---
+
+# 線條規則
+
+全部插畫皆使用：
+
+黑色粗糙輪廓線
+
+線條具有：
+
+* Chalk Texture
+* Dry Brush
+* Wax Crayon
+* Rough Ink
+
+線條自由、不規則。
+
+允許：
+
+* 線條斷裂
+* 邊緣不閉合
+* 筆觸粗細不均
+* 自然抖動
+
+避免：
+
+* 平滑線條
+* Illustrator 向量線
+* 精密描圖
+
+---
+
+# 填色規則
+
+所有插畫人物與物件：
+
+內部全部使用
+
+純白 Solid White Fill
+
+白色必須完整遮擋背景。
+
+形成：
+
+黑色輪廓
+
+＋
+
+純白填色
+
+的極簡抽象速寫。
+
+僅允許極少數局部加入一種低飽和點綴色，例如：
+
+* 土黃色
+* 髒橘色
+* 灰綠色
+* 奶茶色
+
+禁止多彩配色。
+
+---
+
+# 插畫人物
+
+AI請依照片內容，
+
+自然生成：
+
+1～3位抽象速寫人物。
+
+人物可以：
+
+* 坐著
+* 看風景
+* 散步
+* 倚靠
+* 喝咖啡
+* 聊天
+* 遛狗
+* 拍照
+* 發呆
+* 看天空
+
+人物沒有五官。
+
+不用畫衣服細節。
+
+只保留：
+
+人體輪廓。
+
+人物比例必須符合：
+
+真實世界 1:1 尺度。
+
+---
+
+# 插畫物件
+
+可加入少量速寫物件：
+
+例如：
+
+* 小狗
+* 咖啡杯
+* 熱氣
+* 書本
+* 氣球
+* 小植物
+* 星星
+* 月亮
+* 小鳥
+* 雲朵
+* 愛心
+* 箭頭
+* 線條裝飾
+
+全部維持：
+
+黑線
+
+＋
+
+白色填充
+
+風格。
+
+---
+
+# 排版設計
+
+AI自動分析畫面留白。
+
+在天空、
+
+牆面、
+
+玻璃、
+
+空曠區域，
+
+加入：
+
+超大型主標題。
+
+文字不得遮住主體。
+
+---
+
+# 字體風格
+
+主標：
+
+必須使用：
+
+極度笨拙、
+
+扭曲、
+
+像小孩寫字、
+
+完全不會寫字般的
+
+巨大手寫字。
+
+特色：
+
+* 大小不一致
+* 基線歪斜
+* 筆畫粗細不均
+* O變形
+* 字母歪斜
+* 行距自由
+* 字距不規則
+* 原始塗鴉感
+
+具有：
+
+Raw
+
+Primitive
+
+Naive
+
+Handwritten
+
+Feeling。
+
+禁止：
+
+品牌字體
+
+幾何字體
+
+Helvetica
+
+Futura
+
+Sans Serif
+
+精緻手寫字。
+
+---
+
+# 副標文字
+
+只保留一句：
+
+極短英文。
+
+例如：
+
+Take It Easy
+
+Slow Day
+
+Stay Here
+
+Less Noise
+
+Breathe
+
+Go Outside
+
+Enjoy Silence
+
+Always Together
+
+副標使用：
+
+同樣手寫，
+
+但尺寸較小。
+
+文字資訊保持極度克制。
+
+---
+
+# 畫面氛圍
+
+整體呈現：
+
+Mixed Media
+
+Editorial Poster
+
+Creative Photography
+
+Art Book Cover
+
+Independent Magazine
+
+Modern Illustration
+
+Graphic Design
+
+Visual Poetry
+
+Lifestyle Editorial
+
+---
+
+# 品質要求
+
+保持：
+
+真實攝影背景
+
+＋
+
+抽象速寫人物
+
+＋
+
+黑色粗糙輪廓
+
+＋
+
+純白填充
+
+＋
+
+巨大笨拙手寫字
+
+完美融合。
+
+畫面具有：
+
+高級感、
+
+藝術感、
+
+留白感、
+
+手工感、
+
+設計感、
+
+國際獨立雜誌封面氣質。
+
+整體視覺如同一本當代藝術攝影集、獨立設計刊物或國際創意廣告獎作品，而非一般插畫或社群貼文。`,
+    },
 ]
 
 type StyleDetails = Pick<Style, 'summary' | 'tags' | 'inputType'>
 
 const styleDetails: Record<Style['name'], StyleDetails> = {
+  '生活速寫混合媒介': {
+    summary: '保留真實攝影場景與透視，在畫面中融合白底黑線人物、生活物件與巨大原始手寫字，形成獨立雜誌感的混合媒介海報。',
+    tags: ['混合媒介', '抽象速寫', '手寫排版', '生活編輯'],
+    inputType: 'single-image',
+  },
   '精品食物品牌廣告': {
     summary: '分析料理與食材特徵，重構為具有懸浮解構、精品排版與攝影棚光線的國際餐飲品牌廣告。',
     tags: ['精品餐飲', '商業攝影', '食材解構'],
@@ -2125,6 +2513,12 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
 }
 
 const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
+  '生活速寫混合媒介': [
+    {
+      inputImages: ['/examples/sources/mixed-media-lifestyle-sketch/mixed-media-lifestyle-sketch-01.webp'],
+      outputImage: '/examples/outputs/mixed-media-lifestyle-sketch/mixed-media-lifestyle-sketch-chatgpt-5-5-instant-01.webp',
+    },
+  ],
   '精品食物品牌廣告': [
     {
       inputImages: ['/examples/sources/premium-food-branding/premium-food-branding-01.webp'],

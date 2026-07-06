@@ -41,7 +41,7 @@ Status: Complete.
 - [x] Add an `examples` model with input images and an output image.
 - [x] Preserve all current prompt text and prompt routing.
 
-All 31 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, S2-T14, and S2-T15.
+All 32 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, S2-T14, S2-T15, and S2-T16.
 
 ### S2-T4 — Build Benchmark Assets
 
@@ -141,7 +141,7 @@ Status: Complete (24/24).
 Status: Complete.
 
 - [x] Confirm GPT-5.5 即時 as the official example workflow.
-- [x] Confirm all 31 styles have official examples.
+- [x] Confirm all 32 styles have official examples.
 - [x] Confirm all referenced example assets exist.
 - [x] Pass ESLint and the production build.
 - [x] Pass the dependency security audit with zero vulnerabilities.
@@ -182,6 +182,18 @@ Status: Complete.
 - [x] Mark the style as single-image and independent.
 - [x] Connect the official result to card, 9:16 detail, and full-screen previews.
 - [x] Confirm 31 unique styles, 31 official outputs, and zero missing assets.
+
+### S2-T16 — Add 生活速寫混合媒介
+
+Status: Complete.
+
+- [x] Convert both Anson-provided references to complete 9:16 WebP previews without cropping.
+- [x] Add the complete approved prompt without rewriting or shortening it.
+- [x] Name the style `生活速寫混合媒介` and place it in `手繪插畫`.
+- [x] Add the summary and tags `混合媒介`, `抽象速寫`, `手寫排版`, and `生活編輯`.
+- [x] Mark the style as single-image and independent.
+- [x] Connect the official result to card, 9:16 detail, and full-screen previews.
+- [x] Confirm 32 unique styles, 32 official outputs, and zero missing assets.
 
 ## Explicitly Out of Scope
 

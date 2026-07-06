@@ -34,6 +34,7 @@ Independent examples:
 - Colorwalk 城市漫遊
 - 藝術拉絲攝影
 - 精品食物品牌廣告
+- 生活速寫混合媒介
 
 ## Prompt Integrity Rule
 

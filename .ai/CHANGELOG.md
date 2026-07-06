@@ -3,6 +3,21 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-06 — 生活速寫混合媒介 Added
+
+### Added
+
+- New independent single-image style `生活速寫混合媒介` in `手繪插畫`.
+- Exact user-provided Mixed Media prompt without a shared base prompt.
+- Anson-provided original and result references, converted to complete 9:16 WebP previews without cropping.
+- Summary and tags for mixed media, abstract sketching, handwritten typography, and lifestyle editorial design.
+
+### Verified
+
+- 32 unique styles and 32 official example outputs.
+- No missing referenced assets.
+- ESLint and the production build pass.
+
 ## 2026-07-06 — 精品食物品牌廣告 Added
 
 ### Added

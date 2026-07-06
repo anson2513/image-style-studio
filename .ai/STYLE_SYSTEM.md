@@ -63,6 +63,7 @@ Current style object shape:
 - 極簡留白童話速寫
 - 手繪風註解日誌
 - 日系生活感手繪插畫
+- 生活速寫混合媒介
 
 ### 城市旅遊
 
@@ -121,6 +122,13 @@ Current preferred cover ratio discussed during development:
 ### 精品食物品牌廣告
 
 - Category: 食物美學
+- Prompt type: Independent
+- Input type: Single image
+- Must not inherit base prompt
+
+### 生活速寫混合媒介
+
+- Category: 手繪插畫
 - Prompt type: Independent
 - Input type: Single image
 - Must not inherit base prompt
