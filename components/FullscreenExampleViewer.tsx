@@ -22,6 +22,7 @@ export function FullscreenExampleViewer({
   onClose,
 }: FullscreenExampleViewerProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const isTextOnly = style.inputType === 'text-only'
 
   useEffect(() => {
     closeButtonRef.current?.focus()
@@ -50,7 +51,7 @@ export function FullscreenExampleViewer({
         </button>
       </div>
 
-      <div className="mx-4 grid grid-cols-2 rounded-xl border border-white/15 bg-white/10 p-1">
+      {!isTextOnly && <div className="mx-4 grid grid-cols-2 rounded-xl border border-white/15 bg-white/10 p-1">
         <button
           type="button"
           onClick={() => onExampleViewChange('input')}
@@ -65,14 +66,14 @@ export function FullscreenExampleViewer({
         >
           提示詞效果
         </button>
-      </div>
+      </div>}
 
       <div className="relative min-h-0 flex-1 overflow-hidden p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]" style={{ touchAction: 'pinch-zoom' }}>
-        {exampleView === 'output' ? (
+        {isTextOnly || exampleView === 'output' ? (
           <div className="relative h-full w-full">
             <Image
               src={example.outputImage}
-              alt={`${style.name}提示詞效果完整預覽`}
+              alt={`${style.name}${isTextOnly ? '生成範例' : '提示詞效果'}完整預覽`}
               fill
               sizes="100vw"
               className="object-contain"

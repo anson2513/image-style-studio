@@ -52,6 +52,7 @@ Examples:
 - 精品食物品牌廣告
 - 生活速寫混合媒介
 - 品牌主視覺企劃
+- 笨拙手寫詩意海報
 
 Status: Accepted
 
@@ -125,6 +126,12 @@ Status: Accepted by Anson on 2026-07-06
 ## Decision 015 — Official Results Drive All Preview Surfaces
 
 Style cards use the official prompt-result image instead of a separate conceptual cover. Cards remain compact, while desktop and mobile detail views preserve the complete uncropped 9:16 composition. Mobile also provides a dedicated full-screen original/result viewer.
+
+Status: Accepted by Anson on 2026-07-06
+
+## Decision 016 — Text-Only Styles Do Not Fabricate Source Images
+
+Prompts that generate from a written theme use the `text-only` input type. Their cards and detail views show the official generation example only, with a clear no-upload label and no original/result comparison.
 
 Status: Accepted by Anson on 2026-07-06
 

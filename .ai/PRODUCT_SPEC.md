@@ -50,6 +50,7 @@ Status: Approved direction
 - Card previews use a compact 4:5 stage; full composition review belongs in the detail view.
 - Single-image styles: mobile segmented 原始照片／提示詞效果 switch; desktop may add a draggable divider.
 - Multi-image styles: 原始素材 shows a photo grid; 提示詞效果 shows the final composed output.
+- Text-only styles: show one `生成範例`, clearly state `純文字生成｜不需上傳照片`, and do not render a fabricated original or Before/After control.
 - Desktop detail uses an uncropped 9:16 preview with an independently scrollable inspector.
 - Mobile detail uses an uncropped 9:16 preview; tapping it opens a distraction-free full-screen viewer.
 - Show the note: 示範結果會依原始照片與使用的 AI 模型而異.
@@ -67,6 +68,7 @@ Prepare six neutral groups, approximately 16 images total:
 - Daily life: 3
 
 Official examples must preserve the source image, exact prompt, target model/workflow, and first-run result.
+Text-only examples have no source image and must record that absence explicitly instead of inventing one.
 
 ## First Five Pilot Styles
 

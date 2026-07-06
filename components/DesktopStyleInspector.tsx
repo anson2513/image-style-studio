@@ -30,6 +30,7 @@ export function DesktopStyleInspector({
   if (!style) return <aside className="hidden border-l border-[#DEDCD5] bg-[#F6F4EF] lg:block" />
 
   const example = style.examples[0]
+  const isTextOnly = style.inputType === 'text-only'
 
   return (
     <aside className="hidden border-l border-[#DEDCD5] bg-[#F6F4EF] text-[#20211F] lg:flex lg:h-[calc(100vh-4.5rem)] lg:flex-col lg:overflow-y-auto">
@@ -37,7 +38,9 @@ export function DesktopStyleInspector({
         <div className="border-b border-[#DEDCD5] p-4">
           <div className="relative mx-auto aspect-[9/16] w-full max-w-[348px] overflow-hidden rounded-2xl border border-[#DEDCD5] bg-[#E8E5DE] shadow-[0_2px_12px_rgba(32,33,31,0.05)]">
             {example ? (
-              example.inputImages.length === 1 ? (
+              isTextOnly ? (
+                <Image src={example.outputImage} alt={`${style.name}生成範例`} fill sizes="348px" className="object-contain" />
+              ) : example.inputImages.length === 1 ? (
                 <BeforeAfterComparison key={style.name} beforeImage={example.inputImages[0]} afterImage={example.outputImage} styleName={style.name} />
               ) : exampleView === 'output' ? (
                 <Image src={example.outputImage} alt={`${style.name}提示詞效果`} fill sizes="348px" className="object-contain" />
@@ -60,6 +63,10 @@ export function DesktopStyleInspector({
                 <button onClick={() => onExampleViewChange('output')} className={`rounded-lg px-3 py-2 text-xs ${exampleView === 'output' ? 'bg-[#7C8B72] text-white' : 'text-[#5F625D]'}`}>提示詞效果</button>
               </div>
             )}
+
+            {example && isTextOnly && (
+              <span className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/90 px-3 py-1.5 text-[10px] font-medium text-[#5F625D] shadow-sm">生成範例</span>
+            )}
           </div>
         </div>
 
@@ -73,10 +80,11 @@ export function DesktopStyleInspector({
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
+            {isTextOnly && <span className="rounded-full bg-[#F1EBDD] px-3 py-1 text-xs font-medium text-[#8A6A32]">純文字生成｜不需上傳照片</span>}
             {style.tags.map((tag) => <span key={tag} className="rounded-full bg-[#E6E9E1] px-3 py-1 text-xs text-[#64725C]">{tag}</span>)}
           </div>
 
-          <p className="mt-4 text-[11px] text-[#8B8D87]">示範結果會依原始照片與使用的 AI 模型而異。</p>
+          <p className="mt-4 text-[11px] text-[#8B8D87]">{isTextOnly ? '此風格不需上傳照片；生成結果會依輸入主題與使用的 AI 模型而異。' : '示範結果會依原始照片與使用的 AI 模型而異。'}</p>
 
           <button onClick={() => onGenerate(style)} disabled={isGenerating} className="mt-5 w-full rounded-2xl bg-[#7C8B72] py-3.5 font-bold text-white transition hover:bg-[#64725C] disabled:opacity-60">
             {isGenerating ? '正在準備…' : '取得完整提示詞'}

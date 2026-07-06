@@ -3,6 +3,26 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-06 — Text-Only Support and 笨拙手寫詩意海報 Added
+
+### Added
+
+- New `text-only` input type for prompts that require no uploaded image.
+- New independent style `笨拙手寫詩意海報` in `手繪插畫`.
+- Exact user-provided poetry-poster prompt without a shared base prompt.
+- One Anson-provided result converted to a complete 9:16 WebP generation example.
+
+### Changed
+
+- Desktop, mobile detail, and mobile full-screen preview show `生成範例` without original/result controls for text-only styles.
+- Text-only styles display `純文字生成｜不需上傳照片` and use a model/theme-specific result note.
+
+### Verified
+
+- 34 unique styles and 34 official example outputs.
+- No missing referenced assets.
+- ESLint and the production build pass.
+
 ## 2026-07-06 — 品牌主視覺企劃 Added
 
 ### Added

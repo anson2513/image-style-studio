@@ -29,6 +29,7 @@ export function MobileStyleDetailSheet({
   onGenerate,
 }: MobileStyleDetailSheetProps) {
   const example = style.examples[0]
+  const isTextOnly = style.inputType === 'text-only'
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const expandButtonRef = useRef<HTMLButtonElement>(null)
   const [fullscreenOpen, setFullscreenOpen] = useState(false)
@@ -76,7 +77,7 @@ export function MobileStyleDetailSheet({
             <p id="mobile-style-detail-title" className="text-2xl font-semibold leading-tight">{style.name}</p>
           </div>
 
-          {example && (
+          {example && !isTextOnly && (
             <div className="mt-4 grid grid-cols-2 rounded-xl border border-[#D8D6CF] bg-white p-1">
               <button onClick={() => onExampleViewChange('input')} className={`min-h-11 rounded-lg px-3 py-2 text-sm transition ${exampleView === 'input' ? 'bg-[#7C8B72] text-white' : 'text-[#5F625D]'}`}>原始素材</button>
               <button onClick={() => onExampleViewChange('output')} className={`min-h-11 rounded-lg px-3 py-2 text-sm transition ${exampleView === 'output' ? 'bg-[#7C8B72] text-white' : 'text-[#5F625D]'}`}>提示詞效果</button>
@@ -89,12 +90,12 @@ export function MobileStyleDetailSheet({
           type="button"
           onClick={() => example && setFullscreenOpen(true)}
           disabled={!example}
-          aria-label={example ? `全螢幕檢視${style.name}${exampleView === 'output' ? '提示詞效果' : '原始素材'}` : undefined}
+          aria-label={example ? `全螢幕檢視${style.name}${isTextOnly ? '生成範例' : exampleView === 'output' ? '提示詞效果' : '原始素材'}` : undefined}
           className="relative mx-5 block aspect-[9/16] w-[calc(100%-2.5rem)] overflow-hidden rounded-2xl border border-[#DEDCD5] bg-[#E8E5DE] disabled:cursor-default"
         >
           {example ? (
-            exampleView === 'output' ? (
-              <Image src={example.outputImage} alt={`${style.name}提示詞效果`} fill sizes="(max-width: 640px) 100vw, 448px" className="object-contain" />
+            isTextOnly || exampleView === 'output' ? (
+              <Image src={example.outputImage} alt={`${style.name}${isTextOnly ? '生成範例' : '提示詞效果'}`} fill sizes="(max-width: 640px) 100vw, 448px" className="object-contain" />
             ) : example.inputImages.length === 1 ? (
               <Image src={example.inputImages[0]} alt={`${style.name}原始照片`} fill sizes="(max-width: 640px) 100vw, 448px" className="object-contain" />
             ) : (
@@ -113,14 +114,18 @@ export function MobileStyleDetailSheet({
           {example && (
             <span className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/70 bg-white/90 text-lg text-[#454742] shadow-sm" aria-hidden="true">⛶</span>
           )}
+          {example && isTextOnly && (
+            <span className="absolute left-3 top-3 z-10 rounded-full border border-white/70 bg-white/90 px-3 py-1.5 text-[10px] font-medium text-[#5F625D] shadow-sm">生成範例</span>
+          )}
         </button>
 
         <div className="space-y-3 px-5 pb-6 pt-5">
           <p className="text-sm leading-relaxed text-[#5F625D]">{style.summary}</p>
           <div className="flex flex-wrap gap-2">
+            {isTextOnly && <span className="rounded-full bg-[#F1EBDD] px-3 py-1.5 text-xs font-medium text-[#8A6A32]">純文字生成｜不需上傳照片</span>}
             {style.tags.map((tag) => <span key={tag} className="rounded-full bg-[#E6E9E1] px-3 py-1.5 text-xs text-[#64725C]">{tag}</span>)}
           </div>
-          <p className="text-[11px] leading-relaxed text-[#8B8D87]">示範結果會依原始照片與使用的 AI 模型而異。</p>
+          <p className="text-[11px] leading-relaxed text-[#8B8D87]">{isTextOnly ? '此風格不需上傳照片；生成結果會依輸入主題與使用的 AI 模型而異。' : '示範結果會依原始照片與使用的 AI 模型而異。'}</p>
           <button onClick={() => onToggleFavorite(style.name)} className="w-full rounded-2xl border border-[#D8D6CF] bg-white py-3.5 text-sm font-medium text-[#64725C]">
             {isFavorite ? '已加入收藏庫' : '加入收藏庫'}
           </button>

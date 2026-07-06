@@ -1,6 +1,6 @@
 export type PromptMode = 'independent' | 'movie' | 'illustration' | 'travel' | 'space'
 
-export type StyleInputType = 'single-image' | 'multi-image'
+export type StyleInputType = 'single-image' | 'multi-image' | 'text-only'
 
 export interface StyleExample {
   inputImages: string[]

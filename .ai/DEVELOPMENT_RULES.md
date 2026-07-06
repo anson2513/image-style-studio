@@ -36,12 +36,17 @@ Independent examples:
 - 精品食物品牌廣告
 - 生活速寫混合媒介
 - 品牌主視覺企劃
+- 笨拙手寫詩意海報
 
 ## Prompt Integrity Rule
 
 Do not rewrite, summarize, optimize, or shorten user-approved prompts unless explicitly asked.
 
 Long prompts are allowed. They are treated as complete creative briefs.
+
+## Text-Only Style Rule
+
+Use `inputType: 'text-only'` when a prompt generates from a written theme without an uploaded photo. Keep `inputImages` empty, show only the official generation example, and never fabricate an original image for comparison.
 
 ## Monolith Safety Rule
 

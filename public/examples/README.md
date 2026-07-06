@@ -24,6 +24,8 @@ Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GP
 
 `品牌主視覺企劃` was added on 2026-07-06 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews with matching warm-white or black background extension and no destructive crop. The source is preserved as `sources/brand-hero-visual/brand-hero-visual-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/brand-hero-visual/brand-hero-visual-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
 
+`笨拙手寫詩意海報` was added on 2026-07-06 as the first text-only style. It has no source image by design. The Anson-provided GPT-5.5 即時 result was converted to a complete 1080 × 1920 WebP generation example at `outputs/naive-handwritten-poetry-poster/naive-handwritten-poetry-poster-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
+
 ## Directory convention
 
 ```text
@@ -50,13 +52,14 @@ examples/
     premium-food-branding/
     mixed-media-lifestyle-sketch/
     brand-hero-visual/
+    naive-handwritten-poetry-poster/
 ```
 
 Use lowercase kebab-case filenames. Keep originals unchanged; create separate optimized copies if the Web App needs smaller files.
 
 For every official example, record:
 
-- Source photo path or paths.
+- Source photo path or paths, or an explicit no-source record for text-only styles.
 - Exact style name.
 - Exact production prompt revision.
 - Target model and mode: ChatGPT GPT-5.5, 即時.

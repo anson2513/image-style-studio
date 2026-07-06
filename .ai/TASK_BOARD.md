@@ -38,10 +38,11 @@ Status: Complete.
 - [x] Add `summary`.
 - [x] Add `tags`.
 - [x] Add `inputType` for single-image and multi-image prompts.
+- [x] Extend `inputType` with `text-only` for prompts that require no uploaded photo.
 - [x] Add an `examples` model with input images and an output image.
 - [x] Preserve all current prompt text and prompt routing.
 
-All 33 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, S2-T14, S2-T15, S2-T16, and S2-T17.
+All 34 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, S2-T14, S2-T15, S2-T16, S2-T17, and S2-T18.
 
 ### S2-T4 — Build Benchmark Assets
 
@@ -141,7 +142,7 @@ Status: Complete (24/24).
 Status: Complete.
 
 - [x] Confirm GPT-5.5 即時 as the official example workflow.
-- [x] Confirm all 33 styles have official examples.
+- [x] Confirm all 34 styles have official examples.
 - [x] Confirm all referenced example assets exist.
 - [x] Pass ESLint and the production build.
 - [x] Pass the dependency security audit with zero vulnerabilities.
@@ -206,6 +207,19 @@ Status: Complete.
 - [x] Mark the style as single-image and independent.
 - [x] Connect the official result to card, 9:16 detail, and full-screen previews.
 - [x] Confirm 33 unique styles, 33 official outputs, and zero missing assets.
+
+### S2-T18 — Add Text-Only Support and 笨拙手寫詩意海報
+
+Status: Complete.
+
+- [x] Add the `text-only` input type for prompts that require no uploaded image.
+- [x] Hide original/result controls and Before/After comparison for text-only styles.
+- [x] Show one complete 9:16 `生成範例` on desktop, mobile, and mobile full-screen preview.
+- [x] Add the exact approved prompt without rewriting or shortening it.
+- [x] Name the style `笨拙手寫詩意海報` and place it in `手繪插畫`.
+- [x] Add the summary and tags `手寫文字`, `極簡留白`, `詩意插畫`, and `獨立出版`.
+- [x] Mark the style as text-only and independent.
+- [x] Confirm 34 unique styles, 34 official outputs, and zero missing assets.
 
 ## Explicitly Out of Scope
 

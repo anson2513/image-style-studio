@@ -65,6 +65,7 @@ Current style object shape:
 - 手繪風註解日誌
 - 日系生活感手繪插畫
 - 生活速寫混合媒介
+- 笨拙手寫詩意海報
 
 ### 城市旅遊
 
@@ -139,6 +140,14 @@ Current preferred cover ratio discussed during development:
 - Category: 視覺企劃
 - Prompt type: Independent
 - Input type: Single image
+- Must not inherit base prompt
+
+### 笨拙手寫詩意海報
+
+- Category: 手繪插畫
+- Prompt type: Independent
+- Input type: Text only; no uploaded photo
+- Preview type: One labeled generation example, no Before/After
 - Must not inherit base prompt
 
 ## Technical Debt
