@@ -3,6 +3,23 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-06 — Preview System Expanded
+
+### Changed
+
+- Desktop and mobile style cards now use official prompt-result images.
+- Card media uses a compact 4:5 stage with complete, uncropped result images.
+- The desktop inspector now presents a complete 9:16 Before/After comparison and independent scrolling.
+- Mobile detail now presents complete 9:16 media with supporting information below the image.
+
+### Added
+
+- Full-screen mobile original/result viewer with multi-image grid support.
+
+### Verified
+
+- ESLint and the production build pass.
+
 ## 2026-07-06 — Release Readiness Confirmed
 
 ### Confirmed

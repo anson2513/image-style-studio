@@ -9,6 +9,8 @@ interface StyleCardProps {
 }
 
 export function StyleCard({ style, isFavorite, onOpen, onToggleFavorite }: StyleCardProps) {
+  const previewImage = style.examples[0]?.outputImage ?? style.cover
+
   return (
     <article className="group relative min-w-0 overflow-hidden rounded-2xl border border-[#DEDCD5] bg-white shadow-[0_2px_12px_rgba(32,33,31,0.04)]">
       <button
@@ -17,13 +19,13 @@ export function StyleCard({ style, isFavorite, onOpen, onToggleFavorite }: Style
         aria-label={`查看${style.name}詳情`}
         className="block w-full text-left"
       >
-        <div className="relative aspect-[4/3] overflow-hidden bg-[#E8E5DE]">
+        <div className="relative aspect-[4/5] overflow-hidden bg-[#E8E5DE]">
           <Image
-            src={style.cover}
+            src={previewImage}
             alt=""
             fill
             sizes="(min-width: 1536px) 25vw, (min-width: 1280px) 33vw, (min-width: 1024px) 50vw, (min-width: 640px) 33vw, 50vw"
-            className="object-cover transition duration-500 group-hover:scale-[1.025]"
+            className="object-contain transition duration-500 group-hover:scale-[1.015]"
           />
         </div>
 

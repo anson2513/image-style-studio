@@ -46,8 +46,12 @@ Status: Approved direction
 
 ## Example Comparison
 
+- Style cards use each style's official prompt-result image, with the legacy cover as a fallback only when no example exists.
+- Card previews use a compact 4:5 stage; full composition review belongs in the detail view.
 - Single-image styles: mobile segmented 原始照片／提示詞效果 switch; desktop may add a draggable divider.
 - Multi-image styles: 原始素材 shows a photo grid; 提示詞效果 shows the final composed output.
+- Desktop detail uses an uncropped 9:16 preview with an independently scrollable inspector.
+- Mobile detail uses an uncropped 9:16 preview; tapping it opens a distraction-free full-screen viewer.
 - Show the note: 示範結果會依原始照片與使用的 AI 模型而異.
 - First release uses pre-generated examples; it does not call AI from inside the App.
 

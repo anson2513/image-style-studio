@@ -118,3 +118,9 @@ All official Before/After examples use ChatGPT GPT-5.5 in 即時 mode. The previ
 
 Status: Accepted by Anson on 2026-07-06
 
+## Decision 015 — Official Results Drive All Preview Surfaces
+
+Style cards use the official prompt-result image instead of a separate conceptual cover. Cards remain compact, while desktop and mobile detail views preserve the complete uncropped 9:16 composition. Mobile also provides a dedicated full-screen original/result viewer.
+
+Status: Accepted by Anson on 2026-07-06
+

@@ -23,20 +23,20 @@ export function BeforeAfterComparison({
         alt={`${styleName}提示詞效果`}
         fill
         sizes="380px"
-        className="object-cover"
+        className="object-contain"
       />
 
       <div
         className="absolute inset-y-0 left-0 overflow-hidden"
         style={{ width: `${position}%` }}
       >
-        <div className="relative h-full" style={{ width: `${10000 / position}%` }}>
+        <div className="relative h-full bg-[#E8E5DE]" style={{ width: `${10000 / position}%` }}>
           <Image
             src={beforeImage}
             alt={`${styleName}原始照片`}
             fill
             sizes="380px"
-            className="object-cover object-left"
+            className="object-contain"
           />
         </div>
       </div>

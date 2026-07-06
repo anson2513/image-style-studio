@@ -62,6 +62,9 @@ The new App lives in:
 - Analysis-only production prompts remain unchanged and use one standardized follow-up instruction to request the final image.
 - On 2026-07-06, Anson confirmed GPT-5.5 即時 as the official example workflow.
 - Release readiness audit passes: 29 unique styles, 29 official examples, all referenced assets present, ESLint clean, production build clean, and zero dependency vulnerabilities.
+- Desktop and mobile style cards now use official result images in compact 4:5 stages.
+- The desktop inspector now shows the complete 9:16 Before/After stage and scrolls independently for metadata and prompt output.
+- Mobile detail now prioritizes a complete 9:16 preview, moves supporting information below it, and opens a full-screen original/result viewer on tap.
 
 ## Current Priority
 

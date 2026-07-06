@@ -146,6 +146,19 @@ Status: Complete.
 - [x] Pass ESLint and the production build.
 - [x] Pass the dependency security audit with zero vulnerabilities.
 
+### S2-T13 — Improve Example Visibility
+
+Status: Complete.
+
+- [x] Use official prompt-result images in desktop and mobile style cards.
+- [x] Keep a legacy-cover fallback for future styles without examples.
+- [x] Use a compact 4:5 card stage without cropping the official result.
+- [x] Show the complete 9:16 comparison in the desktop inspector.
+- [x] Keep the desktop inspector independently scrollable.
+- [x] Show complete uncropped media in the mobile detail sheet.
+- [x] Add a mobile full-screen original/result viewer.
+- [x] Preserve multi-image source grids and segmented switching.
+
 ## Explicitly Out of Scope
 
 - Native iOS or Android App.

@@ -34,34 +34,36 @@ export function DesktopStyleInspector({
   return (
     <aside className="hidden border-l border-[#DEDCD5] bg-[#F6F4EF] text-[#20211F] lg:flex lg:h-[calc(100vh-4.5rem)] lg:flex-col lg:overflow-y-auto">
       <div className="flex min-h-full flex-col">
-        <div className="relative aspect-[4/3] bg-[#E8E5DE]">
-          {example ? (
-            example.inputImages.length === 1 ? (
-              <BeforeAfterComparison key={style.name} beforeImage={example.inputImages[0]} afterImage={example.outputImage} styleName={style.name} />
-            ) : exampleView === 'output' ? (
-              <Image src={example.outputImage} alt={`${style.name}提示詞效果`} fill sizes="380px" className="object-cover" />
+        <div className="border-b border-[#DEDCD5] p-4">
+          <div className="relative mx-auto aspect-[9/16] w-full max-w-[348px] overflow-hidden rounded-2xl border border-[#DEDCD5] bg-[#E8E5DE] shadow-[0_2px_12px_rgba(32,33,31,0.05)]">
+            {example ? (
+              example.inputImages.length === 1 ? (
+                <BeforeAfterComparison key={style.name} beforeImage={example.inputImages[0]} afterImage={example.outputImage} styleName={style.name} />
+              ) : exampleView === 'output' ? (
+                <Image src={example.outputImage} alt={`${style.name}提示詞效果`} fill sizes="348px" className="object-contain" />
+              ) : (
+                <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-1.5 p-1.5">
+                  {example.inputImages.map((src, index) => (
+                    <div key={src} className="relative overflow-hidden rounded-lg bg-[#DEDCD5]">
+                      <Image src={src} alt={`${style.name}原始素材 ${index + 1}`} fill sizes="174px" className="object-contain" />
+                    </div>
+                  ))}
+                </div>
+              )
             ) : (
-              <div className="absolute inset-0 grid grid-cols-2 gap-1 p-1">
-                {example.inputImages.map((src, index) => (
-                  <div key={src} className="relative overflow-hidden">
-                    <Image src={src} alt={`${style.name}原始素材 ${index + 1}`} fill sizes="190px" className="object-cover" />
-                  </div>
-                ))}
-              </div>
-            )
-          ) : (
-            <Image src={style.cover} alt={style.name} fill sizes="380px" className="object-cover" />
-          )}
+              <Image src={style.cover} alt={style.name} fill sizes="348px" className="object-contain" />
+            )}
 
-          {example && example.inputImages.length > 1 && (
-            <div className="absolute left-4 right-4 top-4 grid grid-cols-2 rounded-xl border border-[#D8D6CF] bg-white p-1 shadow-sm">
-              <button onClick={() => onExampleViewChange('input')} className={`rounded-lg px-3 py-2 text-xs ${exampleView === 'input' ? 'bg-[#7C8B72] text-white' : 'text-[#5F625D]'}`}>原始素材</button>
-              <button onClick={() => onExampleViewChange('output')} className={`rounded-lg px-3 py-2 text-xs ${exampleView === 'output' ? 'bg-[#7C8B72] text-white' : 'text-[#5F625D]'}`}>提示詞效果</button>
-            </div>
-          )}
+            {example && example.inputImages.length > 1 && (
+              <div className="absolute left-3 right-3 top-3 grid grid-cols-2 rounded-xl border border-[#D8D6CF] bg-white/95 p-1 shadow-sm backdrop-blur-sm">
+                <button onClick={() => onExampleViewChange('input')} className={`rounded-lg px-3 py-2 text-xs ${exampleView === 'input' ? 'bg-[#7C8B72] text-white' : 'text-[#5F625D]'}`}>原始素材</button>
+                <button onClick={() => onExampleViewChange('output')} className={`rounded-lg px-3 py-2 text-xs ${exampleView === 'output' ? 'bg-[#7C8B72] text-white' : 'text-[#5F625D]'}`}>提示詞效果</button>
+              </div>
+            )}
+          </div>
         </div>
 
-        <div className="flex flex-1 flex-col p-6">
+        <div className="flex flex-1 flex-col p-5">
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-2xl font-semibold">{style.name}</p>

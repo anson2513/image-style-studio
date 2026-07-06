@@ -51,6 +51,7 @@ The app remains a single-page client MVP, but stable data and routing responsibi
 - `app/page.tsx`: about 406 lines; app state, filtering, persistence coordination, and responsive shell composition.
 - `components/BeforeAfterComparison.tsx`: desktop draggable original-versus-result comparison.
 - `components/DesktopStyleInspector.tsx`: persistent desktop detail, example, generation, and prompt panel.
+- `components/FullscreenExampleViewer.tsx`: mobile full-screen original/result viewer with complete uncropped media.
 - `components/MobileBottomNav.tsx`: mobile 圖庫／收藏／最近 navigation.
 - `components/MobileStyleDetailSheet.tsx`: mobile style metadata and example bottom sheet.
 - `components/PromptOutput.tsx`: mobile prompt generation and copy result.
@@ -131,6 +132,9 @@ Shared prompt universes:
 - All 29 style examples reference existing assets.
 - The repository contains 51 optimized WebP benchmark assets totaling about 14.83 MB.
 - The dependency audit reports zero vulnerabilities.
+- Official output images now power desktop and mobile style cards.
+- Desktop and mobile detail previews preserve the full 9:16 composition without cropping.
+- ESLint and the production build pass after the preview-system update.
 
 ## Current Priority
 
