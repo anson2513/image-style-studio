@@ -21,6 +21,7 @@ const categoryStyleNames: Partial<Record<Category, readonly string[]>> = {
     '食物海報設計',
     '色彩氛圍美學',
     '藝術拉絲攝影',
+    '品牌主視覺企劃',
   ],
   電影宇宙: [
     '日系電影感',

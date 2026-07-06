@@ -58,6 +58,7 @@ The final output must be the style prompt only.
 - 藝術拉絲攝影
 - 精品食物品牌廣告
 - 生活速寫混合媒介
+- 品牌主視覺企劃
 
 ## Critical Rule
 

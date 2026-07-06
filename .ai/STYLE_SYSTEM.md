@@ -38,6 +38,7 @@ Current style object shape:
 - 攝影書敘事
 - 食物海報設計
 - 藝術拉絲攝影
+- 品牌主視覺企劃
 
 ### 電影宇宙
 
@@ -129,6 +130,13 @@ Current preferred cover ratio discussed during development:
 ### 生活速寫混合媒介
 
 - Category: 手繪插畫
+- Prompt type: Independent
+- Input type: Single image
+- Must not inherit base prompt
+
+### 品牌主視覺企劃
+
+- Category: 視覺企劃
 - Prompt type: Independent
 - Input type: Single image
 - Must not inherit base prompt

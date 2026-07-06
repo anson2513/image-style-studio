@@ -22,6 +22,8 @@ Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GP
 
 `生活速寫混合媒介` was added on 2026-07-06 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews with matching dark-green background extension and no destructive crop. The source is preserved as `sources/mixed-media-lifestyle-sketch/mixed-media-lifestyle-sketch-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/mixed-media-lifestyle-sketch/mixed-media-lifestyle-sketch-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
 
+`品牌主視覺企劃` was added on 2026-07-06 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews with matching warm-white or black background extension and no destructive crop. The source is preserved as `sources/brand-hero-visual/brand-hero-visual-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/brand-hero-visual/brand-hero-visual-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
+
 ## Directory convention
 
 ```text
@@ -37,6 +39,7 @@ examples/
     fine-art-motion-streak/
     premium-food-branding/
     mixed-media-lifestyle-sketch/
+    brand-hero-visual/
   outputs/
     photobook-narrative/
     watercolor-illustration/
@@ -46,6 +49,7 @@ examples/
     fine-art-motion-streak/
     premium-food-branding/
     mixed-media-lifestyle-sketch/
+    brand-hero-visual/
 ```
 
 Use lowercase kebab-case filenames. Keep originals unchanged; create separate optimized copies if the Web App needs smaller files.

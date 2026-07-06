@@ -2345,11 +2345,169 @@ Lifestyle Editorial
 
 整體視覺如同一本當代藝術攝影集、獨立設計刊物或國際創意廣告獎作品，而非一般插畫或社群貼文。`,
     },
+    {
+      category: '視覺企劃',
+      cover: '/examples/outputs/brand-hero-visual/brand-hero-visual-chatgpt-5-5-instant-01.webp',
+      name: '品牌主視覺企劃',
+      promptMode: 'independent',
+      desc: 'Brand Hero Visual Direction',
+      prompt: `@創作圖像
+
+請先將我上傳／選取的參考照片，
+視為一個完整的商業視覺創意專案（creative direction project）進行分析。
+
+你必須先像國際級廣告公司中的：
+藝術總監（Art Director）、
+品牌設計師（Brand Designer）、
+商業攝影師（Commercial Photographer）、
+電影美術指導（Production Designer）
+與視覺創意總監（Creative Director）
+一樣進行完整視覺開發流程。
+
+不要套用固定模板。
+不要重複構圖。
+不要每次都產生相同風格。
+
+每次生成時，
+都必須根據「參考照片本身」的內容，
+重新思考最適合的：
+
+- 視覺世界觀
+- 情緒主題
+- 商業定位
+- 光影語言
+- 構圖方式
+- 色彩系統
+- 主視覺設計
+- 材質風格
+- 品牌感
+- 排版邏輯
+- 海報敘事性
+
+請先完整分析照片中的：
+
+【內容分析】
+
+- 主體類型
+（水果／食物／飲料／人物／建築／產品／空間／生活物件等）
+
+- 主體特徵
+（形狀、材質、紋理、比例、結構、細節）
+
+- 色彩關係
+（主色、輔色、冷暖傾向、色彩情緒）
+
+- 光影條件
+（自然光、硬光、柔光、側光、逆光、陰影層次）
+
+- 空間感
+（深度、距離、透視、空氣感）
+
+- 情緒氛圍
+（浪漫、孤獨、未來感、奢華、神秘、溫暖、黑暗、潮流等）
+
+- 可延伸的商業氣質
+（精品品牌、時尚品牌、電影感、韓系生活感、科技感、藝術感等）
+
+接著，
+請不要直接照搬原圖。
+
+而是根據分析結果，
+重新創造一張：
+「更高級、更具有商業價值、更有記憶點」
+的創意海報。
+
+你必須主動思考：
+
+這個主體，
+最適合被塑造成什麼樣的品牌世界觀？
+
+如何讓它：
+看起來像真正國際品牌廣告、
+精品品牌主視覺、
+高端雜誌封面、
+電影級商業海報、
+藝術級攝影作品？
+
+請自動建立：
+
+【創意方向】
+
+- 核心情緒主題
+- 視覺世界觀
+- 主視覺概念（Hero Visual）
+- 視覺記憶點
+- 商業定位
+- 品牌氣質
+- 色彩腳本（Color Script）
+- 光影設計
+- 鏡頭語言
+- 排版節奏
+- 留白比例
+- 材質細節
+- 空氣感
+- 電影感
+- 高級感來源
+
+生成時請避免：
+
+- 普通 AI 拼貼感
+- 過度廉價 HDR
+- 過度飽和
+- 元素堆砌
+- 無意義特效
+- 廣告素材感
+- 廉價電商風
+- 制式社群模板感
+
+請追求：
+
+- 國際精品品牌等級
+- 商業雜誌封面感
+- A24 / Apple / Prada / MUJI / Nike / 精品食品廣告等級的視覺質感
+- 強烈視覺記憶點
+- 電影級光影
+- 高級留白
+- 可商用設計感
+- 真實攝影質感
+- 有呼吸感的構圖
+- 有靈魂的畫面敘事
+
+每次生成時，
+都必須允許 AI 自主產生新的：
+
+- 構圖
+- 光影
+- 排版
+- 色彩
+- 世界觀
+- 情緒方向
+- 主視覺創意
+
+即使使用同一張參考照片，
+每次也都必須生成：
+不同但同樣高品質的創意商業海報方案。
+
+最終畫面必須像：
+
+「真正會出現在國際品牌廣告、
+精品雜誌、
+藝術展覽、
+高端商業攝影、
+電影宣傳視覺」
+
+而不是一般 AI 圖片。`,
+    },
 ]
 
 type StyleDetails = Pick<Style, 'summary' | 'tags' | 'inputType'>
 
 const styleDetails: Record<Style['name'], StyleDetails> = {
+  '品牌主視覺企劃': {
+    summary: '分析照片的主體、情緒與商業潛力，重新建立品牌世界觀、電影光影與高記憶點的國際級主視覺海報。',
+    tags: ['商業主視覺', '品牌世界觀', '創意指導', '電影光影'],
+    inputType: 'single-image',
+  },
   '生活速寫混合媒介': {
     summary: '保留真實攝影場景與透視，在畫面中融合白底黑線人物、生活物件與巨大原始手寫字，形成獨立雜誌感的混合媒介海報。',
     tags: ['混合媒介', '抽象速寫', '手寫排版', '生活編輯'],
@@ -2513,6 +2671,12 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
 }
 
 const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
+  '品牌主視覺企劃': [
+    {
+      inputImages: ['/examples/sources/brand-hero-visual/brand-hero-visual-01.webp'],
+      outputImage: '/examples/outputs/brand-hero-visual/brand-hero-visual-chatgpt-5-5-instant-01.webp',
+    },
+  ],
   '生活速寫混合媒介': [
     {
       inputImages: ['/examples/sources/mixed-media-lifestyle-sketch/mixed-media-lifestyle-sketch-01.webp'],

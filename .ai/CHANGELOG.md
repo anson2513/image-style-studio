@@ -3,6 +3,21 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-06 — 品牌主視覺企劃 Added
+
+### Added
+
+- New independent single-image style `品牌主視覺企劃` in `視覺企劃`.
+- Exact user-provided creative-direction prompt without a shared base prompt.
+- Anson-provided original and result references, converted to complete 9:16 WebP previews without cropping.
+- Summary and tags for commercial hero visuals, brand worlds, creative direction, and cinematic lighting.
+
+### Verified
+
+- 33 unique styles and 33 official example outputs.
+- No missing referenced assets.
+- ESLint and the production build pass.
+
 ## 2026-07-06 — 生活速寫混合媒介 Added
 
 ### Added
