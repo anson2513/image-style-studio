@@ -3,6 +3,21 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-06 — 晨光城市旅行誌 Added
+
+### Added
+
+- New independent single-image style `晨光城市旅行誌` in `城市旅遊`.
+- Exact user-provided Morning Calm travel-editorial prompt without a shared base prompt.
+- Anson-provided original and result references converted to complete 9:16 WebP previews without destructive cropping.
+- Summary and tags for airline travel, morning light, destination branding, and magazine covers.
+
+### Verified
+
+- 35 unique styles and 35 official example outputs.
+- No missing referenced assets.
+- ESLint and the production build pass.
+
 ## 2026-07-06 — Text-Only Support and 笨拙手寫詩意海報 Added
 
 ### Added

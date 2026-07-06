@@ -42,7 +42,7 @@ Status: Complete.
 - [x] Add an `examples` model with input images and an output image.
 - [x] Preserve all current prompt text and prompt routing.
 
-All 34 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, S2-T14, S2-T15, S2-T16, S2-T17, and S2-T18.
+All 35 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, S2-T14, S2-T15, S2-T16, S2-T17, S2-T18, and S2-T19.
 
 ### S2-T4 — Build Benchmark Assets
 
@@ -142,7 +142,7 @@ Status: Complete (24/24).
 Status: Complete.
 
 - [x] Confirm GPT-5.5 即時 as the official example workflow.
-- [x] Confirm all 34 styles have official examples.
+- [x] Confirm all 35 styles have official examples.
 - [x] Confirm all referenced example assets exist.
 - [x] Pass ESLint and the production build.
 - [x] Pass the dependency security audit with zero vulnerabilities.
@@ -220,6 +220,18 @@ Status: Complete.
 - [x] Add the summary and tags `手寫文字`, `極簡留白`, `詩意插畫`, and `獨立出版`.
 - [x] Mark the style as text-only and independent.
 - [x] Confirm 34 unique styles, 34 official outputs, and zero missing assets.
+
+### S2-T19 — Add 晨光城市旅行誌
+
+Status: Complete.
+
+- [x] Convert both Anson-provided references to complete 9:16 WebP previews without destructive cropping.
+- [x] Add the complete approved prompt without rewriting or shortening it.
+- [x] Name the style `晨光城市旅行誌` and place it in `城市旅遊`.
+- [x] Add the summary and tags `航空旅行`, `晨光色調`, `城市品牌`, and `雜誌封面`.
+- [x] Mark the style as single-image and independent.
+- [x] Connect the official result to card, 9:16 detail, and full-screen previews.
+- [x] Confirm 35 unique styles, 35 official outputs, and zero missing assets.
 
 ## Explicitly Out of Scope
 

@@ -3129,11 +3129,194 @@ IG貼文
 
 主題 :<貓>`,
     },
+    {
+      category: '城市旅遊',
+      cover: '/examples/outputs/morning-calm-city-travel/morning-calm-city-travel-chatgpt-5-5-instant-01.webp',
+      name: '晨光城市旅行誌',
+      promptMode: 'independent',
+      desc: 'Morning Calm City Travel Editorial',
+      prompt: `請根據 **【我提供的真實照片視為唯一創作基礎】** 自動分析該地的：
+
+* 地理環境
+* 自然景觀
+* 城市天際線
+* 建築特色
+* 文化氣質
+* 歷史背景
+* 氣候特徵
+* 在地色彩
+* 旅行氛圍
+* 情感印象
+
+並自動調整整體視覺語言，使畫面充分展現該城市獨有的文化魅力與旅行情緒。
+
+---
+
+## 整體靈感
+
+整體風格參考：
+
+韓亞航空（Korean Air）《Morning Calm》機上雜誌封面美學。
+
+打造具有：
+
+* 明亮
+* 優雅
+* 樂觀
+* 高級
+* 寧靜
+* 現代
+* 精品旅行感
+
+的國際級旅遊視覺。
+
+畫面如同：
+
+* 國際航空形象海報
+* 精品旅遊雜誌封面
+* 國際觀光品牌 KV
+* 博物館級平面設計作品
+* 高端 Lifestyle Editorial
+
+---
+
+# 視覺風格（STYLE）
+
+整體畫面需呈現：
+
+* 明亮通透的視覺氛圍
+* 高調（High-Key）電影級光線
+* 清晨自然陽光
+* 柔和晨光或黃金時刻光影（Golden Hour）
+* 明亮但沒有沉重陰影
+* 空氣感豐富
+* 乾淨通透的曝光
+* 柔和且具有城市特色的粉彩色系
+* 高級電影膠片色調
+* 極簡構圖
+* 大量留白
+* 精品旅遊雜誌封面風格
+* 優雅且克制的 Typography
+* Morning Calm 雜誌般的精緻質感
+* 國際級觀光品牌形象
+* 真實空氣透視
+* 細膩環境層次
+* 微弱膠片顆粒
+* 極致乾淨的畫質
+
+---
+
+## 避免以下風格
+
+避免：
+
+* 粗獷寫實
+* 黑暗電影風
+* 強烈高反差
+* 濃重陰影
+* Cyberpunk
+* 深色電影調色
+* 橘褐色濾鏡
+* 泥灰色調
+* 過度飽和霓虹色
+* 恐怖氛圍
+* 暴風雨天氣
+* 夜景（除非該城市最具代表性的旅行印象就是夜晚，且光線仍須保持優雅明亮）
+
+---
+
+# 構圖（COMPOSITION）
+
+畫面需以該城市最具代表性的：
+
+* 地標建築
+* 天際線
+* 山景
+* 海岸
+* 湖泊
+* 街景
+* 自然景觀
+
+作為主要視覺焦點。
+
+整體構圖要求：
+
+* 平衡且富有呼吸感
+* 大量留白
+* 雜誌封面式構圖
+* 大型城市名稱 Typography 自然融入畫面
+* 前景、中景、遠景具有清楚層次
+* 電影感透視
+* 充滿旅行嚮往感
+* 精品觀光品牌形象
+* 清楚的視覺層級
+* 高端旅遊海報構圖
+* 永恆且具有國際感的設計美學
+
+---
+
+# 光線與色彩（LIGHTING & COLOR）
+
+畫面光線應呈現：
+
+* 明亮自然日光
+* 或晨曦光線
+* 柔和漫射光
+* 純淨白色高光
+* 清澈天空漸層
+* 高透明度空氣感
+* 柔暖陽光搭配冷色空氣層次
+* Morning Calm 雜誌般的高級色彩
+* 根據目的地自動匹配當地自然色系
+* 高亮但柔和的曝光平衡
+* 微妙倒影
+* 柔和環境光
+
+---
+
+# 材質與細節（TEXTURE & DETAIL）
+
+整體需呈現：
+
+* 微弱高級紙張質感
+* 博物館級印刷品質
+* 細膩電影膠片顆粒
+* 豐富且真實的環境敘事
+* 精品 Editorial 真實感
+* 8K 超高解析度
+* 極致精緻的 Typography 與版面整合
+* 大師級旅遊海報設計品質
+
+---
+
+# 最終畫面氣質
+
+作品應像：
+
+* Korean Air《Morning Calm》機上雜誌封面
+* Monocle 城市專刊
+* Wallpaper* 城市特輯
+* Condé Nast Traveler 封面
+* Kinfolk Travel
+* 國際精品旅遊品牌形象
+* 博物館收藏級旅遊海報
+* 國際航空公司形象廣告
+* 高端城市品牌視覺（Destination Branding）
+
+整體畫面必須兼具：
+
+**明亮、優雅、極簡、溫暖、國際感、精品感、旅行嚮往感、永恆設計美學，以及電影級的高級視覺質感。**`,
+    },
 ]
 
 type StyleDetails = Pick<Style, 'summary' | 'tags' | 'inputType'>
 
 const styleDetails: Record<Style['name'], StyleDetails> = {
+  '晨光城市旅行誌': {
+    summary: '分析目的地的地理、文化與城市氣質，將真實照片轉化為明亮晨光、粉彩空氣感與精品排版的國際航空旅行雜誌封面。',
+    tags: ['航空旅行', '晨光色調', '城市品牌', '雜誌封面'],
+    inputType: 'single-image',
+  },
   '笨拙手寫詩意海報': {
     summary: '以大量留白、笨拙麥克筆字與一個純真小插畫，把指定主題轉化為安靜溫暖的獨立出版詩意海報。',
     tags: ['手寫文字', '極簡留白', '詩意插畫', '獨立出版'],
@@ -3307,6 +3490,12 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
 }
 
 const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
+  '晨光城市旅行誌': [
+    {
+      inputImages: ['/examples/sources/morning-calm-city-travel/morning-calm-city-travel-01.webp'],
+      outputImage: '/examples/outputs/morning-calm-city-travel/morning-calm-city-travel-chatgpt-5-5-instant-01.webp',
+    },
+  ],
   '笨拙手寫詩意海報': [
     {
       inputImages: [],

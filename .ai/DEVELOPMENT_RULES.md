@@ -37,6 +37,7 @@ Independent examples:
 - 生活速寫混合媒介
 - 品牌主視覺企劃
 - 笨拙手寫詩意海報
+- 晨光城市旅行誌
 
 ## Prompt Integrity Rule
 

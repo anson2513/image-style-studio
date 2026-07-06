@@ -52,6 +52,7 @@ const categoryStyleNames: Partial<Record<Category, readonly string[]>> = {
     '高級旅遊雜誌風',
     '城市旅繪日誌',
     'Colorwalk 城市漫遊',
+    '晨光城市旅行誌',
   ],
   空間敘事: ['電影級風景 HDR', '空拍敘事視角'],
   食物美學: ['食物海報設計', '精品食物品牌廣告'],
