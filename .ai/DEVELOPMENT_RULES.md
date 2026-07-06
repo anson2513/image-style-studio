@@ -32,6 +32,8 @@ Independent examples:
 - 攝影書敘事
 - 食物海報設計
 - Colorwalk 城市漫遊
+- 藝術拉絲攝影
+- 精品食物品牌廣告
 
 ## Prompt Integrity Rule
 

@@ -25,7 +25,7 @@ The new App lives in:
 - Independent GitHub Repository created and pushed: `https://github.com/anson2513/image-style-studio`.
 - Independent Vercel project deployed: `https://image-style-studio.vercel.app`.
 - The new and legacy production Apps were both opened and verified without browser errors or warnings.
-- All 30 current styles include `summary`, `tags`, `inputType`, and typed `examples` metadata.
+- All 31 current styles include `summary`, `tags`, `inputType`, and typed `examples` metadata.
 - `攝影書敘事` is marked as multi-image; the remaining current styles are marked as single-image based on their approved prompts.
 - Example arrays intentionally remain empty until authentic benchmark inputs and first-run outputs are available.
 - ESLint and the production build pass after the style data model extension.
@@ -61,11 +61,12 @@ The new App lives in:
 - Remaining-style release candidate Batch 4 is complete (24/24): 極簡留白童話速寫、手繪風註解日誌、城市旅繪日誌、Colorwalk 城市漫遊、電影級風景 HDR、空拍敘事視角. All 29 styles now have official ChatGPT GPT-5.5 即時 examples.
 - Analysis-only production prompts remain unchanged and use one standardized follow-up instruction to request the final image.
 - On 2026-07-06, Anson confirmed GPT-5.5 即時 as the official example workflow.
-- Release readiness audit passes: 30 unique styles, 30 official examples, all referenced assets present, ESLint clean, production build clean, and zero dependency vulnerabilities.
+- Release readiness audit passes: 31 unique styles, 31 official examples, all referenced assets present, ESLint clean, production build clean, and zero dependency vulnerabilities.
 - Desktop and mobile style cards now use official result images in compact 4:5 stages.
 - The desktop inspector now shows the complete 9:16 Before/After stage and scrolls independently for metadata and prompt output.
 - Mobile detail now prioritizes a complete 9:16 preview, moves supporting information below it, and opens a full-screen original/result viewer on tap.
 - `藝術拉絲攝影` was added as an independent single-image style in `視覺企劃`, using Anson's source/result pair and the exact approved Fine Art Motion Streak prompt.
+- `精品食物品牌廣告` was added as an independent single-image style in `食物美學`; both Anson-provided references were normalized to complete 9:16 WebP previews without cropping.
 
 ## Current Priority
 

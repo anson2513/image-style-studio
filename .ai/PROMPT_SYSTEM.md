@@ -55,6 +55,8 @@ The final output must be the style prompt only.
 - 色彩氛圍美學
 - 攝影書敘事
 - 食物海報設計
+- 藝術拉絲攝影
+- 精品食物品牌廣告
 
 ## Critical Rule
 

@@ -18,6 +18,8 @@ Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GP
 
 `藝術拉絲攝影` was added on 2026-07-06 from an Anson-provided source/result pair. The source is preserved as `sources/fine-art-motion-streak/fine-art-motion-streak-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/fine-art-motion-streak/fine-art-motion-streak-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
 
+`精品食物品牌廣告` was added on 2026-07-06 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews with matching background extension and no destructive crop. The source is preserved as `sources/premium-food-branding/premium-food-branding-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/premium-food-branding/premium-food-branding-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
+
 ## Directory convention
 
 ```text
@@ -31,6 +33,7 @@ examples/
     daily-life/
     aerial/
     fine-art-motion-streak/
+    premium-food-branding/
   outputs/
     photobook-narrative/
     watercolor-illustration/
@@ -38,6 +41,7 @@ examples/
     food-poster-design/
     japanese-cinema/
     fine-art-motion-streak/
+    premium-food-branding/
 ```
 
 Use lowercase kebab-case filenames. Keep originals unchanged; create separate optimized copies if the Web App needs smaller files.

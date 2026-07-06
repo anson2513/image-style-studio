@@ -3,6 +3,21 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-06 — 精品食物品牌廣告 Added
+
+### Added
+
+- New independent single-image style `精品食物品牌廣告` in `食物美學`.
+- Exact user-provided Premium Food Branding Campaign prompt without a shared base prompt.
+- Anson-provided original and result references, converted to complete 9:16 WebP previews without cropping.
+- Summary and tags for premium dining, commercial photography, and ingredient deconstruction.
+
+### Verified
+
+- 31 unique styles and 31 official example outputs.
+- No missing referenced assets.
+- ESLint and the production build pass.
+
 ## 2026-07-06 — 藝術拉絲攝影 Added
 
 ### Added
