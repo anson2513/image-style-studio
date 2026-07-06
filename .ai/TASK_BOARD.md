@@ -45,13 +45,13 @@ All 29 styles now include the extended metadata. Example arrays remain empty unt
 
 ### S2-T4 — Build Benchmark Assets
 
-Status: In progress.
+Status: Complete.
 
 - [x] Define six neutral source-photo groups and their expected image counts.
 - [x] Define the five representative pilot styles.
 - [x] Add the authentic asset directory and provenance convention.
 - [x] Add 16 high-quality AI-generated development source photos with explicit provenance.
-- [ ] Optionally replace development sources with personally captured photos for a documentary-authentic release set.
+- [ ] Optional, non-blocking future enhancement: replace development sources with personally captured photos for a documentary-authentic release set.
 - [x] Generate first-run development examples with OpenAI image generation and each exact approved prompt.
 - [x] Keep original development inputs and first-run outputs.
 - [x] Generate release-candidate examples using ChatGPT GPT-5.5, 即時 mode when that exact workflow is available.
@@ -96,7 +96,7 @@ Status: Complete.
 
 ### S2-T8 — Responsive and Accessibility QA
 
-Status: In progress.
+Status: Complete.
 
 - [x] Verify the two-column mobile grid and mobile bottom navigation.
 - [x] Verify the 260 px / flexible / 380 px desktop workspace.
@@ -135,6 +135,16 @@ Status: Complete (24/24).
 - [x] Batch 2: 吉卜力動畫風、賽博龐克風、復古港風電影、極簡藝術海報、歐美電影預告感、黑白攝影展風格.
 - [x] Batch 3: 潮流街頭品牌風、夢幻童話風、蒸汽龐克風、日系戀愛劇氛圍、彩色蠟筆手繪插畫、日系生活感手繪插畫.
 - [x] Batch 4: 極簡留白童話速寫、手繪風註解日誌、城市旅繪日誌、Colorwalk 城市漫遊、電影級風景 HDR、空拍敘事視角.
+
+### S2-T12 — Release Readiness Audit
+
+Status: Complete.
+
+- [x] Confirm GPT-5.5 即時 as the official example workflow.
+- [x] Confirm all 29 styles have official examples.
+- [x] Confirm all referenced example assets exist.
+- [x] Pass ESLint and the production build.
+- [x] Pass the dependency security audit with zero vulnerabilities.
 
 ## Explicitly Out of Scope
 

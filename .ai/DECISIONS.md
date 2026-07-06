@@ -112,3 +112,9 @@ All UI references must remain feasible in standard Next.js, React, Tailwind CSS,
 
 Status: Accepted
 
+## Decision 014 — Official Example Workflow Uses GPT-5.5 即時
+
+All official Before/After examples use ChatGPT GPT-5.5 in 即時 mode. The previously discussed 智慧高 workflow is superseded for the official example set.
+
+Status: Accepted by Anson on 2026-07-06
+

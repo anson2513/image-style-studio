@@ -60,11 +60,14 @@ The new App lives in:
 - Remaining-style release candidate Batch 3 is complete (18/24): 潮流街頭品牌風、夢幻童話風、蒸汽龐克風、日系戀愛劇氛圍、彩色蠟筆手繪插畫、日系生活感手繪插畫.
 - Remaining-style release candidate Batch 4 is complete (24/24): 極簡留白童話速寫、手繪風註解日誌、城市旅繪日誌、Colorwalk 城市漫遊、電影級風景 HDR、空拍敘事視角. All 29 styles now have official ChatGPT GPT-5.5 即時 examples.
 - Analysis-only production prompts remain unchanged and use one standardized follow-up instruction to request the final image.
+- On 2026-07-06, Anson confirmed GPT-5.5 即時 as the official example workflow.
+- Release readiness audit passes: 29 unique styles, 29 official examples, all referenced assets present, ESLint clean, production build clean, and zero dependency vulnerabilities.
 
 ## Current Priority
 
-1. Connect the Codex Chrome Extension, then run the exact ChatGPT GPT-5.5 即時 release-candidate example pass.
-2. Generate a separate release-candidate pass in ChatGPT GPT-5.5 即時 when that exact workflow is available.
+1. Keep the deployed release stable and address user acceptance feedback.
+2. Add future approved prompts and authentic examples incrementally.
+3. Optionally replace AI-generated benchmark sources with Anson's personally captured photos later.
 
 ## Critical Rules
 

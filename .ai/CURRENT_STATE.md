@@ -61,7 +61,7 @@ The app remains a single-page client MVP, but stable data and routing responsibi
 - `lib/promptRouter.ts`: data-driven base selection and final prompt composition.
 - `lib/categories.ts`: category labels, membership, ordering, and favorites filtering.
 - `lib/storage.ts`: safe local persistence for favorites and recent usage.
-- `public/examples/`: 16 AI-generated benchmark sources and five first-run pilot outputs, delivered as optimized WebP assets.
+- `public/examples/`: 17 AI-generated benchmark sources and 34 preserved development/release outputs, delivered as optimized WebP assets.
 - `lib/types.ts`: shared style and prompt-mode types.
 
 Each style now also carries:
@@ -69,7 +69,7 @@ Each style now also carries:
 - `summary`: concise Traditional Chinese explanation.
 - `tags`: two to four browsing tags.
 - `inputType`: `single-image` or `multi-image`.
-- `examples`: typed input-image and output-image pairs; currently empty pending authentic benchmark production.
+- `examples`: typed input-image and output-image pairs; all 29 styles now point to official GPT-5.5 即時 results.
 
 ## Current Categories
 
@@ -128,7 +128,10 @@ Shared prompt universes:
 - PWA icons use the lightweight `public/brand-mark.svg` identity and matching generated PNG assets.
 - Independent production is live at `https://image-style-studio.vercel.app`.
 - The legacy production remains live at `https://ai-poster-director-clean.vercel.app`.
+- All 29 style examples reference existing assets.
+- The repository contains 51 optimized WebP benchmark assets totaling about 14.83 MB.
+- The dependency audit reports zero vulnerabilities.
 
 ## Current Priority
 
-Complete interaction QA, then run the exact ChatGPT GPT-5.5 即時 release-candidate example pass when that workflow is available.
+Keep production stable, review requested refinements, and add future approved prompts without changing the existing prompt library.
