@@ -56,13 +56,13 @@ The app remains a single-page client MVP, but stable data and routing responsibi
 - `components/MobileStyleDetailSheet.tsx`: mobile style metadata and example bottom sheet.
 - `components/PromptOutput.tsx`: mobile prompt generation and copy result.
 - `components/StyleCard.tsx`: reusable responsive style card and favorite action.
-- `lib/styles.ts`: all 35 style objects and their prompt modes.
+- `lib/styles.ts`: all 36 style objects and their prompt modes.
 - `lib/benchmarks.ts`: six benchmark source groups, 16 registered development images, and five pilot styles.
 - `lib/basePrompts.ts`: the four shared prompt universes.
 - `lib/promptRouter.ts`: data-driven base selection and final prompt composition.
 - `lib/categories.ts`: category labels, membership, ordering, and favorites filtering.
 - `lib/storage.ts`: safe local persistence for favorites and recent usage.
-- `public/examples/`: 22 benchmark/user-provided sources and 40 preserved development/release outputs, delivered as optimized WebP assets.
+- `public/examples/`: 23 benchmark/user-provided sources and 41 preserved development/release outputs, delivered as optimized WebP assets.
 - `lib/types.ts`: shared style and prompt-mode types.
 
 Each style now also carries:
@@ -70,7 +70,7 @@ Each style now also carries:
 - `summary`: concise Traditional Chinese explanation.
 - `tags`: two to four browsing tags.
 - `inputType`: `single-image`, `multi-image`, or `text-only`.
-- `examples`: typed input-image and output-image pairs; all 35 styles now point to official GPT-5.5 即時 results. Text-only styles intentionally use an empty input-image list.
+- `examples`: typed input-image and output-image pairs; all 36 styles now point to official GPT-5.5 即時 results. Text-only styles intentionally use an empty input-image list.
 
 ## Current Categories
 
@@ -98,6 +98,7 @@ Each style now also carries:
 - 品牌主視覺企劃
 - 笨拙手寫詩意海報
 - 晨光城市旅行誌
+- 樂高積木微縮世界
 
 ## Current Important Prompt Routing State
 
@@ -116,6 +117,7 @@ Independent prompts with no base prompt:
 - 品牌主視覺企劃
 - 笨拙手寫詩意海報
 - 晨光城市旅行誌
+- 樂高積木微縮世界
 
 Shared prompt universes:
 
@@ -141,8 +143,8 @@ Shared prompt universes:
 - PWA icons use the lightweight `public/brand-mark.svg` identity and matching generated PNG assets.
 - Independent production is live at `https://image-style-studio.vercel.app`.
 - The legacy production remains live at `https://ai-poster-director-clean.vercel.app`.
-- All 35 style examples reference existing assets.
-- The repository contains 62 optimized WebP example assets.
+- All 36 style examples reference existing assets.
+- The repository contains 64 optimized WebP example assets.
 - Text-only styles render a single labeled generation example without a fabricated source image or comparison control.
 - The dependency audit reports zero vulnerabilities.
 - Official output images now power desktop and mobile style cards.

@@ -65,6 +65,7 @@ Current style object shape:
 - 手繪風註解日誌
 - 日系生活感手繪插畫
 - 生活速寫混合媒介
+- 樂高積木微縮世界
 - 笨拙手寫詩意海報
 
 ### 城市旅遊
@@ -154,6 +155,13 @@ Current preferred cover ratio discussed during development:
 ### 晨光城市旅行誌
 
 - Category: 城市旅遊
+- Prompt type: Independent
+- Input type: Single image
+- Must not inherit base prompt
+
+### 樂高積木微縮世界
+
+- Category: 手繪插畫
 - Prompt type: Independent
 - Input type: Single image
 - Must not inherit base prompt

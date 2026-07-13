@@ -38,6 +38,7 @@ Independent examples:
 - 品牌主視覺企劃
 - 笨拙手寫詩意海報
 - 晨光城市旅行誌
+- 樂高積木微縮世界
 
 ## Prompt Integrity Rule
 

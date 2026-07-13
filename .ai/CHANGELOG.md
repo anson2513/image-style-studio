@@ -3,6 +3,20 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-13 — 樂高積木微縮世界 Added
+
+### Added
+
+- New independent single-image style `樂高積木微縮世界` in `手繪插畫`.
+- Exact user-provided brick-built miniature world prompt without a shared base prompt.
+- Anson-provided original and result references converted to complete 9:16 WebP previews without destructive cropping.
+- Summary and tags for brick models, family-friendly playfulness, plastic gloss, and miniature scenes.
+
+### Verified
+
+- 36 unique styles and 36 official example outputs.
+- No missing referenced assets.
+
 ## 2026-07-06 — 晨光城市旅行誌 Added
 
 ### Added

@@ -28,6 +28,8 @@ Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GP
 
 `晨光城市旅行誌` was added on 2026-07-06 from an Anson-provided source/result pair. The source is preserved as a complete 1080 × 1920 WebP; the result is preserved without cropping inside a feathered 9:16 delivery canvas. The files live at `sources/morning-calm-city-travel/morning-calm-city-travel-01.webp` and `outputs/morning-calm-city-travel/morning-calm-city-travel-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
 
+`樂高積木微縮世界` was added on 2026-07-13 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews with matching blurred background extension and no destructive crop. The source is preserved as `sources/lego-miniature-world/lego-miniature-world-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/lego-miniature-world/lego-miniature-world-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
+
 ## Directory convention
 
 ```text

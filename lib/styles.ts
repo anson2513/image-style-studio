@@ -2346,6 +2346,14 @@ Lifestyle Editorial
 整體視覺如同一本當代藝術攝影集、獨立設計刊物或國際創意廣告獎作品，而非一般插畫或社群貼文。`,
     },
     {
+      category: '手繪插畫',
+      cover: '/examples/outputs/lego-miniature-world/lego-miniature-world-chatgpt-5-5-instant-01.webp',
+      name: '樂高積木微縮世界',
+      promptMode: 'independent',
+      desc: 'Brick-Built Miniature World',
+      prompt: `請將上傳照片轉換成樂高積木拼圖風格。保留人物的髮型、服裝顏色、動作和原場景構圖，把人物和背景都變成由樂高積木拼搭出來的迷你世界。人物像樂高小人偶，場景由彩色積木顆粒組成，保留照片中的主要道具和空間關係。畫面要有真實積木林質、塑料光澤、拼接縫隙和顆粒結構。整體像一組精緻的樂高模型攝影，明亮、有趣、立體、適合親子和家庭主題。`,
+    },
+    {
       category: '視覺企劃',
       cover: '/examples/outputs/brand-hero-visual/brand-hero-visual-chatgpt-5-5-instant-01.webp',
       name: '品牌主視覺企劃',
@@ -3332,6 +3340,11 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
     tags: ['混合媒介', '抽象速寫', '手寫排版', '生活編輯'],
     inputType: 'single-image',
   },
+  '樂高積木微縮世界': {
+    summary: '把照片中的人物、道具與場景轉成彩色積木拼搭的微縮模型，保留原始構圖與空間關係，呈現明亮、有趣、親子感的玩具攝影。',
+    tags: ['積木模型', '親子趣味', '塑料光澤', '微縮場景'],
+    inputType: 'single-image',
+  },
   '精品食物品牌廣告': {
     summary: '分析料理與食材特徵，重構為具有懸浮解構、精品排版與攝影棚光線的國際餐飲品牌廣告。',
     tags: ['精品餐飲', '商業攝影', '食材解構'],
@@ -3512,6 +3525,12 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
     {
       inputImages: ['/examples/sources/mixed-media-lifestyle-sketch/mixed-media-lifestyle-sketch-01.webp'],
       outputImage: '/examples/outputs/mixed-media-lifestyle-sketch/mixed-media-lifestyle-sketch-chatgpt-5-5-instant-01.webp',
+    },
+  ],
+  '樂高積木微縮世界': [
+    {
+      inputImages: ['/examples/sources/lego-miniature-world/lego-miniature-world-01.webp'],
+      outputImage: '/examples/outputs/lego-miniature-world/lego-miniature-world-chatgpt-5-5-instant-01.webp',
     },
   ],
   '精品食物品牌廣告': [
