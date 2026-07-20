@@ -2354,6 +2354,14 @@ Lifestyle Editorial
       prompt: `請將上傳照片轉換成樂高積木拼圖風格。保留人物的髮型、服裝顏色、動作和原場景構圖，把人物和背景都變成由樂高積木拼搭出來的迷你世界。人物像樂高小人偶，場景由彩色積木顆粒組成，保留照片中的主要道具和空間關係。畫面要有真實積木林質、塑料光澤、拼接縫隙和顆粒結構。整體像一組精緻的樂高模型攝影，明亮、有趣、立體、適合親子和家庭主題。`,
     },
     {
+      category: '手繪插畫',
+      cover: '/examples/outputs/line-sticker-people/line-sticker-people-chatgpt-5-5-instant-01.webp',
+      name: '實景人物貼紙線稿',
+      promptMode: 'independent',
+      desc: 'Real Photo × Line Sticker People',
+      prompt: `原圖實景完整保留，不改動真實場景、光影、環境質感；把畫面中的人物做成極簡黑白單線人物切模貼紙，粗黑色輪廓，少量純黑色塊陰影，純黑白無漸變；每張貼紙自帶一圈白色裁切白邊，手賬貼紙疊加效果，扁平極簡手繪，ins 簡約塗鴉風，實景照片保持真實高清質感，8K清晰，9：16竪版`,
+    },
+    {
       category: '視覺企劃',
       cover: '/examples/outputs/brand-hero-visual/brand-hero-visual-chatgpt-5-5-instant-01.webp',
       name: '品牌主視覺企劃',
@@ -3345,6 +3353,11 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
     tags: ['積木模型', '親子趣味', '塑料光澤', '微縮場景'],
     inputType: 'single-image',
   },
+  '實景人物貼紙線稿': {
+    summary: '完整保留真實場景，只把人物轉成黑白單線手帳貼紙，帶白色裁切邊，形成實景照片上疊加極簡塗鴉貼紙的效果。',
+    tags: ['人物貼紙', '黑白線稿', '實景保留', '手帳塗鴉'],
+    inputType: 'single-image',
+  },
   '精品食物品牌廣告': {
     summary: '分析料理與食材特徵，重構為具有懸浮解構、精品排版與攝影棚光線的國際餐飲品牌廣告。',
     tags: ['精品餐飲', '商業攝影', '食材解構'],
@@ -3531,6 +3544,12 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
     {
       inputImages: ['/examples/sources/lego-miniature-world/lego-miniature-world-01.webp'],
       outputImage: '/examples/outputs/lego-miniature-world/lego-miniature-world-chatgpt-5-5-instant-01.webp',
+    },
+  ],
+  '實景人物貼紙線稿': [
+    {
+      inputImages: ['/examples/sources/line-sticker-people/line-sticker-people-01.webp'],
+      outputImage: '/examples/outputs/line-sticker-people/line-sticker-people-chatgpt-5-5-instant-01.webp',
     },
   ],
   '精品食物品牌廣告': [

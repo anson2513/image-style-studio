@@ -30,6 +30,8 @@ Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GP
 
 `樂高積木微縮世界` was added on 2026-07-13 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews with matching blurred background extension and no destructive crop. The source is preserved as `sources/lego-miniature-world/lego-miniature-world-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/lego-miniature-world/lego-miniature-world-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
 
+`實景人物貼紙線稿` was added on 2026-07-20 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews without destructive crop. The source is preserved as `sources/line-sticker-people/line-sticker-people-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/line-sticker-people/line-sticker-people-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
+
 ## Directory convention
 
 ```text

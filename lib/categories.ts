@@ -47,6 +47,7 @@ const categoryStyleNames: Partial<Record<Category, readonly string[]>> = {
     '日系生活感手繪插畫',
     '生活速寫混合媒介',
     '樂高積木微縮世界',
+    '實景人物貼紙線稿',
     '笨拙手寫詩意海報',
   ],
   城市旅遊: [

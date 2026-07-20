@@ -3,6 +3,20 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-20 — 實景人物貼紙線稿 Added
+
+### Added
+
+- New independent single-image style `實景人物貼紙線稿` in `手繪插畫`.
+- Exact user-provided real-photo line-sticker prompt without a shared base prompt.
+- Anson-provided original and result references converted to complete 9:16 WebP previews without destructive cropping.
+- Summary and tags for people stickers, black-and-white line art, real-scene preservation, and journal doodle styling.
+
+### Verified
+
+- 37 unique styles and 37 official example outputs.
+- No missing referenced assets.
+
 ## 2026-07-13 — 樂高積木微縮世界 Added
 
 ### Added
