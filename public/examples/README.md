@@ -34,6 +34,8 @@ Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GP
 
 `斑駁光影電影感` was added on 2026-07-21 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews with matching blurred background extension and no destructive crop. The source is preserved as `sources/dappled-cinematic-light/dappled-cinematic-light-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/dappled-cinematic-light/dappled-cinematic-light-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
 
+`午後窗光輕食時光` was added on 2026-07-21 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews with matching blurred background extension and no destructive crop. The source is preserved as `sources/afternoon-window-light-food/afternoon-window-light-food-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/afternoon-window-light-food/afternoon-window-light-food-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
+
 ## Directory convention
 
 ```text
@@ -51,6 +53,7 @@ examples/
     mixed-media-lifestyle-sketch/
     brand-hero-visual/
     morning-calm-city-travel/
+    afternoon-window-light-food/
   outputs/
     photobook-narrative/
     watercolor-illustration/
@@ -63,6 +66,7 @@ examples/
     brand-hero-visual/
     naive-handwritten-poetry-poster/
     morning-calm-city-travel/
+    afternoon-window-light-food/
 ```
 
 Use lowercase kebab-case filenames. Keep originals unchanged; create separate optimized copies if the Web App needs smaller files.

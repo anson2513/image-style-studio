@@ -64,6 +64,7 @@ The final output must be the style prompt only.
 - 樂高積木微縮世界
 - 實景人物貼紙線稿
 - 斑駁光影電影感
+- 午後窗光輕食時光
 
 ## Critical Rule
 

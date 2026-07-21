@@ -86,6 +86,7 @@ Current style object shape:
 
 - 食物海報設計
 - 精品食物品牌廣告
+- 午後窗光輕食時光
 
 ## Cover System
 
@@ -126,6 +127,13 @@ Current preferred cover ratio discussed during development:
 - Must not inherit base prompt
 
 ### 精品食物品牌廣告
+
+- Category: 食物美學
+- Prompt type: Independent
+- Input type: Single image
+- Must not inherit base prompt
+
+### 午後窗光輕食時光
 
 - Category: 食物美學
 - Prompt type: Independent

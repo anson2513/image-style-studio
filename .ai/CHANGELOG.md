@@ -3,6 +3,20 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-21 — 午後窗光輕食時光 Added
+
+### Added
+
+- New independent single-image style `午後窗光輕食時光` in `食物美學`.
+- Exact user-provided afternoon window-light food prompt without a shared base prompt.
+- Anson-provided original and result references converted to complete 9:16 WebP previews without destructive cropping.
+- Summary and tags for afternoon window light, warm natural lighting, striped shadows, and light-meal atmosphere.
+
+### Verified
+
+- 39 unique styles and 39 official example outputs.
+- No missing referenced assets.
+
 ## 2026-07-21 — 斑駁光影電影感 Added
 
 ### Added

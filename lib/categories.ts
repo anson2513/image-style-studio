@@ -58,7 +58,7 @@ const categoryStyleNames: Partial<Record<Category, readonly string[]>> = {
     '晨光城市旅行誌',
   ],
   空間敘事: ['電影級風景 HDR', '空拍敘事視角'],
-  食物美學: ['食物海報設計', '精品食物品牌廣告'],
+  食物美學: ['食物海報設計', '精品食物品牌廣告', '午後窗光輕食時光'],
 }
 
 export function filterStyles(
