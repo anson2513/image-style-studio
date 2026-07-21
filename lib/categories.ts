@@ -38,6 +38,7 @@ const categoryStyleNames: Partial<Record<Category, readonly string[]>> = {
     '夢幻童話風',
     '蒸汽龐克風',
     '日系戀愛劇氛圍',
+    '斑駁光影電影感',
   ],
   手繪插畫: [
     '水彩插畫風',

@@ -56,6 +56,7 @@ Current style object shape:
 - 夢幻童話風
 - 蒸汽龐克風
 - 日系戀愛劇氛圍
+- 斑駁光影電影感
 
 ### 手繪插畫
 
@@ -170,6 +171,13 @@ Current preferred cover ratio discussed during development:
 ### 實景人物貼紙線稿
 
 - Category: 手繪插畫
+- Prompt type: Independent
+- Input type: Single image
+- Must not inherit base prompt
+
+### 斑駁光影電影感
+
+- Category: 電影宇宙
 - Prompt type: Independent
 - Input type: Single image
 - Must not inherit base prompt

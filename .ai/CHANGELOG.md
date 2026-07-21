@@ -3,6 +3,20 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-07-21 — 斑駁光影電影感 Added
+
+### Added
+
+- New independent single-image style `斑駁光影電影感` in `電影宇宙`.
+- Exact user-provided dappled cinematic light prompt without a shared base prompt.
+- Anson-provided original and result references converted to complete 9:16 WebP previews without destructive cropping.
+- Summary and tags for dappled light, cinematic opening shots, warm-cool contrast, and dynamic foreground depth.
+
+### Verified
+
+- 38 unique styles and 38 official example outputs.
+- No missing referenced assets.
+
 ## 2026-07-20 — 實景人物貼紙線稿 Added
 
 ### Added

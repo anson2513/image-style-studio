@@ -40,6 +40,7 @@ Independent examples:
 - 晨光城市旅行誌
 - 樂高積木微縮世界
 - 實景人物貼紙線稿
+- 斑駁光影電影感
 
 ## Prompt Integrity Rule
 
