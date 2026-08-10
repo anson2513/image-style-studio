@@ -2378,6 +2378,14 @@ Lifestyle Editorial
       prompt: `原圖實景完整保留，不改動真實場景、光影、環境質感；把畫面中的人物做成極簡黑白單線人物切模貼紙，粗黑色輪廓，少量純黑色塊陰影，純黑白無漸變；每張貼紙自帶一圈白色裁切白邊，手賬貼紙疊加效果，扁平極簡手繪，ins 簡約塗鴉風，實景照片保持真實高清質感，8K清晰，9：16竪版`,
     },
     {
+      category: '手繪插畫',
+      cover: '/examples/outputs/die-cut-people-sticker/die-cut-people-sticker-chatgpt-5-5-instant-01.webp',
+      name: '實景人物切模貼紙',
+      promptMode: 'independent',
+      desc: 'Real Photo × Die-Cut People Stickers',
+      prompt: '原圖實景完整保留，不改動真實場景、光影、環境質感;把畫面中的人物做成 極簡黑白單線人物切模貼紙 (極簡手繪塗鴉風格，扁平圖形化，ins簡約美學)，粗黑色輪廓，少量純黑色塊陰影，純黑白無漸變;每張貼紙自帶一圈白色裁切白邊，手賬貼紙疊加效果，扁平極簡手繪省略複雜細節，ins簡約塗鴉風，實景照片保持真實高清質感。 負面提示詞：複雜線條，錯亂線條，細小線條。',
+    },
+    {
       category: '視覺企劃',
       cover: '/examples/outputs/brand-hero-visual/brand-hero-visual-chatgpt-5-5-instant-01.webp',
       name: '品牌主視覺企劃',
@@ -3374,6 +3382,11 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
     tags: ['人物貼紙', '黑白線稿', '實景保留', '手帳塗鴉'],
     inputType: 'single-image',
   },
+  '實景人物切模貼紙': {
+    summary: '完整保留真實場景，把人物轉成粗黑輪廓、純白填色與白色裁切邊的切模貼紙，形成實景照片上疊加極簡 ins 塗鴉的效果。',
+    tags: ['切模貼紙', '黑白線稿', '白邊裁切', '實景保留'],
+    inputType: 'single-image',
+  },
   '精品食物品牌廣告': {
     summary: '分析料理與食材特徵，重構為具有懸浮解構、精品排版與攝影棚光線的國際餐飲品牌廣告。',
     tags: ['精品餐飲', '商業攝影', '食材解構'],
@@ -3576,6 +3589,12 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
     {
       inputImages: ['/examples/sources/line-sticker-people/line-sticker-people-01.webp'],
       outputImage: '/examples/outputs/line-sticker-people/line-sticker-people-chatgpt-5-5-instant-01.webp',
+    },
+  ],
+  '實景人物切模貼紙': [
+    {
+      inputImages: ['/examples/sources/die-cut-people-sticker/die-cut-people-sticker-01.webp'],
+      outputImage: '/examples/outputs/die-cut-people-sticker/die-cut-people-sticker-chatgpt-5-5-instant-01.webp',
     },
   ],
   '精品食物品牌廣告': [

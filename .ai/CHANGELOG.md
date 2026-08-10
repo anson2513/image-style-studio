@@ -3,6 +3,20 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-08-10 — 實景人物切模貼紙 Added
+
+### Added
+
+- New independent single-image style `實景人物切模貼紙` in `手繪插畫`.
+- Exact user-provided real-photo die-cut people sticker prompt without a shared base prompt.
+- Anson-provided original and result references converted to complete 9:16 WebP previews without destructive cropping.
+- Summary and tags for die-cut stickers, black-and-white line art, white sticker borders, and real-scene preservation.
+
+### Verified
+
+- 40 unique styles and 40 official example outputs.
+- No missing referenced assets.
+
 ## 2026-07-21 — 午後窗光輕食時光 Added
 
 ### Added

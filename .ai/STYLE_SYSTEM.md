@@ -68,6 +68,7 @@ Current style object shape:
 - 生活速寫混合媒介
 - 樂高積木微縮世界
 - 實景人物貼紙線稿
+- 實景人物切模貼紙
 - 笨拙手寫詩意海報
 
 ### 城市旅遊
@@ -177,6 +178,13 @@ Current preferred cover ratio discussed during development:
 - Must not inherit base prompt
 
 ### 實景人物貼紙線稿
+
+- Category: 手繪插畫
+- Prompt type: Independent
+- Input type: Single image
+- Must not inherit base prompt
+
+### 實景人物切模貼紙
 
 - Category: 手繪插畫
 - Prompt type: Independent

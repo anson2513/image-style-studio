@@ -63,6 +63,7 @@ The final output must be the style prompt only.
 - 晨光城市旅行誌
 - 樂高積木微縮世界
 - 實景人物貼紙線稿
+- 實景人物切模貼紙
 - 斑駁光影電影感
 - 午後窗光輕食時光
 
