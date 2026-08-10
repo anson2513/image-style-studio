@@ -38,6 +38,8 @@ Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GP
 
 `實景人物切模貼紙` was added on 2026-08-10 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews without destructive crop. The source is preserved as `sources/die-cut-people-sticker/die-cut-people-sticker-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/die-cut-people-sticker/die-cut-people-sticker-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
 
+`日系清透林光紀實` was added on 2026-08-10 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews without destructive crop. The source is preserved as `sources/japanese-clear-forest-light/japanese-clear-forest-light-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/japanese-clear-forest-light/japanese-clear-forest-light-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
+
 ## Directory convention
 
 ```text
@@ -57,6 +59,7 @@ examples/
     morning-calm-city-travel/
     afternoon-window-light-food/
     die-cut-people-sticker/
+    japanese-clear-forest-light/
   outputs/
     photobook-narrative/
     watercolor-illustration/
@@ -71,6 +74,7 @@ examples/
     morning-calm-city-travel/
     afternoon-window-light-food/
     die-cut-people-sticker/
+    japanese-clear-forest-light/
 ```
 
 Use lowercase kebab-case filenames. Keep originals unchanged; create separate optimized copies if the Web App needs smaller files.

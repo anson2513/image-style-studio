@@ -3171,6 +3171,15 @@ IG貼文
     },
     {
       category: '城市旅遊',
+      cover: '/examples/outputs/japanese-clear-forest-light/japanese-clear-forest-light-chatgpt-5-5-instant-01.webp',
+      name: '日系清透林光紀實',
+      promptMode: 'independent',
+      desc: 'Japanese Clear Dappled Light Documentary',
+      prompt: `原圖構圖、主體位置、物體比例完全不變。日系寶礦力視覺風格，戶外林間柔和漫射自然光，細碎斑駁樹影光斑散落畫面，光影過渡柔和無生硬硬陰影；主體膚色溫潤柔和暖調，色彩乾淨通透無髒灰；中等景深，核心主體清晰銳利，遠景景物自然分層虛化；溫暖鬆弛治癒紀實
+氛圍，均勻細膩復古膠片顆粒，HDR柔和寬動態光影，無畫面畸變`,
+    },
+    {
+      category: '城市旅遊',
       cover: '/examples/outputs/morning-calm-city-travel/morning-calm-city-travel-chatgpt-5-5-instant-01.webp',
       name: '晨光城市旅行誌',
       promptMode: 'independent',
@@ -3352,6 +3361,11 @@ IG貼文
 type StyleDetails = Pick<Style, 'summary' | 'tags' | 'inputType'>
 
 const styleDetails: Record<Style['name'], StyleDetails> = {
+  '日系清透林光紀實': {
+    summary: '保持原圖構圖與主體比例，加入日系清透戶外自然光、細碎斑駁樹影、柔和膠片顆粒與溫暖鬆弛的治癒紀實氛圍。',
+    tags: ['日系清透', '林間光斑', '柔和膠片', '治癒紀實'],
+    inputType: 'single-image',
+  },
   '晨光城市旅行誌': {
     summary: '分析目的地的地理、文化與城市氣質，將真實照片轉化為明亮晨光、粉彩空氣感與精品排版的國際航空旅行雜誌封面。',
     tags: ['航空旅行', '晨光色調', '城市品牌', '雜誌封面'],
@@ -3555,6 +3569,12 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
 }
 
 const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
+  '日系清透林光紀實': [
+    {
+      inputImages: ['/examples/sources/japanese-clear-forest-light/japanese-clear-forest-light-01.webp'],
+      outputImage: '/examples/outputs/japanese-clear-forest-light/japanese-clear-forest-light-chatgpt-5-5-instant-01.webp',
+    },
+  ],
   '晨光城市旅行誌': [
     {
       inputImages: ['/examples/sources/morning-calm-city-travel/morning-calm-city-travel-01.webp'],

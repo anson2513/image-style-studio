@@ -3,6 +3,20 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-08-10 — 日系清透林光紀實 Added
+
+### Added
+
+- New independent single-image style `日系清透林光紀實` in `城市旅遊`.
+- Exact user-provided Japanese clear dappled-light documentary prompt without a shared base prompt.
+- Anson-provided original and result references converted to complete 9:16 WebP previews without destructive cropping.
+- Summary and tags for Japanese clear color, forest dappled light, soft film grain, and healing documentary atmosphere.
+
+### Verified
+
+- 41 unique styles and 41 official example outputs.
+- No missing referenced assets.
+
 ## 2026-08-10 — 實景人物切模貼紙 Added
 
 ### Added

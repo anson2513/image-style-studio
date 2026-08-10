@@ -77,6 +77,7 @@ Current style object shape:
 - 城市旅繪日誌
 - Colorwalk 城市漫遊
 - 晨光城市旅行誌
+- 日系清透林光紀實
 
 ### 空間敘事
 
@@ -164,6 +165,13 @@ Current preferred cover ratio discussed during development:
 - Must not inherit base prompt
 
 ### 晨光城市旅行誌
+
+- Category: 城市旅遊
+- Prompt type: Independent
+- Input type: Single image
+- Must not inherit base prompt
+
+### 日系清透林光紀實
 
 - Category: 城市旅遊
 - Prompt type: Independent
