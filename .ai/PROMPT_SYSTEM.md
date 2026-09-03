@@ -65,6 +65,7 @@ The final output must be the style prompt only.
 - 樂高積木微縮世界
 - 實景人物貼紙線稿
 - 實景人物切模貼紙
+- 微型生活敘事海報
 - 斑駁光影電影感
 - 午後窗光輕食時光
 

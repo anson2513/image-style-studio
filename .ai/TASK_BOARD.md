@@ -42,7 +42,7 @@ Status: Complete.
 - [x] Add an `examples` model with input images and an output image.
 - [x] Preserve all current prompt text and prompt routing.
 
-All 41 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, S2-T14, S2-T15, S2-T16, S2-T17, S2-T18, S2-T19, S2-T20, S2-T21, S2-T22, S2-T23, S2-T24, and S2-T25.
+All 42 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, S2-T14, S2-T15, S2-T16, S2-T17, S2-T18, S2-T19, S2-T20, S2-T21, S2-T22, S2-T23, S2-T24, S2-T25, and S2-T26.
 
 ### S2-T4 — Build Benchmark Assets
 
@@ -304,6 +304,18 @@ Status: Complete.
 - [x] Mark the style as single-image and independent.
 - [x] Connect the official result to card, 9:16 detail, and full-screen previews.
 - [x] Confirm 41 unique styles, 41 official outputs, and zero missing assets.
+
+### S2-T26 — Add 微型生活敘事海報
+
+Status: Complete.
+
+- [x] Convert both Anson-provided references to complete 9:16 WebP previews without destructive cropping.
+- [x] Add the complete approved prompt without rewriting or shortening it.
+- [x] Name the style `微型生活敘事海報` and place it in `手繪插畫`.
+- [x] Add the summary and tags `上下雙景`, `微型人物`, `生活雜誌`, and `留白敘事`.
+- [x] Mark the style as single-image and independent.
+- [x] Connect the official result to card, 9:16 detail, and full-screen previews.
+- [x] Confirm 42 unique styles, 42 official outputs, and zero missing assets.
 
 ## Explicitly Out of Scope
 

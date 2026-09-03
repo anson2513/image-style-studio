@@ -2386,6 +2386,14 @@ Lifestyle Editorial
       prompt: '原圖實景完整保留，不改動真實場景、光影、環境質感;把畫面中的人物做成 極簡黑白單線人物切模貼紙 (極簡手繪塗鴉風格，扁平圖形化，ins簡約美學)，粗黑色輪廓，少量純黑色塊陰影，純黑白無漸變;每張貼紙自帶一圈白色裁切白邊，手賬貼紙疊加效果，扁平極簡手繪省略複雜細節，ins簡約塗鴉風，實景照片保持真實高清質感。 負面提示詞：複雜線條，錯亂線條，細小線條。',
     },
     {
+      category: '手繪插畫',
+      cover: '/examples/outputs/miniature-life-editorial-poster/miniature-life-editorial-poster-chatgpt-5-5-instant-01.webp',
+      name: '微型生活敘事海報',
+      promptMode: 'independent',
+      desc: 'Miniature Life Editorial Poster',
+      prompt: '請先完整分析我上傳／選取的參考照片內容，並將照片本身視為唯一的視覺依據，自動辨識其中最值得被保留與強調的主體、人物、動物、食物、產品、建築、物件、自然景觀與環境特徵，再依照照片本身重新設計成一張高質感、清新且具有敘事性的生活風格 editorial poster，採用直式上下雙畫面構圖。上半部以原始照片為主要視覺基礎，完整保留最具辨識度的主體外觀、姿態、材質、紋理、空間關係、拍攝視角與真實質感，可依畫幅需求自然延伸周圍環境，但不可任意替換、扭曲或改變核心主體；使用柔和自然光、細膩陰影與輕微高級攝影調色，呈現乾淨、通透且具有生活感的攝影氛圍。下半部則重新提取原圖中最重要的主體與代表性元素，以更極簡、留白充足的俯視、平視或最適合原照片內容的視角重新編排，保留主體真實攝影質感，同時在周圍加入數個極小比例、纖細手繪鉛筆線稿風人物，讓迷你人物依照照片內容自然產生推動、搬運、攀爬、觀察、測量、整理、拍攝、休息或互動等具有故事性的動作，與巨大化的真實主體形成趣味尺度反差；人物不可搶走主體焦點，動作與位置必須依照片內容自動判斷，不使用固定模板。整體色彩需自動擷取原照片的主要色彩與材質特徵，再轉化為低飽和、高明度、柔和協調的 editorial color palette，背景以暖白、米白、奶油色或與原圖最協調的乾淨中性色為主，保留大量呼吸感與細膩自然陰影。整體風格融合日系生活雜誌、韓系品牌廣告、minimal editorial photography、independent magazine design 與 whimsical miniature illustration，畫面安靜、精緻、自然、帶有輕微幽默與詩意，避免廉價商業廣告感、過度裝飾、卡通化、3D 玩具感與明顯 AI 感。畫面底部中央可依照片的主題、情緒與故事自動生成一句簡短而有質感的英文標語，使用極小尺寸、寬字距、纖細極簡無襯線字體與低對比色彩，使整體具有高級生活品牌、藝術雜誌與獨立出版物般的完整視覺質感。',
+    },
+    {
       category: '視覺企劃',
       cover: '/examples/outputs/brand-hero-visual/brand-hero-visual-chatgpt-5-5-instant-01.webp',
       name: '品牌主視覺企劃',
@@ -3401,6 +3409,11 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
     tags: ['切模貼紙', '黑白線稿', '白邊裁切', '實景保留'],
     inputType: 'single-image',
   },
+  '微型生活敘事海報': {
+    summary: '把參考照片重構為上下雙畫面生活雜誌海報：上半部保留原始攝影質感，下半部以巨大化主體與微型鉛筆線稿人物創造輕盈敘事。',
+    tags: ['上下雙景', '微型人物', '生活雜誌', '留白敘事'],
+    inputType: 'single-image',
+  },
   '精品食物品牌廣告': {
     summary: '分析料理與食材特徵，重構為具有懸浮解構、精品排版與攝影棚光線的國際餐飲品牌廣告。',
     tags: ['精品餐飲', '商業攝影', '食材解構'],
@@ -3615,6 +3628,12 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
     {
       inputImages: ['/examples/sources/die-cut-people-sticker/die-cut-people-sticker-01.webp'],
       outputImage: '/examples/outputs/die-cut-people-sticker/die-cut-people-sticker-chatgpt-5-5-instant-01.webp',
+    },
+  ],
+  '微型生活敘事海報': [
+    {
+      inputImages: ['/examples/sources/miniature-life-editorial-poster/miniature-life-editorial-poster-01.webp'],
+      outputImage: '/examples/outputs/miniature-life-editorial-poster/miniature-life-editorial-poster-chatgpt-5-5-instant-01.webp',
     },
   ],
   '精品食物品牌廣告': [

@@ -3,6 +3,20 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-09-03 — 微型生活敘事海報 Added
+
+### Added
+
+- New independent single-image style `微型生活敘事海報` in `手繪插畫`.
+- Exact user-provided miniature life editorial poster prompt without a shared base prompt.
+- Anson-provided original and result references converted to complete 9:16 WebP previews without destructive cropping.
+- Summary and tags for vertical split scenes, miniature figures, lifestyle magazine composition, and negative-space storytelling.
+
+### Verified
+
+- 42 unique styles and 42 official example outputs.
+- No missing referenced assets.
+
 ## 2026-08-10 — 日系清透林光紀實 Added
 
 ### Added
