@@ -2394,6 +2394,14 @@ Lifestyle Editorial
       prompt: '請先完整分析我上傳／選取的參考照片內容，並將照片本身視為唯一的視覺依據，自動辨識其中最值得被保留與強調的主體、人物、動物、食物、產品、建築、物件、自然景觀與環境特徵，再依照照片本身重新設計成一張高質感、清新且具有敘事性的生活風格 editorial poster，採用直式上下雙畫面構圖。上半部以原始照片為主要視覺基礎，完整保留最具辨識度的主體外觀、姿態、材質、紋理、空間關係、拍攝視角與真實質感，可依畫幅需求自然延伸周圍環境，但不可任意替換、扭曲或改變核心主體；使用柔和自然光、細膩陰影與輕微高級攝影調色，呈現乾淨、通透且具有生活感的攝影氛圍。下半部則重新提取原圖中最重要的主體與代表性元素，以更極簡、留白充足的俯視、平視或最適合原照片內容的視角重新編排，保留主體真實攝影質感，同時在周圍加入數個極小比例、纖細手繪鉛筆線稿風人物，讓迷你人物依照照片內容自然產生推動、搬運、攀爬、觀察、測量、整理、拍攝、休息或互動等具有故事性的動作，與巨大化的真實主體形成趣味尺度反差；人物不可搶走主體焦點，動作與位置必須依照片內容自動判斷，不使用固定模板。整體色彩需自動擷取原照片的主要色彩與材質特徵，再轉化為低飽和、高明度、柔和協調的 editorial color palette，背景以暖白、米白、奶油色或與原圖最協調的乾淨中性色為主，保留大量呼吸感與細膩自然陰影。整體風格融合日系生活雜誌、韓系品牌廣告、minimal editorial photography、independent magazine design 與 whimsical miniature illustration，畫面安靜、精緻、自然、帶有輕微幽默與詩意，避免廉價商業廣告感、過度裝飾、卡通化、3D 玩具感與明顯 AI 感。畫面底部中央可依照片的主題、情緒與故事自動生成一句簡短而有質感的英文標語，使用極小尺寸、寬字距、纖細極簡無襯線字體與低對比色彩，使整體具有高級生活品牌、藝術雜誌與獨立出版物般的完整視覺質感。',
     },
     {
+      category: '手繪插畫',
+      cover: '/examples/outputs/half-photo-paper-illustration-poster/half-photo-paper-illustration-poster-chatgpt-5-5-instant-01.webp',
+      name: '半幅攝影紙繪海報',
+      promptMode: 'independent',
+      desc: 'Half Photo Paper Illustration Poster',
+      prompt: `為每張上傳照片分別生成一張獨立、高端的編輯海報，禁止多圖拼貼或合併。整體嚴格採用3:4竪版構圖，畫面水平分為上下兩個等高區域，各佔50%。兩部分既有明確區分，又要在色彩和敘事上自然銜接，像一本經過完整藝術指導的獨立藝術出版物封面。      【上半部分：原始攝影】 盡可能忠實保留照片，不改變主要構圖、主體身份、五官、身體比例、姿勢、表情、服裝、物體和空間關係。保持真實攝影質感、自然光線、陰影、氛圍及原始色彩基調，只做細微、克制的編輯級調色，使畫面接近高端雜誌攝影或當代藝術書籍。禁止過度磨皮、誇張濾鏡和人為風格化。為適配3:4畫幅，可自然擴展天空、地面、牆壁或周圍環境，但必須無縫、真實；不得拉伸、扭曲、重塑、替換主體或改變人物身份。      【下半部分：極簡手繪紙質插畫】 從原圖中提取最具辨識度的主體、基本輪廓、關鍵動作、重要物體及人與環境之間的核心敘事關係，將其重新詮釋為高度簡化的手繪插畫。移除無關細節，只保留能讓人立即認出原場景的視覺信息。      使用精細但略帶瑕疵的手繪線條、少量丙烯感平面色塊、粗糙紙張紋理、可見筆觸和輕微不規則邊緣，保留真實手作感。主體應小巧、居中且構圖講究，僅佔下半部分約20%-30%，四周留出大量安靜的負空間。背景採用粗糙白紙、溫暖米白紙或淺色天然紙張質感；周圍環境只用少量線條或小色塊暗示，不鋪滿畫面。      【色彩與排版】 直接從上半部分照片中提取主導色，將色板壓縮至不超過4種。色彩應克制、和諧、精緻，以大膽但受控的平面色塊形成呼應，避免過多漸變和雜色。可加入極少量排版，如簡短標題、關鍵詞、地點、年份或數字。文字必須低調，與留白和小插圖自然互動；若無法自然融入，則不要添加。      【避免】 請勿使用彩色鉛筆、蠟筆或暈染水彩質感；避免純線稿、複雜寫實插圖、濃重油畫、過度平滑的數字插畫、3D渲染及光澤紋理。拒絕商業卡通、可愛商業角色、電商廣告、通用海報模板，以及過多裝飾、繁雜構圖和密集排版。      【最終藝術指導】 畫面應安靜、詩意、鬆弛、精緻、極簡且有故事感。視覺核心是“一個小主體被大量留白包圍”。成品應像精心設計的獨立藝術書籍、當代編輯出版物或高級繪本封面，而不是商業廣告。`,
+    },
+    {
       category: '視覺企劃',
       cover: '/examples/outputs/brand-hero-visual/brand-hero-visual-chatgpt-5-5-instant-01.webp',
       name: '品牌主視覺企劃',
@@ -3414,6 +3422,11 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
     tags: ['上下雙景', '微型人物', '生活雜誌', '留白敘事'],
     inputType: 'single-image',
   },
+  '半幅攝影紙繪海報': {
+    summary: '將每張照片獨立轉成 3:4 上下雙區海報：上半部忠實保留原始攝影，下半部提取核心場景為極簡紙質手繪插畫，形成安靜詩意的藝術書封面感。',
+    tags: ['半幅攝影', '紙質插畫', '藝術書封', '留白敘事'],
+    inputType: 'single-image',
+  },
   '精品食物品牌廣告': {
     summary: '分析料理與食材特徵，重構為具有懸浮解構、精品排版與攝影棚光線的國際餐飲品牌廣告。',
     tags: ['精品餐飲', '商業攝影', '食材解構'],
@@ -3634,6 +3647,12 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
     {
       inputImages: ['/examples/sources/miniature-life-editorial-poster/miniature-life-editorial-poster-01.webp'],
       outputImage: '/examples/outputs/miniature-life-editorial-poster/miniature-life-editorial-poster-chatgpt-5-5-instant-01.webp',
+    },
+  ],
+  '半幅攝影紙繪海報': [
+    {
+      inputImages: ['/examples/sources/half-photo-paper-illustration-poster/half-photo-paper-illustration-poster-01.webp'],
+      outputImage: '/examples/outputs/half-photo-paper-illustration-poster/half-photo-paper-illustration-poster-chatgpt-5-5-instant-01.webp',
     },
   ],
   '精品食物品牌廣告': [

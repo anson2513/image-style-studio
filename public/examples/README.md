@@ -42,6 +42,8 @@ Batch 1 of the remaining style library was completed on 2026-07-05 in ChatGPT GP
 
 `微型生活敘事海報` was added on 2026-09-03 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews without destructive crop. The source is preserved as `sources/miniature-life-editorial-poster/miniature-life-editorial-poster-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/miniature-life-editorial-poster/miniature-life-editorial-poster-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
 
+`半幅攝影紙繪海報` was added on 2026-09-04 from an Anson-provided source/result pair. Both references were converted to complete 1080 × 1920 WebP previews without destructive crop. The source is preserved as `sources/half-photo-paper-illustration-poster/half-photo-paper-illustration-poster-01.webp`; the official GPT-5.5 即時 result is preserved as `outputs/half-photo-paper-illustration-poster/half-photo-paper-illustration-poster-chatgpt-5-5-instant-01.webp`. The style uses the exact independent prompt stored in `lib/styles.ts` and does not inherit a shared base prompt.
+
 ## Directory convention
 
 ```text
@@ -63,6 +65,7 @@ examples/
     die-cut-people-sticker/
     japanese-clear-forest-light/
     miniature-life-editorial-poster/
+    half-photo-paper-illustration-poster/
   outputs/
     photobook-narrative/
     watercolor-illustration/
@@ -79,6 +82,7 @@ examples/
     die-cut-people-sticker/
     japanese-clear-forest-light/
     miniature-life-editorial-poster/
+    half-photo-paper-illustration-poster/
 ```
 
 Use lowercase kebab-case filenames. Keep originals unchanged; create separate optimized copies if the Web App needs smaller files.

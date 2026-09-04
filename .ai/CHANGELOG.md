@@ -3,6 +3,20 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-09-04 — 半幅攝影紙繪海報 Added
+
+### Added
+
+- New independent single-image style `半幅攝影紙繪海報` in `手繪插畫`.
+- Exact user-provided half-photo paper illustration poster prompt without a shared base prompt.
+- Anson-provided original and result references converted to complete 9:16 WebP previews without destructive cropping.
+- Summary and tags for half-photo layout, paper illustration, art book cover composition, and negative-space storytelling.
+
+### Verified
+
+- 43 unique styles and 43 official example outputs.
+- No missing referenced assets.
+
 ## 2026-09-03 — 微型生活敘事海報 Added
 
 ### Added
