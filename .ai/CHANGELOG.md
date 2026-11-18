@@ -3,6 +3,11 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-11-18 — 自然電影調色 Added
+
+- Added an independent single-image style to `電影宇宙` with the exact user-provided prompt.
+- Connected the supplied result to the card and the supplied original/result pair to full-frame 9:16 previews.
+
 ## 2026-09-04 — 半幅攝影紙繪海報 Added
 
 ### Added

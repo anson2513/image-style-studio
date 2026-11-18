@@ -42,7 +42,7 @@ Status: Complete.
 - [x] Add an `examples` model with input images and an output image.
 - [x] Preserve all current prompt text and prompt routing.
 
-All 43 current styles include the extended metadata. Their authentic examples were populated through S2-T4, S2-T11, S2-T14, S2-T15, S2-T16, S2-T17, S2-T18, S2-T19, S2-T20, S2-T21, S2-T22, S2-T23, S2-T24, S2-T25, S2-T26, and S2-T27.
+All 44 current styles include the extended metadata. Their examples were populated through S2-T4, S2-T11, and S2-T14 through S2-T28.
 
 ### S2-T4 — Build Benchmark Assets
 
@@ -328,6 +328,14 @@ Status: Complete.
 - [x] Mark the style as single-image and independent.
 - [x] Connect the official result to card, 9:16 detail, and full-screen previews.
 - [x] Confirm 43 unique styles, 43 official outputs, and zero missing assets.
+
+### S2-T28 — Add 自然電影調色
+
+Status: Complete.
+
+- [x] Store the exact prompt as an independent single-image style in `電影宇宙`.
+- [x] Add a Traditional Chinese summary and four search tags.
+- [x] Use the supplied result as the card cover and both 1080 × 1920 assets as a full-frame comparison.
 
 ## Explicitly Out of Scope
 

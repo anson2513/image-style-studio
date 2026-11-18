@@ -57,6 +57,7 @@ Current style object shape:
 - 蒸汽龐克風
 - 日系戀愛劇氛圍
 - 斑駁光影電影感
+- 自然電影調色
 
 ### 手繪插畫
 
@@ -214,6 +215,13 @@ Current preferred cover ratio discussed during development:
 - Prompt type: Independent
 - Input type: Single image
 - Must not inherit base prompt
+
+### 自然電影調色
+
+- Category: 電影宇宙
+- Prompt type: Independent
+- Input type: Single image; multiple uploads are processed separately, not combined.
+- Preview type: Provided result for the card; complete original and result in the 9:16 detail.
 
 ### 斑駁光影電影感
 

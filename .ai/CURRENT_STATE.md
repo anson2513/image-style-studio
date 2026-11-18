@@ -56,13 +56,13 @@ The app remains a single-page client MVP, but stable data and routing responsibi
 - `components/MobileStyleDetailSheet.tsx`: mobile style metadata and example bottom sheet.
 - `components/PromptOutput.tsx`: mobile prompt generation and copy result.
 - `components/StyleCard.tsx`: reusable responsive style card and favorite action.
-- `lib/styles.ts`: all 43 style objects and their prompt modes.
+- `lib/styles.ts`: all 44 style objects and their prompt modes.
 - `lib/benchmarks.ts`: six benchmark source groups, 16 registered development images, and five pilot styles.
 - `lib/basePrompts.ts`: the four shared prompt universes.
 - `lib/promptRouter.ts`: data-driven base selection and final prompt composition.
 - `lib/categories.ts`: category labels, membership, ordering, and favorites filtering.
 - `lib/storage.ts`: safe local persistence for favorites and recent usage.
-- `public/examples/`: 30 benchmark/user-provided sources and 48 preserved development/release outputs, delivered as optimized WebP assets.
+- `public/examples/`: 31 benchmark/user-provided sources and 49 preserved development/release outputs, delivered as optimized WebP assets.
 - `lib/types.ts`: shared style and prompt-mode types.
 
 Each style now also carries:
@@ -70,7 +70,7 @@ Each style now also carries:
 - `summary`: concise Traditional Chinese explanation.
 - `tags`: two to four browsing tags.
 - `inputType`: `single-image`, `multi-image`, or `text-only`.
-- `examples`: typed input-image and output-image pairs; all 43 styles now point to official GPT-5.5 即時 results. Text-only styles intentionally use an empty input-image list.
+- `examples`: typed input-image and output-image pairs; all 44 styles have a catalog example. Text-only styles intentionally use an empty input-image list.
 
 ## Current Categories
 
@@ -105,6 +105,7 @@ Each style now also carries:
 - 微型生活敘事海報
 - 半幅攝影紙繪海報
 - 斑駁光影電影感
+- 自然電影調色
 - 午後窗光輕食時光
 
 ## Current Important Prompt Routing State
@@ -131,6 +132,7 @@ Independent prompts with no base prompt:
 - 微型生活敘事海報
 - 半幅攝影紙繪海報
 - 斑駁光影電影感
+- 自然電影調色
 - 午後窗光輕食時光
 
 Shared prompt universes:
@@ -157,8 +159,8 @@ Shared prompt universes:
 - PWA icons use the lightweight `public/brand-mark.svg` identity and matching generated PNG assets.
 - Independent production is live at `https://image-style-studio.vercel.app`.
 - The legacy production remains live at `https://ai-poster-director-clean.vercel.app`.
-- All 43 style examples reference existing assets.
-- The repository contains 78 optimized WebP example assets.
+- All 44 style examples reference existing assets.
+- The repository contains 80 optimized WebP example assets.
 - Text-only styles render a single labeled generation example without a fabricated source image or comparison control.
 - The dependency audit reports zero vulnerabilities.
 - Official output images now power desktop and mobile style cards.

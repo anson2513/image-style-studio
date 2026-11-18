@@ -97,3 +97,11 @@ For every official example, record:
 - First-run output path.
 
 Do not substitute stock photos, generated source images, or hand-edited outputs without recording their exact source type.
+
+## 自然電影調色
+
+Added 2026-11-18 from the Anson-provided source `S__34603018_0.jpg` and result `S__34603017_0.jpg`. Their complete frames are normalized to 1080 × 1920 WebP without cropping.
+
+- Source: `sources/natural-cinematic-color/natural-cinematic-color-01.webp`
+- Result: `outputs/natural-cinematic-color/natural-cinematic-color-result-01.webp`
+- Prompt: exact independent `自然電影調色` entry in `lib/styles.ts`. Generation model and date were not supplied.

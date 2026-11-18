@@ -45,6 +45,7 @@ Independent examples:
 - 微型生活敘事海報
 - 半幅攝影紙繪海報
 - 斑駁光影電影感
+- 自然電影調色
 - 午後窗光輕食時光
 
 ## Prompt Integrity Rule

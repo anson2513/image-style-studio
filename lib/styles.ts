@@ -1184,6 +1184,15 @@ overdetailed rendering`,
       prompt: `保持原構圖與主體位置不變。 超寫實電影風格，光影瞬間增強，地面與牆面呈現清晰的斑駁光斑。 冷暖色對比明顯，畫面飽和度保持自然真實。 前景輕微動態模糊，增強空間縱深感，電影開場鏡頭質感。`,
     },
     {
+      category: '電影宇宙',
+      cover: '/examples/outputs/natural-cinematic-color/natural-cinematic-color-result-01.webp',
+      name: '自然電影調色',
+      promptMode: 'independent',
+      desc: 'Natural Cinematic Color Grading',
+      prompt: `為每張上傳照片分別生成一張獨立電影感
+「讓這張照片呈現出電影般的質感，擁有豐富的色彩、均衡的對比、寫實的陰影，以及專業的色彩漸層。保留圖片原本的構圖，避免使用會讓它看起來很假的特效。」`,
+    },
+    {
       cover: '/covers/travel-magazine.jpg',
       name: '高級旅遊雜誌風',
       promptMode: 'travel',
@@ -3537,6 +3546,11 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
     tags: ['斑駁光影', '電影開場', '冷暖對比', '前景動態'],
     inputType: 'single-image',
   },
+  '自然電影調色': {
+    summary: '保留照片原有構圖，以豐富色彩、均衡對比、寫實陰影與自然色彩漸層，讓畫面呈現電影劇照般的質感。',
+    tags: ['電影調色', '均衡對比', '寫實陰影', '色彩漸層'],
+    inputType: 'single-image',
+  },
   '高級旅遊雜誌風': {
     summary: '把旅行照片提升為兼具地點故事與精品排版的雜誌封面。',
     tags: ['旅遊雜誌', '精品排版', '目的地'],
@@ -3684,6 +3698,10 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
   '蒸汽龐克風': [{ inputImages: ['/examples/sources/architecture-space/architecture-space-01.webp'], outputImage: '/examples/outputs/steampunk-world/steampunk-world-rc-chatgpt-5-5-instant-01.webp' }],
   '日系戀愛劇氛圍': [{ inputImages: ['/examples/sources/portrait/portrait-02.webp'], outputImage: '/examples/outputs/japanese-romance/japanese-romance-rc-chatgpt-5-5-instant-01.webp' }],
   '斑駁光影電影感': [{ inputImages: ['/examples/sources/dappled-cinematic-light/dappled-cinematic-light-01.webp'], outputImage: '/examples/outputs/dappled-cinematic-light/dappled-cinematic-light-chatgpt-5-5-instant-01.webp' }],
+  '自然電影調色': [{
+    inputImages: ['/examples/sources/natural-cinematic-color/natural-cinematic-color-01.webp'],
+    outputImage: '/examples/outputs/natural-cinematic-color/natural-cinematic-color-result-01.webp',
+  }],
   '彩色蠟筆手繪插畫': [{ inputImages: ['/examples/sources/daily-life/daily-life-03.webp'], outputImage: '/examples/outputs/crayon-handdrawn/crayon-handdrawn-rc-chatgpt-5-5-instant-01.webp' }],
   '日系生活感手繪插畫': [{ inputImages: ['/examples/sources/city-travel/city-travel-01.webp'], outputImage: '/examples/outputs/japanese-lifestyle-sketch/japanese-lifestyle-sketch-rc-chatgpt-5-5-instant-01.webp' }],
   '極簡留白童話速寫': [{ inputImages: ['/examples/sources/portrait/portrait-01.webp'], outputImage: '/examples/outputs/minimal-story-sketch/minimal-story-sketch-rc-chatgpt-5-5-instant-01.webp' }],
