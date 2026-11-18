@@ -105,3 +105,11 @@ Added 2026-11-18 from the Anson-provided source `S__34603018_0.jpg` and result `
 - Source: `sources/natural-cinematic-color/natural-cinematic-color-01.webp`
 - Result: `outputs/natural-cinematic-color/natural-cinematic-color-result-01.webp`
 - Prompt: exact independent `自然電影調色` entry in `lib/styles.ts`. Generation model and date were not supplied.
+
+## 實景蠟筆剪紙
+
+Added 2026-11-18 from the Anson-provided source `S__34611204_0.jpg` and result `S__34611205_0.jpg`. The complete landscape frames were fitted to 1080 × 1920 WebP previews with blurred padding, without cropping either reference.
+
+- Source: `sources/real-scene-crayon-cutout/real-scene-crayon-cutout-01.webp`
+- Result: `outputs/real-scene-crayon-cutout/real-scene-crayon-cutout-result-01.webp`
+- Prompt: exact independent `實景蠟筆剪紙` entry in `lib/styles.ts`. Generation model and date were not supplied.

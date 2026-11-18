@@ -42,7 +42,7 @@ Status: Complete.
 - [x] Add an `examples` model with input images and an output image.
 - [x] Preserve all current prompt text and prompt routing.
 
-All 44 current styles include the extended metadata. Their examples were populated through S2-T4, S2-T11, and S2-T14 through S2-T28.
+All 45 current styles include the extended metadata. Their examples were populated through S2-T4, S2-T11, and S2-T14 through S2-T29.
 
 ### S2-T4 — Build Benchmark Assets
 
@@ -336,6 +336,14 @@ Status: Complete.
 - [x] Store the exact prompt as an independent single-image style in `電影宇宙`.
 - [x] Add a Traditional Chinese summary and four search tags.
 - [x] Use the supplied result as the card cover and both 1080 × 1920 assets as a full-frame comparison.
+
+### S2-T29 — Add 實景蠟筆剪紙
+
+Status: Complete.
+
+- [x] Store the exact standalone prompt, including its keyword line.
+- [x] Register a single-image style under `手繪插畫` with a Chinese summary and four tags.
+- [x] Connect the result to the card and set up an uncropped 9:16 comparison.
 
 ## Explicitly Out of Scope
 

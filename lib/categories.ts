@@ -51,6 +51,7 @@ const categoryStyleNames: Partial<Record<Category, readonly string[]>> = {
     '樂高積木微縮世界',
     '實景人物貼紙線稿',
     '實景人物切模貼紙',
+    '實景蠟筆剪紙',
     '微型生活敘事海報',
     '半幅攝影紙繪海報',
     '笨拙手寫詩意海報',

@@ -3,6 +3,11 @@
 Version: 1.0.0  
 Status: Active
 
+## 2026-11-18 — 實景蠟筆剪紙 Added
+
+- Added an independent single-image style in `手繪插畫` with the exact supplied prompt.
+- Used the supplied result for the card and set up an uncropped 9:16 comparison of both landscape references.
+
 ## 2026-11-18 — 自然電影調色 Added
 
 - Added an independent single-image style to `電影宇宙` with the exact user-provided prompt.

@@ -2396,6 +2396,15 @@ Lifestyle Editorial
     },
     {
       category: '手繪插畫',
+      cover: '/examples/outputs/real-scene-crayon-cutout/real-scene-crayon-cutout-result-01.webp',
+      name: '實景蠟筆剪紙',
+      promptMode: 'independent',
+      desc: 'Real Scene × Crayon Paper Cutout',
+      prompt: `將這張照片的空間，略微虛焦、顏色清淡，原來的主體被抽走；若是一處場景，就留下空間的骨架、刪掉雜物，只把最有代表性的一個換成紙片。原位貼著一張沿外輪廓隨手剪下的白紙，邊上一圈不均勻的白邊，轉角是硬折，紙上有一點薄影；紙上的主體只用粗細跳動、帶點毛刺的黑色蠟筆線勾出，頭髮或最深的一塊塗實黑，衣服只留幾道褶，臉只留輪廓線，姿態與照片一致，同一支筆還在桌面、門框或地面上描幾根和真實邊緣輕輕錯開的線。空牆上散著很少幾處很小的潦草手寫，帶著弧形引線，字和線是同一種近黑，中文用繁體，不把牆寫滿，剪片純白、線條不上色，任何部分都不碰到中間的折痕。
+關鍵詞： 實景空間做底 · 隨手剪的白紙片 · 粗細跳動的蠟筆線 · 近黑潦草標注 · 純白紙片和薄影 · 線條不上色`,
+    },
+    {
+      category: '手繪插畫',
       cover: '/examples/outputs/miniature-life-editorial-poster/miniature-life-editorial-poster-chatgpt-5-5-instant-01.webp',
       name: '微型生活敘事海報',
       promptMode: 'independent',
@@ -3426,6 +3435,11 @@ const styleDetails: Record<Style['name'], StyleDetails> = {
     tags: ['切模貼紙', '黑白線稿', '白邊裁切', '實景保留'],
     inputType: 'single-image',
   },
+  '實景蠟筆剪紙': {
+    summary: '以淡色微虛焦的實景為底，把主體原位換成保留姿態的白紙剪片，以粗細不均的黑蠟筆線、薄紙影和少量繁中手寫註記，營造手作拼貼感。',
+    tags: ['白紙剪片', '黑蠟筆線', '微虛焦實景', '繁中手寫'],
+    inputType: 'single-image',
+  },
   '微型生活敘事海報': {
     summary: '把參考照片重構為上下雙畫面生活雜誌海報：上半部保留原始攝影質感，下半部以巨大化主體與微型鉛筆線稿人物創造輕盈敘事。',
     tags: ['上下雙景', '微型人物', '生活雜誌', '留白敘事'],
@@ -3655,6 +3669,12 @@ const styleExamples: Partial<Record<Style['name'], Style['examples']>> = {
     {
       inputImages: ['/examples/sources/die-cut-people-sticker/die-cut-people-sticker-01.webp'],
       outputImage: '/examples/outputs/die-cut-people-sticker/die-cut-people-sticker-chatgpt-5-5-instant-01.webp',
+    },
+  ],
+  '實景蠟筆剪紙': [
+    {
+      inputImages: ['/examples/sources/real-scene-crayon-cutout/real-scene-crayon-cutout-01.webp'],
+      outputImage: '/examples/outputs/real-scene-crayon-cutout/real-scene-crayon-cutout-result-01.webp',
     },
   ],
   '微型生活敘事海報': [

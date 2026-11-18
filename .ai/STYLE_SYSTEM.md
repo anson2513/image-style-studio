@@ -70,6 +70,7 @@ Current style object shape:
 - 樂高積木微縮世界
 - 實景人物貼紙線稿
 - 實景人物切模貼紙
+- 實景蠟筆剪紙
 - 微型生活敘事海報
 - 半幅攝影紙繪海報
 - 笨拙手寫詩意海報
@@ -194,6 +195,13 @@ Current preferred cover ratio discussed during development:
 - Prompt type: Independent
 - Input type: Single image
 - Must not inherit base prompt
+
+### 實景蠟筆剪紙
+
+- Category: 手繪插畫
+- Prompt type: Independent
+- Input type: Single image
+- Preview type: Supplied result for the card; both complete landscape frames inside a 9:16 detail comparison.
 
 ### 實景人物切模貼紙
 

@@ -25,7 +25,7 @@ The new App lives in:
 - Independent GitHub Repository created and pushed: `https://github.com/anson2513/image-style-studio`.
 - Independent Vercel project deployed: `https://image-style-studio.vercel.app`.
 - The new and legacy production Apps were both opened and verified without browser errors or warnings.
-- All 44 current styles include `summary`, `tags`, `inputType`, and typed `examples` metadata.
+- All 45 current styles include `summary`, `tags`, `inputType`, and typed `examples` metadata.
 - `攝影書敘事` is marked as multi-image; the remaining current styles are marked as single-image based on their approved prompts.
 - Example arrays intentionally remain empty until authentic benchmark inputs and first-run outputs are available.
 - ESLint and the production build pass after the style data model extension.
@@ -80,6 +80,7 @@ The new App lives in:
 - `半幅攝影紙繪海報` was added as an independent single-image style in `手繪插畫`; both Anson-provided references were normalized to complete 9:16 WebP previews without destructive cropping.
 - `斑駁光影電影感` was added as an independent single-image style in `電影宇宙`; both Anson-provided references were normalized to complete 9:16 WebP previews without destructive cropping.
 - `自然電影調色` was added as an independent single-image style in `電影宇宙`, with the user-provided before/after pair in full-frame 9:16 WebP and the exact prompt.
+- `實景蠟筆剪紙` was added as an independent single-image style in `手繪插畫`, with the exact prompt and two uncropped landscape references fitted to a 9:16 preview.
 - `午後窗光輕食時光` was added as an independent single-image style in `食物美學`; both Anson-provided references were normalized to complete 9:16 WebP previews without destructive cropping.
 
 ## Current Priority
